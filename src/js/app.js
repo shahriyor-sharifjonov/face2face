@@ -2,9 +2,30 @@ import * as functions from "./modules/functions.js";
 
 functions.isWebp();
 
-// import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination } from 'swiper';
 
-// const swiper = new Swiper();
+new Swiper(".studios__slider", {
+  spaceBetween: 100,
+  loop: true,
+  modules: [Navigation, Pagination],
+  navigation: {
+    nextEl: ".studios__next",
+    prevEl: ".studios__prev",
+  },
+});
+
+new Swiper(".studios__img", {
+  loop: true,
+  modules: [Navigation, Pagination],
+  navigation: {
+    nextEl: ".studios__img-next",
+    prevEl: ".studios__img-prev",
+  },
+  pagination: {
+    el: ".studios__img-pagination",
+    clickable: true,
+  }
+});
 
 // Header Menu
 const headerButton = document.querySelector(".header__button");

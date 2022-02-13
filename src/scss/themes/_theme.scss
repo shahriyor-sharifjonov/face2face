@@ -24,7 +24,7 @@ a{
         }
     }
     &-md{
-        @include media(768){
+        @include media(767){
             display: none;
         }
     }
@@ -43,7 +43,7 @@ a{
     }
     &-md{
         display: none;
-        @include media(768){
+        @include media(767){
             display: flex;
         }
     }

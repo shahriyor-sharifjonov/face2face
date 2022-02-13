@@ -10,6 +10,10 @@
         color: #FFFFFF;  
         transition: 200ms ease;
         padding: 4px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: max-content;
         &:hover{
             background: darken($color: #8D1AEF, $amount: 10%);
         }
@@ -27,6 +31,10 @@
             border: 1px solid var(--primary-color);
             border-radius: 30px;
             transition: 200ms ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: max-content;
             &:hover{
                 color: #FFFFFF;  
                 background: var(--primary-color);
@@ -45,11 +53,15 @@
         font-size: 18px;
         line-height: 22px;
         text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: #FFFFFF;
         padding: 4px 10px;
         position: relative;
         overflow: hidden;
         isolation: isolate;
+        width: max-content;
         &:hover{
             &::after{
                 opacity: 1;

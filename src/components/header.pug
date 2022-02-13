@@ -2,7 +2,7 @@ mixin header()
   header.header 
     nav.header__nav.container 
       .header__left 
-        button.header__button 
+        button(title="menu").header__button 
           span.header__button-line
         a(href="index.html").header__logo FACE 2 FACE 
       .header__menu 
@@ -19,13 +19,13 @@ mixin header()
             a(href="#!").header__link Контакты 
           li.header__xxl 
             .intro__social 
-              a(href="#!" target="_blank").intro__social-item 
+              a(href="#!" target="_blank" title="facebook").intro__social-item 
                 img(src="@img/facebook.png", alt="" draggable="false")
-              a(href="#!" target="_blank").intro__social-item 
+              a(href="#!" target="_blank" title="wk").intro__social-item 
                 img(src="@img/wk.png", alt="" draggable="false")
-              a(href="#!" target="_blank").intro__social-item 
+              a(href="#!" target="_blank" title="instagram").intro__social-item 
                 img(src="@img/instagram.png", alt="" draggable="false")
-              a(href="#!" target="_blank").intro__social-item 
+              a(href="#!" target="_blank" title="youtube").intro__social-item 
                 img(src="@img/youtube.png", alt="" draggable="false")
             a(href="tel:+74950212992").intro__tel +7 (495) 021-29-92
             p.intro__p Работаем ежедневно с 9:00 до 21:00 

@@ -3,7 +3,7 @@
     @include media(992){
         margin-top: 100px;
     }
-    @include media(768){
+    @include media(767){
         margin-top: 50px;
     }
     &__offer{
@@ -26,7 +26,7 @@
             height: max-content;
             max-width: 1400px;
         }
-        @include media(768){
+        @include media(767){
             padding: 30px 18px 189px 18px;
             padding-bottom: 189px;
         }
@@ -59,7 +59,7 @@
         }
         &-btn{
             padding: 13px 88px;
-            @include media(768){
+            @include media(767){
                 padding: 13px 60px;
             }
         }
@@ -72,7 +72,7 @@
                     width: 164px;
                     left: 18px;
                 }
-                @include media(768){
+                @include media(767){
                     left: calc(50% - 150px);
                     width: 140px;
                 }
@@ -96,7 +96,7 @@
                     right: 3px;
                     width: 214px;
                 }
-                @include media(768){
+                @include media(767){
                     right: calc(50% - 150px);
                     width: 192px;
                 }
@@ -114,7 +114,7 @@
         display: flex;
         justify-content: space-between;
         padding: 50px 15px 80px 15px;
-        @include media(768){
+        @include media(767){
             justify-content: center;
             padding: 30px 15px 50px 15px;
         }

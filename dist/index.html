@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220213215913">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20220214003204">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220214003204">
     <title>Document</title>
   </head>
   <body class="home"> 
@@ -12,7 +13,7 @@
             <header class="header"> 
               <nav class="header__nav container"> 
                 <div class="header__left"> 
-                  <button class="header__button"> <span class="header__button-line"></span></button><a class="header__logo" href="index.html">FACE 2 FACE </a>
+                  <button class="header__button" title="menu"> <span class="header__button-line"></span></button><a class="header__logo" href="index.html">FACE 2 FACE </a>
                 </div>
                 <div class="header__menu"> 
                   <ul class="header__list">
@@ -22,7 +23,7 @@
                     <li class="header__li"> <a class="header__link" href="#!">Ответы на вопросы </a></li>
                     <li class="header__li"> <a class="header__link" href="#!">Контакты </a></li>
                     <li class="header__xxl"> 
-                      <div class="intro__social"> <a class="intro__social-item" href="#!" target="_blank"> <picture><source srcset="img/facebook.webp" type="image/webp"><img src="img/facebook.png" alt="" draggable="false"></picture></a><a class="intro__social-item" href="#!" target="_blank"> <img src="img/wk.png" alt="" draggable="false"></a><a class="intro__social-item" href="#!" target="_blank"> <img src="img/instagram.png" alt="" draggable="false"></a><a class="intro__social-item" href="#!" target="_blank"> <img src="img/youtube.png" alt="" draggable="false"></a></div><a class="intro__tel" href="tel:+74950212992">+7 (495) 021-29-92</a>
+                      <div class="intro__social"> <a class="intro__social-item" href="#!" target="_blank" title="facebook"> <picture><source srcset="img/facebook.webp" type="image/webp"><img src="img/facebook.png" alt="" draggable="false"></picture></a><a class="intro__social-item" href="#!" target="_blank" title="wk"> <img src="img/wk.png" alt="" draggable="false"></a><a class="intro__social-item" href="#!" target="_blank" title="instagram"> <img src="img/instagram.png" alt="" draggable="false"></a><a class="intro__social-item" href="#!" target="_blank" title="youtube"> <img src="img/youtube.png" alt="" draggable="false"></a></div><a class="intro__tel" href="tel:+74950212992">+7 (495) 021-29-92</a>
                       <p class="intro__p">Работаем ежедневно с 9:00 до 21:00 </p>
                     </li>
                   </ul>
@@ -45,11 +46,45 @@
                   <div class="intro__img"> <picture><source srcset="img/intro-youtube.webp" type="image/webp"><img class="intro__youtube" src="img/intro-youtube.png" alt="" draggable="false"></picture><img class="intro__instagram" src="img/intro-instagram.png" alt="" draggable="false"><img src="img/intro-img.png" alt="" draggable="false"></div>
                 </div>
                 <div class="intro__footer container"> 
-                  <div class="intro__social"> <a class="intro__social-item" href="#!" target="_blank"> <picture><source srcset="img/facebook.webp" type="image/webp"><img src="img/facebook.png" alt="" draggable="false"></picture></a><a class="intro__social-item" href="#!" target="_blank"> <img src="img/wk.png" alt="" draggable="false"></a><a class="intro__social-item" href="#!" target="_blank"> <img src="img/instagram.png" alt="" draggable="false"></a><a class="intro__social-item" href="#!" target="_blank"> <img src="img/youtube.png" alt="" draggable="false"></a></div>
+                  <div class="intro__social"> <a class="intro__social-item" href="#!" target="_blank" title="facebook"> <picture><source srcset="img/facebook.webp" type="image/webp"><img src="img/facebook.png" alt="" draggable="false"></picture></a><a class="intro__social-item" href="#!" target="_blank" title="wk"> <img src="img/wk.png" alt="" draggable="false"></a><a class="intro__social-item" href="#!" target="_blank" title="instagram"> <img src="img/instagram.png" alt="" draggable="false"></a><a class="intro__social-item" href="#!" target="_blank" title="youtube"> <img src="img/youtube.png" alt="" draggable="false"></a></div>
                   <p class="intro__p">Работаем ежедневно с 9:00 до 21:00 </p><a class="intro__tel" href="tel:+74950212992">+7 (495) 021-29-92</a>
                 </div>
               </div>
-              <div class="studios"> </div>
+              <div class="studios"> 
+                <div class="studios__body container">
+                  <h2 class="studios__title"><span>Две комфортабельные</span> студии для записи в Москве</h2>
+                  <div class="studios__slider swiper"> 
+                    <div class="studios__wrapper swiper-wrapper">
+                      <div class="studios__slide swiper-slide"> 
+                        <div class="studios__img swiper"> 
+                          <div class="studios__img-wrapper swiper-wrapper">
+                            <div class="studios__img-item swiper-slide"> <picture><source srcset="img/slide.webp" type="image/webp"><img src="img/slide.png" alt="" draggable="false"></picture></div>
+                            <div class="studios__img-item swiper-slide"> <picture><source srcset="img/slide.webp" type="image/webp"><img src="img/slide.png" alt="" draggable="false"></picture></div>
+                            <div class="studios__img-item swiper-slide"> <picture><source srcset="img/slide.webp" type="image/webp"><img src="img/slide.png" alt="" draggable="false"></picture></div>
+                          </div>
+                          <div class="studios__img-prev swiper-button-prev"></div>
+                          <div class="studios__img-next swiper-button-next"></div>
+                          <div class="studios__img-pagination swiper-pagination"></div>
+                        </div>
+                        <div class="studios__content"> 
+                          <div>
+                            <p class="studios__slide-title">Студия м. Тульское:</p>
+                            <p class="studios__slide-li">Малая зона 18 м2</p>
+                            <p class="studios__slide-li">Средняя зона 25 м2</p>
+                            <p class="studios__slide-li last">Большая зона 47 м2 </p>
+                          </div>
+                          <div> 
+                            <p class="studios__slide-title">от 2200 руб/час </p>
+                            <p class="studios__slide-location"> <picture><source srcset="img/location.webp" type="image/webp"><img src="img/location.png" alt="" draggable="false"></picture>ул. Городская 8, Москва </p><a class="btn-primary_nobg studios__slide-btn" href="#!">Подробнее </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="studios__prev swiper-button-prev"></div>
+                    <div class="studios__next swiper-button-next"></div>
+                  </div>
+                </div>
+              </div>
             </main>
             <footer class="footer">
               <div class="footer__offer"><picture><source srcset="img/footer-1.webp" type="image/webp"><img class="footer__offer-img first" src="img/footer-1.png" alt="" draggable="false"></picture>
@@ -68,11 +103,11 @@
                   <p class="footer__p">© 2020-2021 Все права защищены. FACE2FACE</p><a class="footer__privacy" href="#!">Политика конфиденциальности </a>
                 </div>
                 <div class="footer__right"> <a class="footer__tel disable-md" href="tel:+74950212992">+7 (495) 021-29-92</a>
-                  <div class="intro__social disable-lg"> <a class="intro__social-item" href="#!" target="_blank"> <picture><source srcset="img/facebook.webp" type="image/webp"><img src="img/facebook.png" alt="" draggable="false"></picture></a><a class="intro__social-item" href="#!" target="_blank"> <img src="img/wk.png" alt="" draggable="false"></a><a class="intro__social-item" href="#!" target="_blank"> <img src="img/instagram.png" alt="" draggable="false"></a><a class="intro__social-item" href="#!" target="_blank"> <img src="img/youtube.png" alt="" draggable="false"></a></div>
+                  <div class="intro__social disable-lg"> <a class="intro__social-item" href="#!" target="_blank" title="facebook"> <picture><source srcset="img/facebook.webp" type="image/webp"><img src="img/facebook.png" alt="" draggable="false"></picture></a><a class="intro__social-item" href="#!" target="_blank" title="wk"> <img src="img/wk.png" alt="" draggable="false"></a><a class="intro__social-item" href="#!" target="_blank" title="instagram"> <img src="img/instagram.png" alt="" draggable="false"></a><a class="intro__social-item" href="#!" target="_blank" title="youtube"> <img src="img/youtube.png" alt="" draggable="false"></a></div>
                 </div>
               </nav>
             </footer>
     </div>
-    <script src="js/app.min.js?_v=20220213215913"> </script>
+    <script src="js/app.min.js?_v=20220214003204"> </script>
   </body>
 </html>

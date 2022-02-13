@@ -5,7 +5,7 @@
   z-index: 50;
   display: flex;
   align-items: center;
-  @include media(768){
+  @include media(767){
     height: 50px;
     padding: 13px 0;
     background: linear-gradient(282.55deg, rgba(255, 255, 255, 0.7) 18.2%, rgba(255, 255, 255, 0) 87.02%);
@@ -39,7 +39,7 @@
     line-height: 30px;
     color: #101010;
     z-index: 51;
-    @include media(768){
+    @include media(767){
       font-size: 20px;
       line-height: 24px;
       position: absolute;
@@ -76,7 +76,7 @@
         visibility: visible;
       }
     }
-    @include media(768){
+    @include media(767){
       padding-top: 67.5px;
     }
   }
@@ -141,7 +141,7 @@
     @include media(1400){
       padding: 13px 40px;
     }
-    @include media(768){
+    @include media(767){
       padding: 0;
       border: none;
       display: flex;
