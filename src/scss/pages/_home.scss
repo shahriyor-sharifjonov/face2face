@@ -10,28 +10,23 @@
     }
 }
 .intro{
-    min-height: 600px;
-    max-height: 800px;
-    height: calc(100vh - 100px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @include media(992){
-        max-height: 10000px;
-        min-height: calc(100vh - 100px);
-        height: 100%;
-    }
-    @include media(768){
-        min-height: calc(100vh - 50px);
-    }
     &__body{
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 100px 15px;
+        @include media(992){
+            padding-top: 36px;
+            padding-bottom: 52px;
+        }
         @include media(768){
             flex-direction: column;
             row-gap: 30px;
+            padding-top: 30px;
+            padding-bottom: 50px;
         }
     }
     &__content{

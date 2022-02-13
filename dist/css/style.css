@@ -377,9 +377,6 @@
 }
 
 .intro {
-  min-height: 600px;
-  max-height: 800px;
-  height: calc(100vh - 100px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -756,10 +753,9 @@ picture {
     max-width: 720px;
   }
 
-  .intro {
-    max-height: 10000px;
-    min-height: calc(100vh - 100px);
-    height: 100%;
+  .intro__body {
+    padding-top: 36px;
+    padding-bottom: 52px;
   }
 
   .intro__title {
@@ -896,16 +892,14 @@ picture {
   .no-webp .home {
     background: url("../img/home-bg-md.png"), #FEFBFB; }
 
-  .intro {
-    min-height: calc(100vh - 50px);
-  }
-
   .intro__body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     row-gap: 30px;
+    padding-top: 30px;
+    padding-bottom: 50px;
   }
 
   .intro__instagram {
