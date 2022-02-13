@@ -1,1 +1,198 @@
-// Специфичные стили страницы Home
+.home{
+    background: url('../img/home-bg.png'), #FEFBFB;
+    background-size: 100% auto !important;
+    background-repeat: no-repeat !important;
+    @include media(768){
+        background: url('../img/home-bg-md.png'), #FEFBFB;
+    }
+    @include media(568){
+        background: url('../img/home-bg-sm.png'), #FEFBFB;
+    }
+}
+.intro{
+    min-height: 600px;
+    max-height: 800px;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include media(992){
+        max-height: 10000px;
+        min-height: calc(100vh - 100px);
+        height: 100%;
+    }
+    @include media(768){
+        min-height: calc(100vh - 50px);
+    }
+    &__body{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 100px 15px;
+        @include media(768){
+            flex-direction: column;
+            row-gap: 30px;
+        }
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    &__title{
+        font-weight: 800;
+        font-size: 50px;
+        line-height: 61px;
+        color: #101010;        
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 30px;
+        @include media(992){
+            font-weight: 800;
+            font-size: 35px;
+            line-height: 43px;
+            margin-bottom: 20px;
+            img{
+                width: 30px;
+                height: 30px;
+            }
+        }
+        @include media(576){
+            font-weight: 800;
+            font-size: 25px;
+            line-height: 30px;
+            img{
+                margin-left: 10px;
+            }
+        }
+        img{
+            margin-left: 19px;
+        }
+    }
+    &__list{
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        margin-bottom: 40px;
+        @include media(992){
+            margin-bottom: 30px;
+        }
+    }
+    &__li{
+        font-size: 25px;
+        line-height: 130%;
+        color: #101010;
+        padding-left: 35px;
+        position: relative;
+        @include media(992){
+            font-size: 18px;
+            line-height: 130%;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 2px;
+            background: #000000;
+        }
+    }
+    &__btn{
+        padding: 20px 150px;
+        @include media(992){
+            padding: 13px 55px;
+        }
+    }
+    &__img{
+        position: relative;
+        @include media(992){
+            width: 240px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    &__instagram{
+        position: absolute;
+        top: -80px;
+        left: 50%;
+        transform: translateX(-50%);
+        @include media(992){
+            width: 80px !important;
+            transform: translateX(0);
+            left: auto;
+            right: 40px;
+            top: -33px;
+        }
+        @include media(768){
+            top: 113px;
+            right: -30px;
+        }
+    }
+    &__youtube{
+        position: absolute;
+        left: -150px;
+        top: 50%;
+        transform: translateY(-40%);
+        @include media(992){
+            width: 100px !important;
+            left: -110px;
+        }
+        @include media(768){
+            left: 145px;
+            top: 70%;
+        }
+    }
+    &__footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 50px;
+        @include media(768){
+            display: none;
+        }
+    }
+    &__social{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 20px;
+        @include media(992){
+            column-gap: 15px;
+        }
+        &-item{
+            box-shadow: 0px 10px 50px 0px #7389FF1A;
+        }
+    }
+    &__p{
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 130%;
+        text-align: center;
+        color: #101010;
+        opacity: 0.8;
+        @include media(992){
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 130%;
+        }
+    }
+    &__tel{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 130%;
+        text-align: right;
+        color: #101010;   
+        @include media(992){
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 130%;
+        }     
+    }
+}
+

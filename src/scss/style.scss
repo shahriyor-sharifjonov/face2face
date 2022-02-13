@@ -18,6 +18,13 @@
     'base/reset',
     'base/typography';
 
+// components
+@import 
+    'components/buttons',
+    'components/carousel',
+    'components/cover',
+    'components/dropdown';
+
 // layout
 @import 
     'layout/navigation',
@@ -26,14 +33,7 @@
     'layout/footer',
     'layout/sidebar',
     'layout/forms';
-
-// components
-@import 
-    'components/buttons',
-    'components/carousel',
-    'components/cover',
-    'components/dropdown';
-
+    
 // pages
 @import 
     'pages/home';

@@ -14,6 +14,46 @@ html,
 body{
     height: 100%;
 }
+a{
+    text-decoration: none;
+}
+.disable{
+    &-lg{
+        @include media(992){
+            display: none;
+        }
+    }
+    &-md{
+        @include media(768){
+            display: none;
+        }
+    }
+    &-sm{
+        @include media(586){
+            display: none;
+        }
+    }
+}
+.enable{
+    &-lg{
+        display: none;
+        @include media(992){
+            display: flex;
+        }
+    }
+    &-md{
+        display: none;
+        @include media(768){
+            display: flex;
+        }
+    }
+    &-sm{
+        display: none;
+        @include media(586){
+            display: flex;
+        }
+    }
+}
 .wrapper{
     min-height: 100%;
     display: flex;
@@ -26,4 +66,7 @@ button{
     background: none;
     border: none;
     cursor: pointer;
+}
+picture{
+    line-height: 0 !important;
 }

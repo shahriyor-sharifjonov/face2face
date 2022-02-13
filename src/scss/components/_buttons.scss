@@ -1,1 +1,73 @@
-//Кнопки
+.btn{
+    &-primary{
+        background: var(--primary-color);
+        border-radius: 60px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        text-decoration: none;
+        text-align: center;
+        color: #FFFFFF;  
+        transition: 200ms ease;
+        padding: 4px 10px;
+        &:hover{
+            background: darken($color: #8D1AEF, $amount: 10%);
+        }
+        &:active{
+            background: lighten($color: #8D1AEF, $amount: 10%);
+        }
+        &_nobg{
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            text-align: center;
+            color: var(--primary-color);
+            padding: 4px 10px;
+            transition: 200ms ease;
+            border: 1px solid var(--primary-color);
+            border-radius: 30px;
+            transition: 200ms ease;
+            &:hover{
+                color: #FFFFFF;  
+                background: var(--primary-color);
+            }
+            &:active{
+                background: lighten($color: #8D1AEF, $amount: 10%);
+                border-color: lighten($color: #8D1AEF, $amount: 10%);
+            }
+        }
+    }
+    &-secondary{
+        border-radius: 60px;
+        background: url('../img/btn-gradient.webp') 100% 100%;
+        background-size: 100% 100%;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        color: #FFFFFF;
+        padding: 4px 10px;
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        &:hover{
+            &::after{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: #00000010;
+            z-index: -2;
+            transition: 200ms ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}

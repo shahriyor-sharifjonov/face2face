@@ -1,3 +1,34 @@
 mixin header()
-    header.header 
-        p header
+  header.header 
+    nav.header__nav.container 
+      .header__left 
+        button.header__button 
+          span.header__button-line
+        a(href="index.html").header__logo FACE 2 FACE 
+      .header__menu 
+        ul.header__list
+          li.header__li 
+            a(href="#!").header__link Наши студии 
+          li.header__li  
+            a(href="#!").header__link Услуги и цены 
+          li.header__li 
+            a(href="#!").header__link Наши клиенты 
+          li.header__li 
+            a(href="#!").header__link Ответы на вопросы 
+          li.header__li 
+            a(href="#!").header__link Контакты 
+          li.header__xxl 
+            .intro__social 
+              a(href="#!" target="_blank").intro__social-item 
+                img(src="@img/facebook.png", alt="" draggable="false")
+              a(href="#!" target="_blank").intro__social-item 
+                img(src="@img/wk.png", alt="" draggable="false")
+              a(href="#!" target="_blank").intro__social-item 
+                img(src="@img/instagram.png", alt="" draggable="false")
+              a(href="#!" target="_blank").intro__social-item 
+                img(src="@img/youtube.png", alt="" draggable="false")
+            a(href="tel:+74950212992").intro__tel +7 (495) 021-29-92
+            p.intro__p Работаем ежедневно с 9:00 до 21:00 
+      a(href="#!").btn-primary_nobg.header__btn.disable-md Забронировать 
+      a(href="#!").btn-primary_nobg.header__btn.enable-md 
+        img(src="@img/phone.png", alt="" draggable="false")

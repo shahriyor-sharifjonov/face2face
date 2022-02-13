@@ -1,3 +1,30 @@
 mixin main()
-    main.main 
-        p main 
+  main.main 
+    .intro 
+      .intro__body.container 
+        .intro__content 
+          h1.intro__title Студии записи
+            img(src="@img/next.png", alt="" draggable="false")
+          ul.intro__list 
+            li.intro__li Аудио-видео подкастов
+            li.intro__li Youtube
+            li.intro__li Вебинаров
+            li.intro__li Online мероприятий
+            li.intro__li Мастер классов
+          a(href="#!").btn-secondary.intro__btn Выбрать зал 
+        .intro__img 
+          img(src="@img/intro-youtube.png", alt="" draggable="false").intro__youtube
+          img(src="@img/intro-instagram.png", alt="" draggable="false").intro__instagram
+          img(src="@img/intro-img.png", alt="" draggable="false")
+      .intro__footer.container 
+        .intro__social 
+          a(href="#!" target="_blank").intro__social-item 
+            img(src="@img/facebook.png", alt="" draggable="false")
+          a(href="#!" target="_blank").intro__social-item 
+            img(src="@img/wk.png", alt="" draggable="false")
+          a(href="#!" target="_blank").intro__social-item 
+            img(src="@img/instagram.png", alt="" draggable="false")
+          a(href="#!" target="_blank").intro__social-item 
+            img(src="@img/youtube.png", alt="" draggable="false")
+        p.intro__p Работаем ежедневно с 9:00 до 21:00 
+        a(href="tel:+74950212992").intro__tel +7 (495) 021-29-92
