@@ -1,3 +1,42 @@
 mixin footer()
-    footer.footer   
-        p footer
+  footer.footer
+    .footer__offer
+      img(src="@img/footer-1.png", alt="" draggable="false").footer__offer-img.first
+      p.footer__offer-p <span>Вы продюсер?</span> Получите выгодное предложение с кэшбеком!
+      a(href="#!").btn-secondary.footer__offer-btn Запросить КП 
+      img(src="@img/footer-2.png", alt="" draggable="false").footer__offer-img.last
+    nav.footer__nav.container 
+      .intro__social.enable-lg.disable-md 
+        a(href="#!" target="_blank").intro__social-item 
+          img(src="@img/facebook.png", alt="" draggable="false")
+        a(href="#!" target="_blank").intro__social-item 
+          img(src="@img/wk.png", alt="" draggable="false")
+        a(href="#!" target="_blank").intro__social-item 
+          img(src="@img/instagram.png", alt="" draggable="false")
+        a(href="#!" target="_blank").intro__social-item 
+          img(src="@img/youtube.png", alt="" draggable="false")
+      .footer__left 
+        ul.footer__list 
+          li.footer__li 
+            a(href="#!").footer__link Наши студии
+          li.footer__li 
+            a(href="#!").footer__link Услуги и цены
+          li.footer__li 
+            a(href="#!").footer__link Наши клиенты
+          li.footer__li 
+            a(href="#!").footer__link Контакты
+          li.footer__li 
+            a(href="#!").footer__link Ответы на вопросы
+        p.footer__p © 2020-2021 Все права защищены. FACE2FACE
+        a(href="#!").footer__privacy Политика конфиденциальности 
+      .footer__right 
+        a(href="tel:+74950212992").footer__tel.disable-md +7 (495) 021-29-92
+        .intro__social.disable-lg 
+          a(href="#!" target="_blank").intro__social-item 
+            img(src="@img/facebook.png", alt="" draggable="false")
+          a(href="#!" target="_blank").intro__social-item 
+            img(src="@img/wk.png", alt="" draggable="false")
+          a(href="#!" target="_blank").intro__social-item 
+            img(src="@img/instagram.png", alt="" draggable="false")
+          a(href="#!" target="_blank").intro__social-item 
+            img(src="@img/youtube.png", alt="" draggable="false")
