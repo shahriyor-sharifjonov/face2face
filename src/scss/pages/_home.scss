@@ -545,39 +545,5 @@
         }
     }
 }
-.advantages{
-    &__header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 50px;
-    }
-    &__title{
-        font-weight: 800;
-        font-size: 40px;
-        line-height: 49px;
-        color: #101010;        
-    }
-    &__desc{
-        font-weight: 300;
-        font-size: 25px;
-        line-height: 130%;
-        color: #101010;
-        max-width: 728px;
-        position: relative;
-        @include media(1200){
-            max-width: 546px;
-        }
-        &::before{
-            content: '';
-            position: absolute;
-            left: -20px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 2px;
-            height: 80px;
-            background: #000;
-        }
-    }
-}
+
 

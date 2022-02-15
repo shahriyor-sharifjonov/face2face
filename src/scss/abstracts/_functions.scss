@@ -1,1 +1,60 @@
 // Sass функции
+.enable{
+    &-xl{
+        display: none;
+        @include media(1200){
+            display: block;
+        }
+    }
+    &-lg{ 
+        display: none;
+        @include media(992){
+            display: block;
+        }
+    }
+    &-md{
+        display: none;
+        @include media(768){
+            display: block;
+        }
+    }
+    &-md2{
+        display: none;
+        @include media(767){
+            display: block;
+        }
+    }
+    &-sm{
+        display: none;
+        @include media(576){
+            display: block;
+        }
+    }
+}
+.disable{
+    &-xl{
+        @include media(1200){
+            display: none;
+        }
+    }
+    &-lg{ 
+        @include media(992){
+            display: none;
+        }
+    }
+    &-md{
+        @include media(768){
+            display: none;
+        }
+    }
+    &-md2{
+        @include media(767){
+            display: none;
+        }
+    }
+    &-sm{
+        @include media(576){
+            display: none;
+        }
+    }
+}

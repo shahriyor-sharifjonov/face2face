@@ -5,9 +5,9 @@
 
 // abstracts
 @import 
+    'abstracts/mixins',
     'abstracts/variables',
     'abstracts/functions',
-    'abstracts/mixins',
     'abstracts/placeholders';
 
 // vendors
@@ -26,13 +26,7 @@
     'components/dropdown';
 
 // layout
-@import 
-    'layout/navigation',
-    'layout/grid',
-    'layout/header',
-    'layout/footer',
-    'layout/sidebar',
-    'layout/forms';
+@import 'layout/all';
     
 // pages
 @import 
