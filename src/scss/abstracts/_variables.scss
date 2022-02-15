@@ -3,6 +3,15 @@
     --secondary-color: #F59139;
 }
 
+.color{
+    &-secondary{
+        color: var(--primary-color);
+    }
+    &-primary{
+        color: var(--secondary-color);
+    }
+}
+
 $z-indexes: (
     'header': 50,
     'menu': 100,

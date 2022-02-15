@@ -219,17 +219,34 @@
     &__slider{
         padding-top: 30px;
         padding-bottom: 30px;
+        margin-bottom: 100px;
         margin-left: -75px;
         padding-left: 75px;
         margin-right: -75px;
         padding-right: 75px;
+        @include media(1460){
+            margin-left: -50px;
+            padding-left: 50px;
+            margin-right: -50px;
+            padding-right: 50px;
+        }
+        @include media(1400){
+            margin-left: -75px;
+            padding-left: 75px;
+            margin-right: -75px;
+            padding-right: 75px;
+        }
         @include media(1270){
             margin-left: -25px;
             padding-left: 25px;
             margin-right: -25px;
             padding-right: 25px;
         }
+        @include media(992){
+            margin-bottom: 70px;
+        }
         @include media(576){
+            margin-bottom: 20px;
             margin-left: -15px;
             margin-right: -15px;
             padding-left: 15px;
@@ -525,6 +542,41 @@
                     }
                 }
             }
+        }
+    }
+}
+.advantages{
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    &__title{
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 49px;
+        color: #101010;        
+    }
+    &__desc{
+        font-weight: 300;
+        font-size: 25px;
+        line-height: 130%;
+        color: #101010;
+        max-width: 728px;
+        position: relative;
+        @include media(1200){
+            max-width: 546px;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 2px;
+            height: 80px;
+            background: #000;
         }
     }
 }

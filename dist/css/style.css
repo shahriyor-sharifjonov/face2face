@@ -147,6 +147,14 @@
   --secondary-color: #F59139;
 }
 
+.color-secondary {
+  color: var(--primary-color);
+}
+
+.color-primary {
+  color: var(--secondary-color);
+}
+
 .container {
   width: 100%;
   margin-right: auto;
@@ -732,6 +740,7 @@
 .studios__slider {
   padding-top: 30px;
   padding-bottom: 30px;
+  margin-bottom: 100px;
   margin-left: -75px;
   padding-left: 75px;
   margin-right: -75px;
@@ -1000,6 +1009,48 @@
   visibility: visible;
 }
 
+.advantages__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+}
+
+.advantages__title {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 49px;
+  color: #101010;
+}
+
+.advantages__desc {
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 130%;
+  color: #101010;
+  max-width: 728px;
+  position: relative;
+}
+
+.advantages__desc::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 2px;
+  height: 80px;
+  background: #000;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1116,6 +1167,15 @@ picture {
   }
 }
 
+@media (max-width: 1460px) {
+  .studios__slider {
+    margin-left: -50px;
+    padding-left: 50px;
+    margin-right: -50px;
+    padding-right: 50px;
+  }
+}
+
 @media (max-width: 1400px) {
   .header__menu {
     position: fixed;
@@ -1215,6 +1275,13 @@ picture {
   .header__button {
     display: block;
   }
+
+  .studios__slider {
+    margin-left: -75px;
+    padding-left: 75px;
+    margin-right: -75px;
+    padding-right: 75px;
+  }
 }
 
 @media (max-width: 1270px) {
@@ -1247,6 +1314,10 @@ picture {
     -webkit-column-gap: 20px;
        -moz-column-gap: 20px;
             column-gap: 20px;
+  }
+
+  .advantages__desc {
+    max-width: 546px;
   }
 }
 
@@ -1410,6 +1481,10 @@ picture {
     font-weight: 800;
     font-size: 35px;
     line-height: 43px;
+  }
+
+  .studios__slider {
+    margin-bottom: 70px;
   }
 
   .studios__slide {
@@ -1679,6 +1754,7 @@ picture {
   }
 
   .studios__slider {
+    margin-bottom: 20px;
     margin-left: -15px;
     margin-right: -15px;
     padding-left: 15px;

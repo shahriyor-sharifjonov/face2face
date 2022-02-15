@@ -1,0 +1,55 @@
+mixin studios()
+  .studios 
+    .studios__body.container
+      h2.studios__title <span>Две комфортабельные</span> студии для записи в Москве
+      .studios__slider.swiper 
+        .studios__wrapper.swiper-wrapper
+          .studios__slide.swiper-slide  
+            .studios__img.swiper 
+              .studios__img-wrapper.swiper-wrapper
+                .studios__img-item.swiper-slide 
+                  img(src="@img/slide.png" alt="" draggable="false")
+                .studios__img-item.swiper-slide 
+                  img(src="@img/slide.png" alt="" draggable="false")
+                .studios__img-item.swiper-slide 
+                  img(src="@img/slide.png" alt="" draggable="false")
+              .studios__img-prev.swiper-button-prev
+              .studios__img-next.swiper-button-next
+              .studios__img-pagination.swiper-pagination
+            .studios__content 
+              div
+                p.studios__slide-title Студия м. Тульское:
+                p.studios__slide-li Малая зона 18 м2
+                p.studios__slide-li Средняя зона 25 м2
+                p.studios__slide-li.last Большая зона 47 м2 
+              div 
+                p.studios__slide-title от 2200 руб/час 
+                p.studios__slide-location 
+                  img(src="@img/location.png" alt="" draggable="false")
+                  | ул. Городская 8, Москва 
+                a(href="#!").btn-primary_nobg.studios__slide-btn Подробнее 
+          .studios__slide.swiper-slide  
+            .studios__img.swiper 
+              .studios__img-wrapper.swiper-wrapper
+                .studios__img-item.swiper-slide 
+                  img(src="@img/slide.png" alt="" draggable="false")
+                .studios__img-item.swiper-slide 
+                  img(src="@img/slide.png" alt="" draggable="false")
+                .studios__img-item.swiper-slide 
+                  img(src="@img/slide.png" alt="" draggable="false")
+              .studios__img-prev.swiper-button-prev
+              .studios__img-next.swiper-button-next
+              .studios__img-pagination.swiper-pagination
+            .studios__content 
+              div
+                p.studios__slide-title Студия м. Отрадное 50м2 :
+                p.studios__slide-li Малая зона 15 м2 
+                p.studios__slide-li.last Большая зона  28 м2 
+              div 
+                p.studios__slide-title от 1900 руб/час 
+                p.studios__slide-location 
+                  img(src="@img/location.png" alt="" draggable="false")
+                  | Алтуфьевское ш., 37, стр. 1, Москва
+                a(href="#!").btn-primary_nobg.studios__slide-btn Подробнее 
+        .studios__prev.swiper-button-prev
+        .studios__next.swiper-button-next
