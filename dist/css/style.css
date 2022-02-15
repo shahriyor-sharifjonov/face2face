@@ -1054,6 +1054,9 @@
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
 }
 
 .offer__title {
@@ -1104,6 +1107,7 @@
 
 .offer__img-people {
   position: absolute;
+  max-width: 545px;
   width: 100%;
   height: 100%;
   right: -1px;
@@ -1513,6 +1517,11 @@ picture {
   .advantages__item {
     min-height: 290px;
   }
+
+  .offer__title {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 @media (max-width: 1270px) {
@@ -1613,6 +1622,67 @@ picture {
 
   .advantages__item-img img {
     max-height: 135px;
+  }
+
+  .offer__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    row-gap: 50px;
+  }
+
+  .offer__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .offer__title {
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 580px;
+  }
+
+  .offer__btn {
+    padding: 15px 36px;
+  }
+
+  .offer__img {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .offer__img-calendar {
+    top: auto;
+    bottom: 150px;
+    left: 178px;
+    right: auto;
+  }
+
+  .offer__img-check {
+    left: 293px;
+    bottom: 319px;
+    top: auto;
+  }
+
+  .offer__img-clock {
+    left: 50px;
+    bottom: 246px;
+    top: auto;
   }
 
   .footer__offer-p {
@@ -2050,6 +2120,59 @@ picture {
     bottom: 7px;
     width: 53px;
     height: 80px;
+  }
+
+  .offer__body {
+    row-gap: 20px;
+  }
+
+  .offer__title {
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 304px;
+    margin-bottom: 20px;
+  }
+
+  .offer__btn {
+    width: 100%;
+  }
+
+  .offer__img {
+    height: 247px;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+
+  .offer__img-calendar {
+    top: 7px;
+    bototm: auto;
+    right: 0;
+    left: auto;
+    width: 68.57px;
+  }
+
+  .offer__img-check {
+    left: 86px;
+    bottom: 191px;
+    width: 40.49px;
+  }
+
+  .offer__img-clock {
+    left: 22px;
+    bottom: 107px;
+    width: 63.35px;
+  }
+
+  .offer__img-people {
+    max-width: 320px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: bottom right;
+       object-position: bottom right;
+  }
+
+  .offer__img-platform {
+    height: 135px;
   }
 
   .footer__offer {
