@@ -3,6 +3,23 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+        column-gap: 20px;
+        @include media(1200){
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            row-gap: 50px;
+        }
+        @include media(767){
+            row-gap: 20px;
+        }
+    }
+    &__content{
+        @include media(1200){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
     &__title{
         font-weight: 800;
@@ -10,21 +27,64 @@
         line-height: 43px;
         margin-bottom: 96px;
         color: #101010;
+        @include media(1400){
+            font-size: 30px;
+            line-height: 37px;
+        }
+        @include media(1200){
+            text-align: center;
+            margin-bottom: 30px;
+            max-width: 580px;
+        }
+        @include media(767){
+            font-size: 20px;
+            line-height: 24px;
+            max-width: 304px;
+            margin-bottom: 20px;
+        }
     }
     &__btn{
         padding: 19px 186px;
+        @include media(1200){
+            padding: 15px 36px;
+        }
+        @include media(767){
+            width: 100%;
+        }
     }
     &__img{
         width: 545px;
         min-width: 545px;
         height: 407px;
         position: relative;
+        @include media(1200){
+            width: 100%;
+            min-width: 100%;
+        }
+        @include media(767){
+            height: 247px;
+            border-radius: 30px;
+            overflow: hidden;
+        }
         &-calendar{
             filter: drop-shadow(0px 15px 20px rgba(159, 140, 255, 0.15));
             position: absolute;
             z-index: 1;
             top: 5px;
             right: -16px;
+            @include media(1200){
+                top: auto;
+                bottom: 150px;
+                left: 178px;
+                right: auto;
+            }
+            @include media(767){
+                top: 7px;
+                bototm: auto;
+                right: 0;
+                left: auto;
+                width: 68.57px;
+            }
         }
         &-check{
             filter: drop-shadow(0px 15px 20px rgba(159, 140, 255, 0.15));
@@ -32,6 +92,16 @@
             z-index: 1;
             top: 18px;
             left: 147px;
+            @include media(1200){
+                left: 293px;
+                bottom: 319px;
+                top: auto;
+            }
+            @include media(767){
+                left: 86px;
+                bottom: 191px;
+                width: 40.49px;
+            }
         }
         &-clock{
             filter: drop-shadow(0px 15px 20px rgba(159, 140, 255, 0.15));
@@ -39,15 +109,31 @@
             z-index: 1;
             top: 122px;
             left: 38px;
+            @include media(1200){
+                left: 50px;
+                bottom: 246px;
+                top: auto;
+            }
+            @include media(767){
+                left: 22px;
+                bottom: 107px;
+                width: 63.35px;
+            }
         }
         &-people{
             position: absolute;
+            max-width: 545px;
             width: 100%;
             height: 100%;
             right: -1px;
             bottom: -1px;
             line-height: 0;
             z-index: 0;
+            @include media(767){
+                max-width: 320px;
+                object-fit: contain;
+                object-position: bottom right;
+            }
         }
         &-platform{
             position: absolute;
@@ -58,6 +144,9 @@
             border-radius: 30px;
             background: url('../img/offer-platform.png') center / cover no-repeat;
             z-index: -1;
+            @include media(767){
+                height: 135px;
+            }
         }
     }
 }
