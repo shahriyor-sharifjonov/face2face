@@ -1133,6 +1133,103 @@
   color: #101010;
 }
 
+.technicals__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 40px;
+}
+
+.technicals__item {
+  position: relative;
+  width: 420px;
+  height: 410px;
+}
+
+.technicals__item-title {
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: capitalize;
+  color: #101010;
+  margin-bottom: 10px;
+}
+
+.technicals__img {
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+}
+
+.technicals__info {
+  width: 310px;
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 20px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 10px 50px rgba(101, 126, 255, 0.1);
+          box-shadow: 0px 10px 50px rgba(101, 126, 255, 0.1);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 110px;
+}
+
+.technicals__list {
+  padding-left: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 7px;
+}
+
+.technicals__list-li {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 130%;
+  color: #101010;
+  position: relative;
+  max-width: 253px;
+  width: 100%;
+}
+
+.technicals__list-li::before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  left: -13px;
+  top: 35%;
+  background: #8D1AEF;
+  border-radius: 50%;
+}
+
 .footer__offer {
   background: #8D1AEF;
   border-radius: 20px 20px 0px 0px;
@@ -1305,6 +1402,10 @@ body {
 
 a {
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
 
 .wrapper {
