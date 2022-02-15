@@ -27,6 +27,32 @@ new Swiper(".studios__img", {
   }
 });
 
+new Swiper(".clients__slider", {
+  modules: [Navigation, Pagination],
+  slidesPerView: 2,
+  loop: true,
+  spaceBetween: 20,
+  breakpoints: {
+    768: {
+      slidesPerView: 4,
+    },
+    1200: {
+      slidesPerView: 5,
+    },
+    1400: {
+      slidesPerView: 6,
+    }
+  },
+  navigation: {
+    nextEl: ".clients__next",
+    prevEl: ".clients__prev",
+  },
+  pagination: {
+    el: ".studios__img-pagination",
+    clickable: true,
+  }
+});
+
 // Header Menu
 const headerButton = document.querySelector(".header__button");
 const headerMenu = document.querySelector(".header__menu");

@@ -107,7 +107,7 @@
         display: flex;
         justify-content: space-between;
         padding: 50px 15px 80px 15px;
-        @include media(767){
+        @include media(768){
             justify-content: center;
             padding: 30px 15px 50px 15px;
         }
