@@ -1,0 +1,38 @@
+.podcasts{
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-buttons{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            column-gap: 20px;
+        }
+        &-btn{
+            width: 310px;
+            height: 60px;
+            border-width: 2px;
+            &.active{
+                border: 2px solid #8B8B8B;
+                color: #8B8B8B;
+                &:hover{
+                    background: transparent;
+                }
+            }
+        }
+    }
+    &__title{
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 49px;
+        color: #101010;
+        margin-bottom: 15px;
+    }
+    &__p{
+        font-weight: 300;
+        font-size: 25px;
+        line-height: 130%;
+        color: #101010;
+    }
+}

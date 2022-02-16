@@ -1356,6 +1356,176 @@
 .no-webp .clients .swiper-button-prev::after {
   background: url("../img/prev-slide.png") 100% 100%; }
 
+.podcasts__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.podcasts__header-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.podcasts__header-btn {
+  width: 310px;
+  height: 60px;
+  border-width: 2px;
+}
+
+.podcasts__header-btn.active {
+  border: 2px solid #8B8B8B;
+  color: #8B8B8B;
+}
+
+.podcasts__header-btn.active:hover {
+  background: transparent;
+}
+
+.podcasts__title {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 49px;
+  color: #101010;
+  margin-bottom: 15px;
+}
+
+.podcasts__p {
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 130%;
+  color: #101010;
+}
+
+.questions__title {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 49px;
+  text-align: center;
+  color: #101010;
+  margin-bottom: 50px;
+}
+
+.questions__accordion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 5px;
+}
+
+.questions__item-btn {
+  padding: 10px 10px 10px 50px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 10px 50px rgba(101, 126, 255, 0.1);
+          box-shadow: 0px 10px 50px rgba(101, 126, 255, 0.1);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  width: 100%;
+  min-height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 20px;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  color: #101010;
+  margin-bottom: 5px;
+  text-align: left;
+  -webkit-column-gap: 80px;
+     -moz-column-gap: 80px;
+          column-gap: 80px;
+  border: 1px solid #FDF4F7;
+  border-radius: 15px;
+}
+
+.questions__item-btn span.icon {
+  background: #8D1AEF;
+  -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  min-width: 50px;
+  width: 50px;
+  height: 50px;
+  -webkit-transition: 200ms ease;
+  -o-transition: 200ms ease;
+  transition: 200ms ease;
+  position: relative;
+}
+
+.questions__item-btn span.icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 16.2px;
+  height: 1px;
+  background: #fff;
+}
+
+.questions__item-btn span.icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 1px;
+  height: 16.2px;
+  background: #fff;
+}
+
+.questions__item-btn.active span.icon {
+  background: #F59139;
+}
+
+.questions__item-btn.active span.icon::after {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.questions__item-content {
+  display: none;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 10px 50px rgba(101, 126, 255, 0.1);
+          box-shadow: 0px 10px 50px rgba(101, 126, 255, 0.1);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  padding: 20px 50px;
+  border-radius: 20px;
+  border: 1px solid #FDF4F7;
+}
+
 .footer__offer {
   background: #8D1AEF;
   border-radius: 20px 20px 0px 0px;
@@ -2094,6 +2264,35 @@ picture {
     top: 80px;
   }
 
+  .questions__title {
+    font-size: 35px;
+    line-height: 43px;
+    margin-bottom: 30px;
+  }
+
+  .questions__accordion {
+    row-gap: 15px;
+  }
+
+  .questions__item-btn {
+    font-size: 18px;
+    line-height: 22px;
+    -webkit-column-gap: 18px;
+       -moz-column-gap: 18px;
+            column-gap: 18px;
+    padding: 15px 15px 15px 30px;
+  }
+
+  .questions__item-btn span.icon {
+    min-width: 40px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .questions__item-content {
+    padding: 15px 15px 15px 30px;
+  }
+
   .footer__offer-p {
     font-weight: 800;
     font-size: 30px;
@@ -2196,6 +2395,12 @@ picture {
 
   .header__btn:hover {
     background: transparent;
+  }
+
+  .questions__item-content p {
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 130%;
   }
 
   .footer__nav {
@@ -2490,6 +2695,62 @@ picture {
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
+  }
+
+  .questions__title {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #101010;
+  }
+
+  .questions__accordion {
+    row-gap: 10px;
+  }
+
+  .questions__item {
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  .questions__item-btn {
+    padding: 6px 15px 6px 15px;
+    margin-bottom: 0;
+    border-bottom: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border-radius: 0;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 16px;
+    min-height: 60px;
+  }
+
+  .questions__item-btn span.icon {
+    min-width: 30px;
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+  }
+
+  .questions__item-btn span.icon::before {
+    width: 9.72px;
+  }
+
+  .questions__item-btn span.icon::after {
+    height: 9.72px;
+  }
+
+  .questions__item-content {
+    padding: 0 15px 10px 15px;
+    border-radius: 0 0 15px 15px;
+    border-top: none;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
 
   .footer__offer {
