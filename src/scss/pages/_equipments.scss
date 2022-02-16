@@ -1,5 +1,11 @@
 .equipments{
     &-page{
         padding: 50px 0 130px 0px;
+        @include media(992){
+            padding-bottom: 61px;
+        }
+        @include media(768){
+            padding-bottom: 50px;
+        }
     }
 }
