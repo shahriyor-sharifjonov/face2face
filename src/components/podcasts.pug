@@ -1,0 +1,17 @@
+mixin podcasts()
+  .podcasts 
+    .podcasts__body.container 
+      .podcasts__header 
+        .podcasts__header-info 
+          h2.podcasts__title Наши подкасты
+          p.podcasts__p Послушайте прямо здесь и сейчас
+        .podcasts__header-buttons 
+          button(type="button" target="podcasts__video").btn-primary_nobg.podcasts__header-btn.active Видеоподкаст
+          button(type="button" target="podcasts__audio").btn-primary_nobg.podcasts__header-btn Аудиоподкаст
+      .podcasts__slider.podcasts__video.active.swiper
+        .swiper-wrapper   
+          .swiper-slide.podcasts__video-item
+            img(src="@img/video.png", alt="" draggable="false")
+      .podcasts__slider.podcasts__audio.active.swiper   
+        .swiper-wrapper   
+          .swiper-slide
