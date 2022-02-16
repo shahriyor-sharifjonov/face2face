@@ -63,6 +63,11 @@ const menuToggle = () => {
     headerButton.classList.toggle("open"); 
     header.classList.toggle("menu-open");
     headerMenu.classList.toggle("open");
+    if (menuOpened) {
+      document.body.style="overflow-y: hidden";
+    }else{
+      document.body.style="overflow-y: auto";
+    }
 };
 
 
