@@ -365,12 +365,15 @@ input[type=checkbox] {
   min-width: 14px;
   width: 14px;
   height: 14px;
-  border: 2px solid var(--primary-color);
+  border: 2px solid #8B8B8B;
   border-radius: 2px;
   position: relative;
+  -webkit-transition: 200ms ease;
+  -o-transition: 200ms ease;
+  transition: 200ms ease;
 }
 
-input[type=checkbox]:checked::after {
+input[type=checkbox]::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -381,6 +384,20 @@ input[type=checkbox]:checked::after {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background: url("../img/checkbox-checked.svg") 100% 100%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 200ms ease;
+  -o-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+input[type=checkbox]:checked {
+  border: 2px solid var(--primary-color);
+}
+
+input[type=checkbox]:checked::after {
+  opacity: 1;
+  visibility: visible;
 }
 
 .header {
