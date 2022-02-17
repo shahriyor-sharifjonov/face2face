@@ -1936,20 +1936,16 @@ input[type=checkbox]:checked::after {
   background: url("../img/home-bg.png"), #FEFBFB; }
 
 .home {
-  background-size: 100% auto !important;
+  background-size: 100% 100% !important;
   background-repeat: no-repeat !important;
 }
 
-.main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 130px 0;
-  row-gap: 130px;
+.no-webp .equipments {
+  background: url("../img/equipments-bg.png"), #FEFBFB; }
+
+.equipments {
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
 }
 
 .equipments-page {
@@ -1977,7 +1973,7 @@ input[type=checkbox]:checked::after {
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
 }
 
 a {
@@ -1986,6 +1982,18 @@ a {
 
 ul {
   list-style: none;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 130px 0;
+  row-gap: 130px;
 }
 
 .wrapper {
@@ -2798,6 +2806,9 @@ picture {
   .no-webp .home {
     background: url("../img/home-bg-md.png"), #FEFBFB; }
 
+  .no-webp .equipments {
+    background: url("../img/equipments-bg-md.png"), #FEFBFB; }
+
   .main {
     padding: 50px 0 100px 0;
     row-gap: 100px;
@@ -3548,6 +3559,9 @@ picture {
 @media (max-width: 568px) {
   .no-webp .home {
     background: url("../img/home-bg-sm.png"), #FEFBFB; }
+
+  .no-webp .equipments {
+    background: url("../img/equipments-bg-sm.png"), #FEFBFB; }
 }
 
 @media (max-width: 380px) {
@@ -3604,9 +3618,16 @@ picture {
 
 .webp .home { background: url(../img/home-bg.webp), #FEFBFB; }
 
+.webp .equipments { background: url(../img/equipments-bg.webp), #FEFBFB; }
+
 @media (max-width: 992px) {
 
   .webp .home { background: url(../img/home-bg-md.webp), #FEFBFB; }
+}
+
+@media (max-width: 992px) {
+
+  .webp .equipments { background: url(../img/equipments-bg-md.webp), #FEFBFB; }
 }
 
 @media (max-width: 767px) {
@@ -3642,4 +3663,9 @@ picture {
 @media (max-width: 568px) {
 
   .webp .home { background: url(../img/home-bg-sm.webp), #FEFBFB; }
+}
+
+@media (max-width: 568px) {
+
+  .webp .equipments { background: url(../img/equipments-bg-sm.webp), #FEFBFB; }
 }

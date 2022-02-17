@@ -12,13 +12,27 @@
 }
 html,
 body{
-    height: 100%;
+    min-height: 100%;
 }
 a{
     text-decoration: none;
 }
 ul{
     list-style: none;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    padding: 130px 0;
+    row-gap: 130px;
+    @include media(992){
+        padding: 50px 0 100px 0;
+        row-gap: 100px;
+    }
+    @include media(767){
+        padding: 30px 0 50px 0;
+        row-gap: 50px;
+    }
 }
 .wrapper{
     min-height: 100%;
