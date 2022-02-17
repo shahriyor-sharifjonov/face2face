@@ -24,6 +24,12 @@
         display: flex;
         flex-direction: column;
         row-gap: 5px;
+        @media (min-width: 992px){
+            max-width: 860px !important;
+            width: 100% !important;
+            margin-left: auto;
+            margin-right: auto;
+        }
         @include media(992){
             row-gap: 15px;
         }

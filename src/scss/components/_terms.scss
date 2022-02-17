@@ -1,0 +1,11 @@
+.terms{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 14px;
+    &__label{
+        font-size: 15px;
+        line-height: 130%;
+        color: #101010;
+    }
+}
