@@ -10,6 +10,9 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 50px;
+        &::after{
+            display: none !important;
+        }
         @include media(1200){
             display: none;
             width: 33.3333%;
@@ -110,28 +113,35 @@
             flex-direction: row;
             overflow: visible;
         }
-        &.active{
-            &::before{
-                content: '';
-                position: absolute;
-                inset: 0px;
-                background: linear-gradient(180deg, #8D1AEF 0%, rgba(74, 29, 255, 0) 82.81%);
-                z-index: 1;
-                border-radius: 15px;
-                @include media(767){
-                    display: none;
-                }
+        &::before{
+            content: '';
+            position: absolute;
+            inset: 0px;
+            background: linear-gradient(180deg, #8D1AEF 0%, rgba(74, 29, 255, 0) 82.81%);
+            z-index: 1;
+            border-radius: 15px;
+            opacity: 0;
+            visibility: hidden;
+            @include media(767){
+                background: linear-gradient(90deg, #8D1AEF 0%, rgba(74, 29, 255, 0) 82.81%);
+                // display: none;
             }
-            &::after{
-                content: '';
-                position: absolute;
-                inset: 1px;
-                background: #fff;
-                z-index: 2;
-                border-radius: 15px;
-                @include media(767){
-                    display: none;
-                }
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            inset: 1px;
+            z-index: 2;
+            border-radius: 15px;
+            background: #fff;
+            @include media(767){
+                // display: none;
+            }
+        }
+        &:hover{
+            &::before{
+                opacity: 1;
+                visibility: visible;
             }
             .advantages__item{
                 &-img{
@@ -140,6 +150,9 @@
                     @include media(767){
                         background: linear-gradient(96.98deg, #F59139 0%, #FFFCBA 100%);
                         border-radius: 15px;
+                    }
+                    img{
+                        filter: invert(21%) sepia(224%) saturate(200%) hue-rotate(354deg) brightness(99%) contrast(300%);
                     }
                 }
             }
@@ -217,11 +230,12 @@
                 min-width: 65px;
                 width: 65px;
             }
-            img{
+            div{
                 position: absolute;
+                width: 90px;
+                height: 135px;
                 bottom: 10px;
                 right: 20px;
-                z-index: 3;
                 @include media(1200){
                     max-height: 135px;
                 }
@@ -232,6 +246,12 @@
                     width: 53px;
                     height: 80px;
                 }
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                z-index: 3;
+                filter: invert(29%) sepia(99%) saturate(256%) hue-rotate(218deg) brightness(90%) contrast(300%);
             }
         }
     }
