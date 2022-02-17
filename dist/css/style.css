@@ -3012,8 +3012,6 @@ picture {
   }
 
   .advantages__item:hover .advantages__item-img {
-    background: -o-linear-gradient(353.02deg, #F59139 0%, #FFFCBA 100%);
-    background: linear-gradient(96.98deg, #F59139 0%, #FFFCBA 100%);
     border-radius: 15px;
   }
 
