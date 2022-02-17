@@ -1,10 +1,31 @@
 .header{
-  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
   height: 100px;
-  position: relative;
-  z-index: 50;
+  padding: 20px 0;
   display: flex;
   align-items: center;
+  z-index: 50;
+  transition: 200ms ease;
+  border: 2px solid transparent;
+  &.sticky{
+    background: linear-gradient(282.55deg, rgba(255, 255, 255, 0.7) 18.2%, rgba(255, 255, 255, 0) 87.02%);
+    filter: drop-shadow(0px 10px 20px rgba(115, 137, 255, 0.1));
+    backdrop-filter: blur(50px);
+    width: calc(100% - 10px);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0px 0px 15px 15px;
+    border: 2px solid #FFF2F1;
+    box-shadow: 0px 10px 20px 0px #7389FF1A;
+  }
+  &.menu-open{
+    backdrop-filter: none;
+    filter: none;
+  }
   @include media(767){
     height: 50px;
     padding: 13px 0;
@@ -51,14 +72,14 @@
   &__menu{
     @include media(1400){
       position: fixed;
-      top: 0;
-      left: 0;
+      top: -2px;
+      left: -2px;
       box-sizing: border-box;
       padding-top: 100px;
       padding-bottom: 26px;
       height: max-content;
       transform: translateY(-30%);
-      width: 100%;
+      width: calc(100% + 4px);
       flex-direction: column;
       background: linear-gradient(293.26deg, rgba(255, 255, 255, 0.56) 27.59%, rgba(240, 237, 255, 0.56) 113.35%);
       box-shadow: 0px 10px 20px rgba(115, 137, 255, 0.1);
