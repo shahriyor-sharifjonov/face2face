@@ -1,4 +1,13 @@
 .equipments{
+    background: url('../img/equipments-bg.png'), #FEFBFB;
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
+    @include media(992){
+        background: url('../img/equipments-bg-md.png'), #FEFBFB;
+    }
+    @include media(568){
+        background: url('../img/equipments-bg-sm.png'), #FEFBFB;
+    }
     &-page{
         padding-top: 50px;
     }

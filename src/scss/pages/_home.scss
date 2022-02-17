@@ -1,6 +1,6 @@
 .home{
     background: url('../img/home-bg.png'), #FEFBFB;
-    background-size: 100% auto !important;
+    background-size: 100% 100% !important;
     background-repeat: no-repeat !important;
     @include media(992){
         background: url('../img/home-bg-md.png'), #FEFBFB;
@@ -9,19 +9,3 @@
         background: url('../img/home-bg-sm.png'), #FEFBFB;
     }
 }
-.main{
-    display: flex;
-    flex-direction: column;
-    padding: 130px 0;
-    row-gap: 130px;
-    @include media(992){
-        padding: 50px 0 100px 0;
-        row-gap: 100px;
-    }
-    @include media(767){
-        padding: 30px 0 50px 0;
-        row-gap: 50px;
-    }
-}
-
-
