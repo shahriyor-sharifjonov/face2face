@@ -1,0 +1,171 @@
+.money{
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        @include media(1400){
+            column-gap: 20px;
+        }
+        @include media(992){
+            width: calc(100% + 30px);
+            margin-left: -15px;
+        }
+        @include media(767){
+            flex-direction: column;
+            align-items: center;
+            row-gap: 10px;
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+    &__title{
+        font-weight: 800;
+        font-size: 35px;
+        line-height: 43px;
+        color: #101010;
+        margin-bottom: 30px;
+        text-align: center;
+        @include media(1200){
+            margin-bottom: 50px;
+        }
+        @include media(767){
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 20px;
+        }
+    }
+    .main__title{
+        display: none;
+        text-align: center;
+        width: 100%;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        @include media(1200){
+            font-size: 30px;
+            line-height: 37px;
+        }
+    }
+    &__left{
+        position: relative;
+        height: 373px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        @include media(1200){
+            order: 1;
+            height: max-content;
+        }
+        @include media(767){
+            height: 140px;
+        }
+    }
+    &__img{
+        position: absolute; 
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        @include media(1200){
+            height: 230px;
+            left: 55px;
+            bottom: 0;
+            z-index: 1;
+        }
+        @include media(992){
+            bottom: 5px;
+        }
+        @include media(767){
+            left: 50%;
+            bottom: -17px;
+            height: max-content;
+            width: 185px;
+        }
+    }
+    &__bg{
+        @include media(767){
+            width: 100%;
+            height: 80px;
+            max-width: 320px;
+            width: 100%;
+        }
+    }
+    &__right{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 15px;
+    }
+    &__item{
+        position: relative;
+        width: 530px;
+        min-height: 90px;
+        height: max-content;
+        background: linear-gradient(110.34deg, rgba(255, 255, 255, 0.5) -1.55%, rgba(230, 237, 255, 0.6) 111.86%);
+        box-shadow: 0px 10px 50px rgba(101, 126, 255, 0.1);
+        backdrop-filter: blur(20px);
+        border-radius: 15px;
+        padding: 12px 0 12px 30px;
+        &::before{
+            content: '';
+            position: absolute;
+            left: -2px;
+            top: -2px;
+            bottom: -2px;
+            right: -2px;
+            background: linear-gradient(105.73deg, rgba(255, 255, 255, 0.28) 39.01%, rgba(255, 160, 166, 0.28) 77.46%, rgba(255, 255, 255, 0.28) 110.69%);
+            border-radius: 15px;
+            z-index: -2;
+        }&::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border-radius: 15px;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        @include media(1400){
+            max-width: 479px;
+            width: 100%;
+            min-height: max-content;
+            padding: 9px 27px 9px 27px;
+        }
+        @include media(767){
+            padding: 10px;
+            min-height: max-content;
+        }
+        &-title{
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 37px;
+            color: #8D1AEF;
+            margin-bottom: 10px;
+            @include media(1200){
+                font-size: 20px;
+                line-height: 24px;
+            }
+            @include media(767){
+                font-size: 15px;
+                line-height: 18px;
+                text-align: center;
+            }
+        }
+        &-p{
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 130%;
+            color: #101010;
+            @include media(1200){
+                font-size: 16px;
+            }
+            @include media(767){
+                font-size: 12px;
+                text-align: center;
+                max-width: 300px;
+                width: 100%;
+            }
+        }
+    }
+}

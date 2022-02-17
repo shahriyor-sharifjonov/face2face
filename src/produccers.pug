@@ -7,7 +7,7 @@ html(lang="en")
         link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.min.css")
         link(rel="stylesheet", href="css/style.min.css")
         title Document
-    body.home 
+    body.equipments     
         .wrapper 
             include components/header 
             +header
@@ -16,6 +16,10 @@ html(lang="en")
                 +partners
                 include components/produccers/rules 
                 +rules
+                include components/produccers/money 
+                +money
+                include components/form
+                +form
             include components/footer 
             +footer
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js") 
