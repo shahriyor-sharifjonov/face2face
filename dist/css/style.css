@@ -1949,7 +1949,7 @@ input[type=checkbox]:checked::after {
 }
 
 .equipments-page {
-  padding-top: 50px;
+  padding: 50px 0 130px 0 !important;
 }
 
 .produccers-page {
@@ -2809,6 +2809,10 @@ picture {
   .no-webp .equipments {
     background: url("../img/equipments-bg-md.png"), #FEFBFB; }
 
+  .equipments-page {
+    padding: 50px 0 100px 0 !important;
+  }
+
   .main {
     padding: 50px 0 100px 0;
     row-gap: 100px;
@@ -3344,6 +3348,10 @@ picture {
   .footer__offer-img.last {
     right: calc(50% - 150px);
     width: 192px;
+  }
+
+  .equipments-page {
+    padding: 30px 0 50px 0 !important;
   }
 
   .main {
