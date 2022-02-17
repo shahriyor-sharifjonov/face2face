@@ -2257,8 +2257,7 @@ input[type=checkbox]:checked::after {
 }
 
 .produccers-page {
-  padding-top: 50px;
-  padding-bottom: 149px;
+  padding: 150px 0 130px 0 !important;
 }
 
 * {
@@ -2817,10 +2816,6 @@ picture {
   .money__item-p {
     font-size: 16px;
   }
-
-  .produccers-page {
-    padding-top: 80px;
-  }
 }
 
 @media (max-width: 1024px) {
@@ -3191,6 +3186,10 @@ picture {
 
   .no-webp .produccers {
     background: url("../img/produccers-bg-md.png"), #FEFBFB; }
+
+  .produccers-page {
+    padding: 150px 0 100px 0 !important;
+  }
 
   .main {
     padding: 150px 0 100px 0;
@@ -3855,6 +3854,10 @@ picture {
     padding: 80px 0 50px 0 !important;
   }
 
+  .produccers-page {
+    padding: 80px 0 50px 0 !important;
+  }
+
   .main {
     padding: 80px 0 50px 0;
     row-gap: 50px;
@@ -4058,10 +4061,6 @@ picture {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-
-  .produccers-page {
-    padding-top: 30px;
   }
 }
 
