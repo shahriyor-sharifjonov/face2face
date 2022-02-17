@@ -1,0 +1,111 @@
+.partners{
+    &__body{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        @include media(1200){
+            flex-direction: column;
+            align-items: center;
+            row-gap: 28px;
+        }
+        @include media(576){
+            row-gap: 26px;
+        }
+    }
+    &__title{
+        font-weight: 800;
+        font-size: 35px;
+        line-height: 43px;
+        color: #101010;
+        margin-bottom: 15px;
+        max-width: 640px;
+        width: 100%;
+        @include media(1400){
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 37px;
+        }
+        @include media(1200){
+            max-width: 507px;
+            width: 100%;
+        }
+        @include media(576){
+            font-size: 18px;
+            line-height: 22px;
+            max-width: 320px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    &__p{
+        font-weight: 300;
+        font-size: 25px;
+        line-height: 130%;
+        color: #101010;
+        margin-bottom: 28px;
+        max-width: 660px;
+        width: 100%;
+        @include media(1400){
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 130%;
+        }
+        @include media(1200){
+            max-width: 435px;
+            width: 100%;
+        }
+        @include media(576){
+            font-size: 15px;
+            line-height: 130%;
+            max-width: 316px;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    }
+    &__btn{
+        width: 530px;
+        height: 60px;
+        @include media(576){
+            max-width: 316px;
+            width: 100%;
+            height: 50px !important;
+        }
+    }
+    &__img{
+        position: absolute;
+        bottom: 0;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        @include media(576){
+            height: 303px;
+            right: auto;
+        
+        }
+        &-bg{
+            @include media(576){
+                min-width: 320px;
+                width: 100%;
+                min-height: 222px;
+            }
+        }
+    }
+    &__right{
+        position: relative;
+        line-height: 0;
+        height: 403px;
+        display: flex;
+        align-items: flex-end;
+        @include media(576){
+            height: 303px;
+        }
+    }
+    &__left{
+        @include media(576){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
