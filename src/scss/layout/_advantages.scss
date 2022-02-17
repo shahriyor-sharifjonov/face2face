@@ -161,6 +161,9 @@
             background: none;
             box-shadow: none;
             border-radius: 0;
+            &::before{
+                display: none !important;
+            }
             @include media(1200){
                 display: flex;
                 justify-content: flex-start;
