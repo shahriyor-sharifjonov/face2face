@@ -183,6 +183,10 @@
   display: none !important;
 }
 
+.fw-500 {
+  font-weight: 500;
+}
+
 .btn-primary {
   background: var(--primary-color);
   border-radius: 60px;
@@ -1869,6 +1873,65 @@ input[type=checkbox]:checked::after {
   color: #101010;
 }
 
+.partners__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.partners__title {
+  font-weight: 800;
+  font-size: 35px;
+  line-height: 43px;
+  color: #101010;
+  margin-bottom: 15px;
+  max-width: 640px;
+  width: 100%;
+}
+
+.partners__p {
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 130%;
+  color: #101010;
+  margin-bottom: 28px;
+  max-width: 660px;
+  width: 100%;
+}
+
+.partners__btn {
+  width: 530px;
+  height: 60px;
+}
+
+.partners__img {
+  position: absolute;
+  bottom: 0;
+  right: auto;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.partners__right {
+  position: relative;
+  line-height: 0;
+  height: 403px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
 .no-webp .home {
   background: url("../img/home-bg.png"), #FEFBFB; }
 
@@ -1890,7 +1953,12 @@ input[type=checkbox]:checked::after {
 }
 
 .equipments-page {
-  padding: 50px 0 130px 0px;
+  padding-top: 50px;
+}
+
+.produccers-page {
+  padding-top: 50px;
+  padding-bottom: 149px;
 }
 
 * {
@@ -2162,6 +2230,18 @@ picture {
     opacity: 0;
     visibility: hidden;
   }
+
+  .partners__title {
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .partners__p {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 130%;
+  }
 }
 
 @media (max-width: 1270px) {
@@ -2340,6 +2420,31 @@ picture {
     -webkit-column-gap: 20px;
        -moz-column-gap: 20px;
             column-gap: 20px;
+  }
+
+  .partners__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    row-gap: 28px;
+  }
+
+  .partners__title {
+    max-width: 507px;
+    width: 100%;
+  }
+
+  .partners__p {
+    max-width: 435px;
+    width: 100%;
+  }
+
+  .produccers-page {
+    padding-top: 80px;
   }
 }
 
@@ -2697,10 +2802,6 @@ picture {
     padding: 50px 0 100px 0;
     row-gap: 100px;
   }
-
-  .equipments-page {
-    padding-bottom: 61px;
-  }
 }
 
 @media (max-width: 992px) and (max-width: 767px) {
@@ -2741,10 +2842,6 @@ picture {
         -ms-flex-pack: center;
             justify-content: center;
     padding: 30px 15px 50px 15px;
-  }
-
-  .equipments-page {
-    padding-bottom: 50px;
   }
 }
 
@@ -3388,6 +3485,65 @@ picture {
 
   .footer__offer-img.last {
     right: calc(50% - 160px);
+  }
+
+  .partners__body {
+    row-gap: 26px;
+  }
+
+  .partners__title {
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 320px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .partners__p {
+    font-size: 15px;
+    line-height: 130%;
+    max-width: 316px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .partners__btn {
+    max-width: 316px;
+    width: 100%;
+    height: 50px !important;
+  }
+
+  .partners__img {
+    height: 303px;
+    right: auto;
+  }
+
+  .partners__img-bg {
+    min-width: 320px;
+    width: 100%;
+    min-height: 222px;
+  }
+
+  .partners__right {
+    height: 303px;
+  }
+
+  .partners__left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .produccers-page {
+    padding-top: 30px;
   }
 }
 

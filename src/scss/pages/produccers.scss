@@ -1,0 +1,12 @@
+.produccers{
+    &-page{
+        padding-top: 50px;
+        padding-bottom: 149px;  
+        @include media(1200){
+            padding-top: 80px;
+        }
+        @include media(576){
+            padding-top: 30px;
+        }
+    }
+}
