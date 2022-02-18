@@ -54,26 +54,26 @@ new Swiper(".clients__slider", {
 });
 
 new Swiper(".podcasts__video", {
-  modules: [Navigation, Pagination],
-  slidesPerView: 1,
+  modules: [Navigation],
   loop: true,
+  watchSlidesProgress: true,
+  watchSlidesVisibility: true,
+  slidesPerView: 1,
   spaceBetween: 20,
-  breakpoints: {
-    767: {
-      slidesPerView: 2,
-    },
-    1200: {
-      slidesPerView: 3,
-    },
-  },
   navigation: {
     nextEl: ".podcasts__video-next",
     prevEl: ".podcasts__video-prev",
   },
-  pagination: {
-    el: ".podcasts__video-pagination",
-    clickable: true,
-  }
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+      watchSlidesVisibility: true,
+    },
+    1200: {
+      slidesPerView: 3,
+      watchSlidesVisibility: true,
+    },
+  },
 });
 
 // Header Menu
