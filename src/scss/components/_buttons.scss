@@ -83,3 +83,27 @@
         }
     }
 }
+.play{
+    position: relative;
+    &::before{
+        content: attr(data-title);
+        position: absolute;
+        display: inline-block;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -30px;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        font-weight: bold;
+        padding: 4px 6px;
+        word-break: keep-all;
+        white-space: pre;
+        transition: 200ms ease;
+        opacity: 0;
+        visibility: hidden;
+    }
+    &:hover::before {
+        opacity: 1;
+        visibility: visible;
+    }
+}
