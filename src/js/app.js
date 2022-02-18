@@ -146,7 +146,7 @@ window.addEventListener('scroll', (e) => {
 
 // video 
 document.querySelectorAll('.video-container').forEach(function(el){
-  const videos = document.querySelectorAll('.video');
+  const videos = document.querySelectorAll('.video-container');
   const video = el.querySelector('.video');
   const videoControls = el.querySelector('.video-controls'); 
   const videoContent = el.querySelector('.podcasts__video-item-content'); 
@@ -169,11 +169,18 @@ document.querySelectorAll('.video-container').forEach(function(el){
   function togglePlay() {
     if (video.paused || video.ended) {
       videos.forEach(function(el){
-        el.pause();
+        const video = el.querySelector('.video');
+        video.pause();
+        el.querySelector('.video-controls').classList.add('hide');
+        el.querySelector('.podcasts__video-item-content').classList.remove('hide');
       })
       video.play();
+      videoControls.classList.remove('hide');
+      videoContent.classList.add('hide');
     } else {
       video.pause();
+      videoControls.classList.add('hide');
+      videoContent.classList.remove('hide');
     }
   }
 
@@ -299,7 +306,7 @@ document.querySelectorAll('.video-container').forEach(function(el){
   videoControls.addEventListener('mouseenter', showControls);
   videoControls.addEventListener('mouseleave', hideControls);
   video.addEventListener('ended', () => {
-    hideControls();
+    hideControls()
   });
 }) 
 
