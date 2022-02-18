@@ -55,3 +55,26 @@ input[type="checkbox"]{
         }
     }
 }
+input[type='range'] {
+    overflow: hidden;
+    width: 100%;
+    -webkit-appearance: none;
+    background: #FAF9FF;
+    border-radius: 5px;
+}
+  
+input[type='range']::-webkit-slider-runnable-track {
+    height: 10px;
+    -webkit-appearance: none;
+    color: #F59139;
+    border: 1px solid #F4E7FF;
+}
+  
+input[type='range']::-webkit-slider-thumb {
+    width: 10px;
+    -webkit-appearance: none;
+    height: 10px;
+    cursor: ew-resize;
+    background: #F59139;
+    box-shadow: -378px 0 0 378px #F59139;
+}

@@ -56,6 +56,7 @@ new Swiper(".clients__slider", {
 new Swiper(".podcasts__video", {
   modules: [Navigation],
   loop: true,
+  allowTouchMove: false,
   watchSlidesProgress: true,
   watchSlidesVisibility: true,
   slidesPerView: 1,
@@ -179,8 +180,6 @@ document.querySelectorAll('.video-container').forEach(function(el){
       videoContent.classList.add('hide');
     } else {
       video.pause();
-      videoControls.classList.add('hide');
-      videoContent.classList.remove('hide');
     }
   }
 
