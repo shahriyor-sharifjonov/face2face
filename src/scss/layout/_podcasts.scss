@@ -229,13 +229,9 @@
             height: auto;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0px 10px 30px rgba(101, 126, 255, 0.1);
             background: #FFFFFF;
             display: flex;
             flex-direction: column;
-            @include media(1200){
-                box-shadow: 0px 0px 0px rgba(101, 126, 255, 0.1);
-            }
             &-media{
                 width: 100%;
                 position: relative;
