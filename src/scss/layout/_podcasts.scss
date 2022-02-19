@@ -156,11 +156,24 @@
         }
     }
     .swiper{
+        &-wrapper{
+            overflow: hidden;
+            @include media(1200){
+                overflow: visible;
+            }
+        }
         &-slide{
             transition: 200ms ease;
-            opacity: 0;
-            &.swiper-slide-visible{
-                opacity: 1;
+            opacity: 1;
+            visibility: visible;
+
+            &-prev{
+                opacity: 0;
+                visibility: hidden;
+                @include media(1200){
+                    opacity: 1;
+                    visibility: visible;
+                }
             }
         }
         &-button{
@@ -416,7 +429,6 @@
             overflow: hidden;
             background: #FDFDFF;
             backdrop-filter: blur(20px);
-            box-shadow: 0px 10px 30px 0px #657EFF1A;
             &-header{
                 background: #fff;
                 padding: 9px 0;

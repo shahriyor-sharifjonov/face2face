@@ -6,10 +6,10 @@ mixin podcasts()
           h2.podcasts__title Наши подкасты
           p.podcasts__p Послушайте прямо здесь и сейчас
         .podcasts__header-buttons 
-          button(type="button" data-target="podcasts__video-slider").btn-primary_nobg.podcasts__header-btn Видеоподкаст
-          button(type="button" data-target="podcasts__audio-slider").btn-primary_nobg.podcasts__header-btn.active Аудиоподкаст
+          button(type="button" data-target="podcasts__video-slider").btn-primary_nobg.podcasts__header-btn.active Видеоподкаст
+          button(type="button" data-target="podcasts__audio-slider").btn-primary_nobg.podcasts__header-btn Аудиоподкаст
       .podcasts__content
-        .podcasts__video-slider.podcasts__element-slider
+        .podcasts__video-slider.podcasts__element-slider.active
           .podcasts__slider.podcasts__video.swiper
             .swiper-wrapper   
               .swiper-slide.podcasts__video-item.video-container 
@@ -186,7 +186,7 @@ mixin podcasts()
                           path.hidden(d="M25.0001 45.8333C13.4941 45.8333 4.16675 36.5059 4.16675 25C4.16675 13.494 13.4941 4.16663 25.0001 4.16663C36.506 4.16663 45.8334 13.494 45.8334 25C45.8208 36.5007 36.5008 45.8207 25.0001 45.8333ZM27.0834 16.6666V33.3333H31.2501V16.6666H27.0834ZM18.7501 16.6666V33.3333H22.9167V16.6666H18.7501Z" fill="#8D1AEF")
             .podcasts__video-prev.swiper-button-prev
             .podcasts__video-next.swiper-button-next
-        .podcasts__audio-slider.podcasts__element-slider.active 
+        .podcasts__audio-slider.podcasts__element-slider 
           .podcasts__slider.podcasts__audio.swiper
             .swiper-wrapper 
               .swiper-slide.podcasts__audio-item.audio-container 
