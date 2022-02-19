@@ -3026,6 +3026,143 @@ input[type=range]::-webkit-slider-thumb {
   height: 50px;
 }
 
+.price__title {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 49px;
+  text-align: center;
+  color: #101010;
+  margin-bottom: 48px;
+}
+
+.price__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.price__content::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 171.5px;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(228, 123, 0, 0)), color-stop(48.78%, #F59139), to(rgba(228, 96, 0, 0)));
+  background: -o-linear-gradient(right, rgba(228, 123, 0, 0) 0%, #F59139 48.78%, rgba(228, 96, 0, 0) 100%);
+  background: linear-gradient(270deg, rgba(228, 123, 0, 0) 0%, #F59139 48.78%, rgba(228, 96, 0, 0) 100%);
+  z-index: -1;
+}
+
+.price__content::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 593.5px;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(228, 123, 0, 0)), color-stop(48.78%, #F59139), to(rgba(228, 96, 0, 0)));
+  background: -o-linear-gradient(right, rgba(228, 123, 0, 0) 0%, #F59139 48.78%, rgba(228, 96, 0, 0) 100%);
+  background: linear-gradient(270deg, rgba(228, 123, 0, 0) 0%, #F59139 48.78%, rgba(228, 96, 0, 0) 100%);
+  z-index: -1;
+}
+
+.price__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.price__img {
+  position: relative;
+  min-height: 180px;
+  margin-bottom: 10px;
+}
+
+.price__img::before {
+  content: "";
+  position: absolute;
+  height: 120px;
+  width: 120px;
+  left: 41px;
+  top: 20px;
+  background: -o-linear-gradient(339.66deg, rgba(255, 255, 255, 0.5) -1.55%, rgba(230, 237, 255, 0.6) 111.86%);
+  background: linear-gradient(110.34deg, rgba(255, 255, 255, 0.5) -1.55%, rgba(230, 237, 255, 0.6) 111.86%);
+  -webkit-box-shadow: 0px 10px 50px rgba(101, 126, 255, 0.1);
+          box-shadow: 0px 10px 50px rgba(101, 126, 255, 0.1);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 20px;
+  z-index: -1;
+}
+
+.price__img::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #8D1AEF;
+  bottom: 0px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+.price__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.price__info-title {
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #101010;
+  margin-bottom: 10px;
+}
+
+.price__info-p {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 130%;
+  text-align: center;
+  color: #101010;
+  max-width: 272px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.price__info-price {
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #8D1AEF;
+}
+
 .no-webp .home {
   background: url("../img/home-bg.png"), #FEFBFB; }
 
@@ -3782,6 +3919,17 @@ picture {
             align-items: center;
     margin: 30px auto 0 auto;
   }
+
+  .price__content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    row-gap: 30px;
+  }
+
+  .price__item {
+    max-width: 330px;
+    width: 100%;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -4146,6 +4294,29 @@ picture {
 
   .contacts-page {
     padding: 150px 0 100px 0 !important;
+  }
+
+  .price__title {
+    font-size: 35px;
+    line-height: 43px;
+    margin-bottom: 50px;
+  }
+
+  .price__content::after {
+    top: 553.5px;
+  }
+
+  .price__info-title {
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: left;
+  }
+
+  .price__info-p {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 130%;
   }
 
   .no-webp .home {
@@ -4905,6 +5076,89 @@ picture {
     text-align: center;
   }
 
+  .price__title {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
+  .price__content {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+
+  .price__content::before {
+    display: none;
+  }
+
+  .price__content::after {
+    display: none;
+  }
+
+  .price__item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100% !important;
+    max-width: 100% !important;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .price__img {
+    min-height: 100% !important;
+  }
+
+  .price__img .price-img {
+    height: 101px;
+  }
+
+  .price__img .price-img {
+    margin-left: -25px;
+  }
+
+  .price__img::before {
+    height: 110px;
+    width: 89px;
+    left: 29px;
+    top: -9px;
+  }
+
+  .price__img::after {
+    display: none;
+  }
+
+  .price__info {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .price__info-title {
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  .price__info-p {
+    font-size: 10px;
+    line-height: 130%;
+    text-align: left;
+    max-width: 220px;
+    width: 100%;
+  }
+
+  .price__info-price {
+    font-size: 15px;
+    line-height: 18px;
+  }
+
   .equipments-page {
     padding: 80px 0 50px 0 !important;
   }
@@ -5211,6 +5465,16 @@ picture {
     max-width: 320px;
     width: 100%;
     height: 276px;
+  }
+
+  .price__item {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .price__img::before {
+    left: 5px;
   }
 }
 
