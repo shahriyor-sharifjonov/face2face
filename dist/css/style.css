@@ -3039,12 +3039,12 @@ input[type=range]::-webkit-slider-thumb {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-column-gap: 75px;
+     -moz-column-gap: 75px;
+          column-gap: 75px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   position: relative;
 }
 
@@ -3142,6 +3142,8 @@ input[type=range]::-webkit-slider-thumb {
   text-align: center;
   color: #101010;
   margin-bottom: 10px;
+  max-width: 230px;
+  width: 100%;
 }
 
 .price__info-p {
@@ -3150,8 +3152,12 @@ input[type=range]::-webkit-slider-thumb {
   line-height: 130%;
   text-align: center;
   color: #101010;
-  max-width: 272px;
+  max-width: 310px;
   width: 100%;
+  margin-bottom: 10px;
+}
+
+.price__info-p_mb {
   margin-bottom: 10px;
 }
 
@@ -3929,6 +3935,7 @@ picture {
   .price__item {
     max-width: 330px;
     width: 100%;
+    min-height: 290px;
   }
 }
 
@@ -4306,11 +4313,15 @@ picture {
     top: 553.5px;
   }
 
+  .price__item {
+    max-width: 275px;
+    width: 100%;
+  }
+
   .price__info-title {
     font-weight: 900;
     font-size: 15px;
     line-height: 18px;
-    text-align: left;
   }
 
   .price__info-p {
@@ -5110,25 +5121,7 @@ picture {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-
-  .price__img {
-    min-height: 100% !important;
-  }
-
-  .price__img .price-img {
-    height: 101px;
-  }
-
-  .price__img .price-img {
-    margin-left: -25px;
-  }
-
-  .price__img::before {
-    height: 110px;
-    width: 89px;
-    left: 29px;
-    top: -9px;
+    min-height: 100%;
   }
 
   .price__img::after {
@@ -5141,9 +5134,15 @@ picture {
             align-items: flex-start;
   }
 
+  .price__info {
+    max-width: 220px;
+    width: 100%;
+  }
+
   .price__info-title {
     font-size: 13px;
     line-height: 16px;
+    text-align: left;
   }
 
   .price__info-p {
@@ -5473,8 +5472,17 @@ picture {
             align-items: center;
   }
 
+  .price__img {
+    min-height: 100% !important;
+  }
+
+  .price__img .price-img {
+    height: 101px;
+    width: 147px;
+  }
+
   .price__img::before {
-    left: 5px;
+    display: none;
   }
 }
 
@@ -5500,6 +5508,13 @@ picture {
   .footer__offer-img.last {
     right: calc(50% - 145px);
     width: 160px;
+  }
+}
+
+@media (max-width: 370px) {
+  .price__img .price-img {
+    width: 127px;
+    height: 101px;
   }
 }
 
