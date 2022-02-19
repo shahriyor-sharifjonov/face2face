@@ -173,8 +173,6 @@ window.addEventListener('scroll', (e) => {
   header.classList.toggle('sticky', window.scrollY >= 1);
 })
 
-<<<<<<< HEAD
-=======
 // audio
 document.querySelectorAll('.audio-container').forEach(function(el){
   const videos = document.querySelectorAll('.video-container');
@@ -455,5 +453,4 @@ document.querySelectorAll('.video-container').forEach(function(el){
     hideControls()
   });
 }) 
->>>>>>> 38d14f53466f0e0d95fe04e898a94e07b881ff26
 

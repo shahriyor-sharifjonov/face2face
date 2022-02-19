@@ -2849,6 +2849,10 @@ input[type=range]::-webkit-slider-thumb {
   color: #101010;
 }
 
+.contacts-page {
+  padding: 150px 0 130px 0 !important;
+}
+
 .contacts__header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2886,12 +2890,6 @@ input[type=range]::-webkit-slider-thumb {
 
 .contacts__btns a:nth-of-type(2):hover {
   color: #fff;
-}
-
-.contacts__btns a:nth-of-type(1) {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
 }
 
 .contacts__title {
@@ -3059,10 +3057,6 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .questions-page {
-  padding: 150px 0 130px 0 !important;
-}
-
-.tula-page {
   padding: 150px 0 130px 0 !important;
 }
 
@@ -3711,8 +3705,16 @@ picture {
     font-size: 16px;
   }
 
+  .contacts__btns {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
   .contacts__btns a {
-    width: 350px;
+    max-width: 350px;
+    width: 100%;
     height: 50px;
   }
 
@@ -4130,6 +4132,10 @@ picture {
 
   .money__img {
     bottom: 5px;
+  }
+
+  .contacts-page {
+    padding: 150px 0 100px 0 !important;
   }
 
   .no-webp .home {
@@ -4837,6 +4843,10 @@ picture {
     width: 100%;
   }
 
+  .contacts-page {
+    padding: 80px 0 50px 0 !important;
+  }
+
   .contacts__btns {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -5168,9 +5178,19 @@ picture {
             align-items: center;
   }
 
+  .contacts__header {
+    row-gap: 20px;
+  }
+
   .contacts__btns a {
     max-width: 320px;
     width: 100%;
+  }
+
+  .contacts__title {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
   }
 
   .contacts .contacts__left-btn {
