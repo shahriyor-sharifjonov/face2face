@@ -33,14 +33,16 @@
             flex-direction: column;
             row-gap: 15px;
         }
-        a{
+        button{
             width: 420px;
             height: 60px;
-            &:nth-of-type(2){
+            &.active{
                 color: #8B8B8B;
                 border: 1px solid #8B8B8B;
                 &:hover{
-                    color: #fff;
+                    color: #8B8B8B;
+                    border: 1px solid #8B8B8B;
+                    background: transparent;
                 }
             }
             @include media(1200){
@@ -86,6 +88,10 @@
         }
     }
     &__info{
+        display: none;
+        &.active{
+            display: block;
+        }
         @include media(1200){
             background: #FFFFFF;
             box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);

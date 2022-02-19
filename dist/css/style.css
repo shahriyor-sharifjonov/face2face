@@ -2878,18 +2878,20 @@ input[type=range]::-webkit-slider-thumb {
           column-gap: 20px;
 }
 
-.contacts__btns a {
+.contacts__btns button {
   width: 420px;
   height: 60px;
 }
 
-.contacts__btns a:nth-of-type(2) {
+.contacts__btns button.active {
   color: #8B8B8B;
   border: 1px solid #8B8B8B;
 }
 
-.contacts__btns a:nth-of-type(2):hover {
-  color: #fff;
+.contacts__btns button.active:hover {
+  color: #8B8B8B;
+  border: 1px solid #8B8B8B;
+  background: transparent;
 }
 
 .contacts__title {
@@ -2910,6 +2912,14 @@ input[type=range]::-webkit-slider-thumb {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-bottom: 50px;
+}
+
+.contacts__info {
+  display: none;
+}
+
+.contacts__info.active {
+  display: block;
 }
 
 .contacts .contacts__left-btn {
@@ -3712,7 +3722,7 @@ picture {
             justify-content: center;
   }
 
-  .contacts__btns a {
+  .contacts__btns button {
     max-width: 350px;
     width: 100%;
     height: 50px;
@@ -5182,7 +5192,7 @@ picture {
     row-gap: 20px;
   }
 
-  .contacts__btns a {
+  .contacts__btns button {
     max-width: 320px;
     width: 100%;
   }
