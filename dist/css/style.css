@@ -3169,6 +3169,162 @@ input[type=range]::-webkit-slider-thumb {
   color: #8D1AEF;
 }
 
+.lamps__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 25px;
+}
+
+.lamps__title {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 49px;
+  color: #101010;
+  margin-bottom: 50px;
+}
+
+.lamps__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 26px;
+}
+
+.lamps__li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  background: #FFFFFF;
+  border: 1px solid #8D1AEF;
+  border-left: none;
+  border-radius: 30px;
+  padding-right: 31px;
+}
+
+.lamps__li.active {
+  background: #F59139;
+  border-radius: 30px;
+  border: none;
+}
+
+.lamps__li.active .lamps__link {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+}
+
+.lamps__li.active .lamps__icon {
+  background: none;
+}
+
+.lamps__link {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #101010;
+}
+
+.lamps__icon {
+  padding: 15px;
+  background: #8D1AEF;
+  border-radius: 30px;
+}
+
+.lamps__left-title {
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 37px;
+  color: #101010;
+  margin-bottom: 30px;
+}
+
+.lamps__left-p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 130%;
+  color: #101010;
+  max-width: 578px;
+  width: 100%;
+  position: relative;
+  margin-left: 20px;
+}
+
+.lamps__left-p::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 105px;
+  left: -20px;
+  background: #000;
+}
+
+.lamps__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 320px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 15px 20px rgba(159, 140, 255, 0.15);
+          box-shadow: 0px 15px 20px rgba(159, 140, 255, 0.15);
+  border-radius: 30px;
+  padding: 62px 0px 85px 110px;
+  position: relative;
+}
+
+.no-webp .lamps__right {
+  background: url(../img/back-img.png) center/cover no-repeat; }
+
+.lamps__right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 418px;
+  height: 100%;
+}
+
+.lamps__img {
+  position: absolute;
+  top: -16px;
+  right: 107px;
+  width: 530px;
+  height: 396px;
+}
+
 .no-webp .home {
   background: url("../img/home-bg.png"), #FEFBFB; }
 
@@ -3562,6 +3718,10 @@ picture {
     width: 420px;
     height: 50px;
   }
+
+  .lamps__img {
+    right: 49px;
+  }
 }
 
 @media (max-width: 1270px) {
@@ -3936,6 +4096,49 @@ picture {
     max-width: 330px;
     width: 100%;
     min-height: 290px;
+  }
+
+  .lamps__body {
+    row-gap: 30px;
+  }
+
+  .lamps__title {
+    font-size: 35px;
+    line-height: 43px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .lamps__icon {
+    padding: 10px;
+  }
+
+  .lamps__left-title {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+
+  .lamps__left-p {
+    margin-left: 0;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 130%;
+    max-width: 388px;
+  }
+
+  .lamps__left-p::before {
+    display: none;
+  }
+
+  .lamps__content {
+    padding: 40px 0px 40px 30px;
+    height: 176px;
+  }
+
+  .lamps__img {
+    width: 270px;
+    height: 176px;
   }
 }
 
@@ -4328,6 +4531,10 @@ picture {
     font-weight: 300;
     font-size: 13px;
     line-height: 130%;
+  }
+
+  .lamps__right {
+    width: 229px;
   }
 
   .no-webp .home {
@@ -5159,6 +5366,81 @@ picture {
     line-height: 18px;
   }
 
+  .lamps__title {
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+
+  .lamps__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 20px;
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .lamps__li {
+    max-width: 150px;
+    height: 40px;
+    width: 50%;
+  }
+
+  .lamps__link {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .lamps__left {
+    margin-bottom: 32px;
+  }
+
+  .lamps__left-title {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 10px;
+  }
+
+  .lamps__left-p {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 130%;
+  }
+
+  .lamps__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 318px;
+    height: 235px;
+    margin: 0 auto;
+    padding: 20px 0px 20px 20px;
+  }
+
+  .lamps__right {
+    bottom: 0 !important;
+    right: 0;
+    left: 0;
+    top: 57%;
+    width: 100%;
+    height: 100px;
+    border-radius: 0 0 30px 30px;
+  }
+
+  .lamps__img {
+    bottom: 0 !important;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 200px;
+    height: 132px;
+  }
+
   .equipments-page {
     padding: 80px 0 50px 0 !important;
   }
@@ -5497,6 +5779,13 @@ picture {
   .price__info-p {
     margin-bottom: 5px;
   }
+
+  .lamps__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 @media (max-width: 568px) {
@@ -5575,6 +5864,8 @@ picture {
 .webp .podcasts .swiper-button-prev::after { background: url(../img/prev-slide.webp) 100% 100%; }
 
 .webp .form__bg { background: url(../img/form-bg.webp); }
+
+.webp .lamps__right { background: url(../img/back-img.webp) center/cover no-repeat; }
 
 .webp .home { background: url(../img/home-bg.webp), #FEFBFB; }
 

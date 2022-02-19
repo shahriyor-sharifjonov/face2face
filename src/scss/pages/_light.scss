@@ -1,0 +1,11 @@
+.light{
+    &-page{
+        padding: 150px 0 130px 0 !important;
+        @include media(992){
+            padding: 150px 0 100px 0 !important;
+        }
+        @include media(767){
+            padding: 80px 0 50px 0 !important;
+        }
+    }
+}
