@@ -22,8 +22,16 @@
         column-gap: 75px;
         justify-content: space-between;
         position: relative;
+        @include media(1200){
+            flex-wrap: wrap;
+            row-gap: 30px;
+        }
         @include media(767){
             flex-direction: column !important;
+            row-gap: 0;
+        }
+        @include media(576){
+            row-gap: 20px;
         }
         &::before{
             content: '';
@@ -50,10 +58,6 @@
             @include media(767){
                 display: none;
             }
-        }
-        @include media(1200){
-            flex-wrap: wrap;
-            row-gap: 30px;
         }
     }
     &__item{
@@ -159,6 +163,9 @@
                 line-height: 16px;
                 text-align: left;
             }
+            @include media(576){
+                margin-bottom: 5px;
+            }
         }
         &-p{
             font-weight: 300;
@@ -180,6 +187,9 @@
                 text-align: left;
                 max-width: 220px;
                 width: 100%;
+            }
+            @include media(576){
+                margin-bottom: 5px;
             }
             &_mb{
                 margin-bottom: 10px;

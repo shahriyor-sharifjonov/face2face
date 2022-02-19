@@ -5098,6 +5098,7 @@ picture {
     -webkit-box-direction: normal !important;
         -ms-flex-direction: column !important;
             flex-direction: column !important;
+    row-gap: 0;
   }
 
   .price__content::before {
@@ -5466,6 +5467,10 @@ picture {
     height: 276px;
   }
 
+  .price__content {
+    row-gap: 20px;
+  }
+
   .price__item {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -5483,6 +5488,14 @@ picture {
 
   .price__img::before {
     display: none;
+  }
+
+  .price__info-title {
+    margin-bottom: 5px;
+  }
+
+  .price__info-p {
+    margin-bottom: 5px;
   }
 }
 
