@@ -1649,8 +1649,41 @@ input[type=range]::-webkit-slider-thumb {
   color: #101010;
 }
 
+.podcasts__content {
+  position: relative;
+}
+
+.podcasts__video-slider {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.podcasts__video-slider.active {
+  position: static;
+  opacity: 1;
+  visibility: visible;
+}
+
+.podcasts__audio-slider {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.podcasts__audio-slider.active {
+  position: static;
+  opacity: 1;
+  visibility: visible;
+}
+
 .podcasts__slider {
-  display: none;
   padding-top: 30px;
   margin-top: -30px;
   padding-bottom: 30px;
@@ -1661,19 +1694,15 @@ input[type=range]::-webkit-slider-thumb {
   padding-right: 75px;
 }
 
-.podcasts__slider.active {
-  display: block;
-}
-
 .podcasts .swiper-slide {
   -webkit-transition: 200ms ease;
   -o-transition: 200ms ease;
   transition: 200ms ease;
+  opacity: 0;
 }
 
-.podcasts .swiper-slide-duplicate-active {
-  opacity: 0;
-  visibility: hidden;
+.podcasts .swiper-slide.swiper-slide-visible {
+  opacity: 1;
 }
 
 .podcasts .swiper-button-next,
@@ -1724,11 +1753,6 @@ input[type=range]::-webkit-slider-thumb {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  opacity: 0;
-}
-
-.podcasts__video-item.swiper-slide-visible {
-  opacity: 1;
 }
 
 .podcasts__video-item-media {
@@ -1989,6 +2013,182 @@ input[type=range]::-webkit-slider-thumb {
   -webkit-column-gap: 28px;
      -moz-column-gap: 28px;
           column-gap: 28px;
+}
+
+.podcasts__audio-item {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #FDFDFF;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  -webkit-box-shadow: 0px 10px 30px 0px #657EFF1A;
+          box-shadow: 0px 10px 30px 0px #657EFF1A;
+}
+
+.podcasts__audio-item-header {
+  background: #fff;
+  padding: 9px 0;
+  -webkit-box-shadow: 0px 10px 50px 0px #657EFF1A;
+          box-shadow: 0px 10px 50px 0px #657EFF1A;
+}
+
+.podcasts__audio-item-header p {
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 22px;
+  width: 100%;
+  text-align: center;
+  text-transform: capitalize;
+  color: #101010;
+}
+
+.podcasts__audio-item-body {
+  padding: 15px 20px 25px 20px;
+  border: 1px solid #FCE0E5;
+  border-top: none;
+  border-radius: 0 0 20px 20px;
+}
+
+.podcasts__audio-item-media {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.podcasts__audio-item-media .playback-animation {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+}
+
+.podcasts__audio-item-media .playback-animation .playback-icons {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.podcasts__audio-item-media .playback-animation .playback-icon.hidden {
+  display: none;
+}
+
+.podcasts__audio-item-media img {
+  max-width: 100%;
+}
+
+.podcasts__audio-item-controls.hidden {
+  display: none;
+}
+
+.podcasts__audio-item-controls-progress {
+  position: relative;
+  margin-bottom: 13px;
+}
+
+.podcasts__audio-item-controls-progress:hover .seek-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.podcasts__audio-item-controls-progress .progress-bar {
+  display: none;
+}
+
+.podcasts__audio-item-controls-progress .seek {
+  width: 100%;
+  height: 10px;
+}
+
+.podcasts__audio-item-controls-progress .seek-tooltip {
+  position: absolute;
+  top: -30px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 15px;
+  line-height: 130%;
+  padding: 4px 6px;
+  word-break: keep-all;
+  white-space: pre;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 200ms ease, visibility 200ms ease;
+  -o-transition: opacity 200ms ease, visibility 200ms ease;
+  transition: opacity 200ms ease, visibility 200ms ease;
+}
+
+.podcasts__audio-item-controls-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.podcasts__audio-item-controls-time time {
+  font-size: 15px;
+  line-height: 130%;
+  color: #101010;
+}
+
+.podcasts__audio-item-controls-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 28px;
+     -moz-column-gap: 28px;
+          column-gap: 28px;
+}
+
+.podcasts__audio-item-controls .play svg.hidden {
+  display: none;
 }
 
 .questions__title {
@@ -4570,6 +4770,12 @@ picture {
   }
 
   .podcasts__video-item-controls-title {
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .podcasts__audio-item-header p {
     font-weight: 800;
     font-size: 15px;
     line-height: 18px;

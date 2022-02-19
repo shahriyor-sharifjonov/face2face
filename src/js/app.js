@@ -53,17 +53,17 @@ new Swiper(".clients__slider", {
   }
 });
 
-new Swiper(".podcasts__video", {
+new Swiper(".podcasts__slider", {
   modules: [Navigation],
-  loop: true,
+  // loop: true,
   allowTouchMove: false,
   watchSlidesProgress: true,
   watchSlidesVisibility: true,
   slidesPerView: 1,
   spaceBetween: 20,
   navigation: {
-    nextEl: ".podcasts__video-next",
-    prevEl: ".podcasts__video-prev",
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   breakpoints: {
     767: {
@@ -76,6 +76,34 @@ new Swiper(".podcasts__video", {
     },
   },
 });
+
+// new Swiper(".podcasts__audio", {
+//   modules: [Navigation],
+//   // loop: true,
+//   allowTouchMove: false,
+//   watchSlidesProgress: true,
+//   watchSlidesVisibility: true,
+//   slidesPerView: 1,
+//   spaceBetween: 20,
+//   navigation: {
+//     nextEl: ".podcasts__audio-next",
+//     prevEl: ".podcasts__audio-prev",
+//   },
+//   breakpoints: {
+//     767: {
+//       slidesPerView: 2,
+//       watchSlidesVisibility: true,
+//       watchSlidesProgress: true,
+//       spaceBetween: 20,
+//     },
+//     1200: {
+//       slidesPerView: 3,
+//       watchSlidesVisibility: true,
+//       watchSlidesProgress: true,
+//       spaceBetween: 20,
+//     },
+//   },
+// });
 
 // Header Menu
 const headerButton = document.querySelector(".header__button");
@@ -112,7 +140,7 @@ document.querySelectorAll('.podcasts').forEach(function(podcast){
       })
       const el = e.target;
       const target = el.getAttribute('data-target');
-      document.querySelectorAll('.podcasts__slider').forEach(function(el){
+      document.querySelectorAll(`.podcasts__element-slider`).forEach(function(el){
         el.classList.remove('active');
       });
       document.querySelector(`.${target}`).classList.add('active');
@@ -145,8 +173,121 @@ window.addEventListener('scroll', (e) => {
   header.classList.toggle('sticky', window.scrollY >= 1);
 })
 
+// audio
+document.querySelectorAll('.audio-container').forEach(function(el){
+  const videos = document.querySelectorAll('.video-container');
+  const audios = document.querySelectorAll('.audio-container');
+  const audio = el.querySelector('.audio');
+  const audioControls = el.querySelector('.audio-controls');
+  const playButton = el.querySelector('.play');
+  const playbackIcons = el.querySelectorAll('.playback-icons .playback-icon');
+  const timeElapsed = el.querySelector('.time-elapsed');
+  const duration = el.querySelector('.duration');
+  const progressBar = el.querySelector('.progress-bar');
+  const seek = el.querySelector('.seek');
+  const seekTooltip = el.querySelector('.seek-tooltip');
+  const playbackAnimation = el.querySelector('.playback-animation');
+  const audioContainer = el.querySelector('.podcasts__audio-item-media');
+
+  const audioWorks = !!document.createElement('audio').canPlayType; 
+  if (audioWorks) { 
+    audio.controls = false; 
+    audioControls.classList.remove('hidden'); 
+  } 
+
+  function togglePlay() {
+    if (audio.paused || audio.ended) {
+      videos.forEach(function(el){
+        const video = el.querySelector('.video');
+        video.pause();
+        el.querySelector('.video-controls').classList.add('hide');
+        el.querySelector('.podcasts__video-item-content').classList.remove('hide');
+      })
+      audios.forEach(function(el){
+        const audio = el.querySelector('.audio');
+        audio.pause();
+      })
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+
+  playButton.addEventListener('click', togglePlay);
+
+  function updatePlayButton() {
+    playbackIcons.forEach(icon => icon.classList.toggle('hidden'));
+    if (audio.paused) {
+      playButton.setAttribute('data-title', 'Play')
+    } else {
+      playButton.setAttribute('data-title', 'Pause')
+    }
+  }
+
+  audio.addEventListener('play', updatePlayButton);
+  audio.addEventListener('pause', updatePlayButton);
+
+  function formatTime(timeInSeconds) {
+    const result = new Date(timeInSeconds * 1000).toISOString().substr(11, 8);
+  
+    return {
+      minutes: result.substr(3, 2),
+      seconds: result.substr(6, 2),
+    };
+  };
+
+  function initializeAudio() {
+    const audioDuration = Math.round(audio.duration);
+    seek.setAttribute('max', audioDuration);
+    progressBar.setAttribute('max', audioDuration);
+    const time = formatTime(audioDuration);
+    duration.innerText = `${time.minutes}:${time.seconds}`;
+    duration.setAttribute('datetime', `${time.minutes}m ${time.seconds}s`)
+  }
+
+  audio.addEventListener('loadedmetadata', initializeAudio);
+
+  function updateTimeElapsed() {
+    const time = formatTime(Math.round(audio.currentTime));
+    timeElapsed.innerText = `${time.minutes}:${time.seconds}`;
+    timeElapsed.setAttribute('datetime', `${time.minutes}m ${time.seconds}s`)
+  }
+
+  audio.addEventListener('timeupdate', updateTimeElapsed);
+
+  function updateProgress() {
+    seek.value = Math.floor(audio.currentTime);
+    progressBar.value = Math.floor(audio.currentTime);
+  }
+
+  audio.addEventListener('timeupdate', updateProgress);
+
+  function updateSeekTooltip(event) {
+    const skipTo = Math.round((event.offsetX / event.target.clientWidth) * parseInt(event.target.getAttribute('max'), 10));
+    seek.setAttribute('data-seek', skipTo)
+    const t = formatTime(skipTo);
+    seekTooltip.textContent = `${t.minutes}:${t.seconds}`;
+    const rect = audioControls.getBoundingClientRect();
+    seekTooltip.style.left = `${event.pageX - rect.left}px`;
+  }
+
+  seek.addEventListener('mousemove', updateSeekTooltip);
+
+  function skipAhead(event) {
+    const skipTo = event.target.dataset.seek ? event.target.dataset.seek : event.target.value;
+    audio.currentTime = skipTo;
+    progressBar.value = skipTo;
+    seek.value = skipTo;
+  }
+
+  seek.addEventListener('input', skipAhead);
+})
+
+
 // video 
+
 document.querySelectorAll('.video-container').forEach(function(el){
+  const audios = document.querySelectorAll('.audio-container');
   const videos = document.querySelectorAll('.video-container');
   const video = el.querySelector('.video');
   const videoControls = el.querySelector('.video-controls'); 
@@ -169,6 +310,10 @@ document.querySelectorAll('.video-container').forEach(function(el){
 
   function togglePlay() {
     if (video.paused || video.ended) {
+      audios.forEach(function(el){
+        const audio = el.querySelector('.audio');
+        audio.pause();
+      })
       videos.forEach(function(el){
         const video = el.querySelector('.video');
         video.pause();

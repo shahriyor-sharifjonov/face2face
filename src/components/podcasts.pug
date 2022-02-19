@@ -6,184 +6,304 @@ mixin podcasts()
           h2.podcasts__title Наши подкасты
           p.podcasts__p Послушайте прямо здесь и сейчас
         .podcasts__header-buttons 
-          button(type="button" data-target="podcasts__video").btn-primary_nobg.podcasts__header-btn.active Видеоподкаст
-          button(type="button" data-target="podcasts__audio").btn-primary_nobg.podcasts__header-btn Аудиоподкаст
-      .podcasts__slider.podcasts__video.active.swiper
-        .swiper-wrapper   
-          .swiper-slide.podcasts__video-item.video-container 
-            .podcasts__video-item-media
-              video.video(controls='' preload='metadata' poster='img/poster.png')
-                source(src='files/video-1.mp4' type='video/mp4')
-              .playback-animation
-                .playback-icons
-                  svg.playback-icon(width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg")
-                    path(d="M37.6042 20.9961C39.0937 21.8554 40 23.3691 40 25C40 26.6308 39.0937 28.1445 37.6042 28.916L7.60729 46.1035C6.06354 47.0703 4.13125 47.1093 2.55417 46.2793C0.976771 45.4492 0 43.8867 0 42.1875V7.81247C0 6.11716 0.976771 4.55368 2.55417 3.72361C4.13125 2.89451 6.06354 2.92869 7.60729 3.81247L37.6042 20.9961Z" fill="white")
-                  svg.playback-icon.hidden(width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg")
-                    path(d="M34 6.16211H30C26.6862 6.16211 24 8.26074 24 10.7617V38.8867C24 41.4756 26.6862 43.5742 30 43.5742L34 43.75C37.3138 43.75 40 41.6514 40 39.0625V10.9375C40 8.34863 37.3125 6.16211 34 6.16211ZM10 6.16211H6C2.68625 6.16211 0 8.26074 0 10.8496V38.9746C0 41.6504 2.68625 43.75 6 43.75H10C13.3138 43.75 16 41.6514 16 39.0625V10.9375C16 8.34863 13.3125 6.16211 10 6.16211Z" fill="white")
-            .podcasts__video-item-content
-              .podcasts__video-item-content-header 
-                img(src="@img/client-1.png", alt="" draggable="false")
-                a(href="#!" target="_blank" rel="noopener") YouTube канал <br>«FIGHT SHOW»
-              .podcasts__video-item-content-body 
-                a(href="#!" target="_blank" rel="noopener").podcasts__video-item-content-social 
-                  img(src="@img/instagram.svg", alt="" draggable="false") 
-                  p @fight_show 
-                a(href="#!" target="_blank" rel="noopener").podcasts__video-item-content-social 
-                  img(src="@img/youtube.svg", alt="" draggable="false") 
-                  p @fight_show 
-            .podcasts__video-item-controls.video-controls.hidden.hide 
-              p.podcasts__video-item-controls-title YouTube канал «FIGHT SHOW» 
-              .podcasts__video-item-controls-socials
-                a(href="#!" target="_blank" rel="noopener" title="youtube")
-                  img(src="@img/youtube.svg", alt="") 
-                a(href="#!" target="_blank" rel="noopener" title="instagram")
-                  img(src="@img/instagram.svg", alt="") 
-              .video-progress.podcasts__video-item-controls-progress 
-                progress(value="0" min="0").progress-bar 
-                input(value="0" min="0" type="range" step="1").seek 
-                .seek-tooltip 00:00 
-              .podcasts__video-item-controls-time.time
-                time.time-elapsed 00:00 
-                time.duration 00:00
-              .podcasts__video-item-controls-btns
-                button(data-title='Play').play 
-                  .playback-icons 
-                    svg.playback-icon(width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg")
-                      ellipse(cx="25" cy="25" rx="9" ry="11" fill="white")
-                      path(d="M25 45C13.9593 44.9879 5.01212 36.0407 5 25V24.6C5.21986 13.6091 14.2692 4.85595 25.2613 5.0018C36.2535 5.14764 45.0674 14.1378 44.9955 25.1307C44.9237 36.1236 35.9931 44.9978 25 45ZM21 16V34L33 25L21 16Z" fill="#8D1AEF")
-                    svg.playback-icon.hidden(width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg")
-                      path.hidden(d="M25.0001 45.8333C13.4941 45.8333 4.16675 36.5059 4.16675 25C4.16675 13.494 13.4941 4.16663 25.0001 4.16663C36.506 4.16663 45.8334 13.494 45.8334 25C45.8208 36.5007 36.5008 45.8207 25.0001 45.8333ZM27.0834 16.6666V33.3333H31.2501V16.6666H27.0834ZM18.7501 16.6666V33.3333H22.9167V16.6666H18.7501Z" fill="#8D1AEF")
-          .swiper-slide.podcasts__video-item.video-container 
-            .podcasts__video-item-media
-              video.video(controls='' preload='metadata' poster='img/poster.png')
-                source(src='files/video-1.mp4' type='video/mp4')
-              .playback-animation
-                .playback-icons
-                  svg.playback-icon(width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg")
-                    path(d="M37.6042 20.9961C39.0937 21.8554 40 23.3691 40 25C40 26.6308 39.0937 28.1445 37.6042 28.916L7.60729 46.1035C6.06354 47.0703 4.13125 47.1093 2.55417 46.2793C0.976771 45.4492 0 43.8867 0 42.1875V7.81247C0 6.11716 0.976771 4.55368 2.55417 3.72361C4.13125 2.89451 6.06354 2.92869 7.60729 3.81247L37.6042 20.9961Z" fill="white")
-                  svg.playback-icon.hidden(width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg")
-                    path(d="M34 6.16211H30C26.6862 6.16211 24 8.26074 24 10.7617V38.8867C24 41.4756 26.6862 43.5742 30 43.5742L34 43.75C37.3138 43.75 40 41.6514 40 39.0625V10.9375C40 8.34863 37.3125 6.16211 34 6.16211ZM10 6.16211H6C2.68625 6.16211 0 8.26074 0 10.8496V38.9746C0 41.6504 2.68625 43.75 6 43.75H10C13.3138 43.75 16 41.6514 16 39.0625V10.9375C16 8.34863 13.3125 6.16211 10 6.16211Z" fill="white")
-            .podcasts__video-item-content
-              .podcasts__video-item-content-header 
-                img(src="@img/client-1.png", alt="" draggable="false")
-                a(href="#!" target="_blank" rel="noopener") YouTube канал <br>«FIGHT SHOW»
-              .podcasts__video-item-content-body 
-                a(href="#!" target="_blank" rel="noopener").podcasts__video-item-content-social 
-                  img(src="@img/instagram.svg", alt="" draggable="false") 
-                  p @fight_show 
-                a(href="#!" target="_blank" rel="noopener").podcasts__video-item-content-social 
-                  img(src="@img/youtube.svg", alt="" draggable="false") 
-                  p @fight_show 
-            .podcasts__video-item-controls.video-controls.hidden.hide 
-              p.podcasts__video-item-controls-title YouTube канал «FIGHT SHOW» 
-              .podcasts__video-item-controls-socials
-                a(href="#!" target="_blank" rel="noopener" title="youtube")
-                  img(src="@img/youtube.svg", alt="") 
-                a(href="#!" target="_blank" rel="noopener" title="instagram")
-                  img(src="@img/instagram.svg", alt="") 
-              .video-progress.podcasts__video-item-controls-progress 
-                progress(value="0" min="0").progress-bar 
-                input(value="0" min="0" type="range" step="1").seek 
-                .seek-tooltip 00:00 
-              .podcasts__video-item-controls-time.time
-                time.time-elapsed 00:00 
-                time.duration 00:00
-              .podcasts__video-item-controls-btns
-                button(data-title='Play').play 
-                  .playback-icons 
-                    svg.playback-icon(width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg")
-                      ellipse(cx="25" cy="25" rx="9" ry="11" fill="white")
-                      path(d="M25 45C13.9593 44.9879 5.01212 36.0407 5 25V24.6C5.21986 13.6091 14.2692 4.85595 25.2613 5.0018C36.2535 5.14764 45.0674 14.1378 44.9955 25.1307C44.9237 36.1236 35.9931 44.9978 25 45ZM21 16V34L33 25L21 16Z" fill="#8D1AEF")
-                    svg.playback-icon.hidden(width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg")
-                      path.hidden(d="M25.0001 45.8333C13.4941 45.8333 4.16675 36.5059 4.16675 25C4.16675 13.494 13.4941 4.16663 25.0001 4.16663C36.506 4.16663 45.8334 13.494 45.8334 25C45.8208 36.5007 36.5008 45.8207 25.0001 45.8333ZM27.0834 16.6666V33.3333H31.2501V16.6666H27.0834ZM18.7501 16.6666V33.3333H22.9167V16.6666H18.7501Z" fill="#8D1AEF")
-          .swiper-slide.podcasts__video-item.video-container 
-            .podcasts__video-item-media
-              video.video(controls='' preload='metadata' poster='img/poster.png')
-                source(src='files/video-1.mp4' type='video/mp4')
-              .playback-animation
-                .playback-icons
-                  svg.playback-icon(width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg")
-                    path(d="M37.6042 20.9961C39.0937 21.8554 40 23.3691 40 25C40 26.6308 39.0937 28.1445 37.6042 28.916L7.60729 46.1035C6.06354 47.0703 4.13125 47.1093 2.55417 46.2793C0.976771 45.4492 0 43.8867 0 42.1875V7.81247C0 6.11716 0.976771 4.55368 2.55417 3.72361C4.13125 2.89451 6.06354 2.92869 7.60729 3.81247L37.6042 20.9961Z" fill="white")
-                  svg.playback-icon.hidden(width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg")
-                    path(d="M34 6.16211H30C26.6862 6.16211 24 8.26074 24 10.7617V38.8867C24 41.4756 26.6862 43.5742 30 43.5742L34 43.75C37.3138 43.75 40 41.6514 40 39.0625V10.9375C40 8.34863 37.3125 6.16211 34 6.16211ZM10 6.16211H6C2.68625 6.16211 0 8.26074 0 10.8496V38.9746C0 41.6504 2.68625 43.75 6 43.75H10C13.3138 43.75 16 41.6514 16 39.0625V10.9375C16 8.34863 13.3125 6.16211 10 6.16211Z" fill="white")
-            .podcasts__video-item-content
-              .podcasts__video-item-content-header 
-                img(src="@img/client-1.png", alt="" draggable="false")
-                a(href="#!" target="_blank" rel="noopener") YouTube канал <br>«FIGHT SHOW»
-              .podcasts__video-item-content-body 
-                a(href="#!" target="_blank" rel="noopener").podcasts__video-item-content-social 
-                  img(src="@img/instagram.svg", alt="" draggable="false") 
-                  p @fight_show 
-                a(href="#!" target="_blank" rel="noopener").podcasts__video-item-content-social 
-                  img(src="@img/youtube.svg", alt="" draggable="false") 
-                  p @fight_show 
-            .podcasts__video-item-controls.video-controls.hidden.hide 
-              p.podcasts__video-item-controls-title YouTube канал «FIGHT SHOW» 
-              .podcasts__video-item-controls-socials
-                a(href="#!" target="_blank" rel="noopener" title="youtube")
-                  img(src="@img/youtube.svg", alt="") 
-                a(href="#!" target="_blank" rel="noopener" title="instagram")
-                  img(src="@img/instagram.svg", alt="") 
-              .video-progress.podcasts__video-item-controls-progress 
-                progress(value="0" min="0").progress-bar 
-                input(value="0" min="0" type="range" step="1").seek 
-                .seek-tooltip 00:00 
-              .podcasts__video-item-controls-time.time
-                time.time-elapsed 00:00 
-                time.duration 00:00
-              .podcasts__video-item-controls-btns
-                button(data-title='Play').play 
-                  .playback-icons 
-                    svg.playback-icon(width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg")
-                      ellipse(cx="25" cy="25" rx="9" ry="11" fill="white")
-                      path(d="M25 45C13.9593 44.9879 5.01212 36.0407 5 25V24.6C5.21986 13.6091 14.2692 4.85595 25.2613 5.0018C36.2535 5.14764 45.0674 14.1378 44.9955 25.1307C44.9237 36.1236 35.9931 44.9978 25 45ZM21 16V34L33 25L21 16Z" fill="#8D1AEF")
-                    svg.playback-icon.hidden(width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg")
-                      path.hidden(d="M25.0001 45.8333C13.4941 45.8333 4.16675 36.5059 4.16675 25C4.16675 13.494 13.4941 4.16663 25.0001 4.16663C36.506 4.16663 45.8334 13.494 45.8334 25C45.8208 36.5007 36.5008 45.8207 25.0001 45.8333ZM27.0834 16.6666V33.3333H31.2501V16.6666H27.0834ZM18.7501 16.6666V33.3333H22.9167V16.6666H18.7501Z" fill="#8D1AEF")
-          .swiper-slide.podcasts__video-item.video-container 
-            .podcasts__video-item-media
-              video.video(controls='' preload='metadata' poster='img/poster.png')
-                source(src='files/video-1.mp4' type='video/mp4')
-              .playback-animation
-                .playback-icons
-                  svg.playback-icon(width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg")
-                    path(d="M37.6042 20.9961C39.0937 21.8554 40 23.3691 40 25C40 26.6308 39.0937 28.1445 37.6042 28.916L7.60729 46.1035C6.06354 47.0703 4.13125 47.1093 2.55417 46.2793C0.976771 45.4492 0 43.8867 0 42.1875V7.81247C0 6.11716 0.976771 4.55368 2.55417 3.72361C4.13125 2.89451 6.06354 2.92869 7.60729 3.81247L37.6042 20.9961Z" fill="white")
-                  svg.playback-icon.hidden(width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg")
-                    path(d="M34 6.16211H30C26.6862 6.16211 24 8.26074 24 10.7617V38.8867C24 41.4756 26.6862 43.5742 30 43.5742L34 43.75C37.3138 43.75 40 41.6514 40 39.0625V10.9375C40 8.34863 37.3125 6.16211 34 6.16211ZM10 6.16211H6C2.68625 6.16211 0 8.26074 0 10.8496V38.9746C0 41.6504 2.68625 43.75 6 43.75H10C13.3138 43.75 16 41.6514 16 39.0625V10.9375C16 8.34863 13.3125 6.16211 10 6.16211Z" fill="white")
-            .podcasts__video-item-content
-              .podcasts__video-item-content-header 
-                img(src="@img/client-1.png", alt="" draggable="false")
-                a(href="#!" target="_blank" rel="noopener") YouTube канал <br>«FIGHT SHOW»
-              .podcasts__video-item-content-body 
-                a(href="#!" target="_blank" rel="noopener").podcasts__video-item-content-social 
-                  img(src="@img/instagram.svg", alt="" draggable="false") 
-                  p @fight_show 
-                a(href="#!" target="_blank" rel="noopener").podcasts__video-item-content-social 
-                  img(src="@img/youtube.svg", alt="" draggable="false") 
-                  p @fight_show 
-            .podcasts__video-item-controls.video-controls.hidden.hide 
-              p.podcasts__video-item-controls-title YouTube канал «FIGHT SHOW» 
-              .podcasts__video-item-controls-socials
-                a(href="#!" target="_blank" rel="noopener" title="youtube")
-                  img(src="@img/youtube.svg", alt="") 
-                a(href="#!" target="_blank" rel="noopener" title="instagram")
-                  img(src="@img/instagram.svg", alt="") 
-              .video-progress.podcasts__video-item-controls-progress 
-                progress(value="0" min="0").progress-bar 
-                input(value="0" min="0" type="range" step="1").seek 
-                .seek-tooltip 00:00 
-              .podcasts__video-item-controls-time.time
-                time.time-elapsed 00:00 
-                time.duration 00:00
-              .podcasts__video-item-controls-btns
-                button(data-title='Play').play 
-                  .playback-icons 
-                    svg.playback-icon(width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg")
-                      ellipse(cx="25" cy="25" rx="9" ry="11" fill="white")
-                      path(d="M25 45C13.9593 44.9879 5.01212 36.0407 5 25V24.6C5.21986 13.6091 14.2692 4.85595 25.2613 5.0018C36.2535 5.14764 45.0674 14.1378 44.9955 25.1307C44.9237 36.1236 35.9931 44.9978 25 45ZM21 16V34L33 25L21 16Z" fill="#8D1AEF")
-                    svg.playback-icon.hidden(width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg")
-                      path.hidden(d="M25.0001 45.8333C13.4941 45.8333 4.16675 36.5059 4.16675 25C4.16675 13.494 13.4941 4.16663 25.0001 4.16663C36.506 4.16663 45.8334 13.494 45.8334 25C45.8208 36.5007 36.5008 45.8207 25.0001 45.8333ZM27.0834 16.6666V33.3333H31.2501V16.6666H27.0834ZM18.7501 16.6666V33.3333H22.9167V16.6666H18.7501Z" fill="#8D1AEF")
-        .podcasts__video-prev.swiper-button-prev
-        .podcasts__video-next.swiper-button-next
-      .podcasts__slider.podcasts__audio.swiper 
-        .swiper-wrapper 
-          .swiper-slide 
+          button(type="button" data-target="podcasts__video-slider").btn-primary_nobg.podcasts__header-btn Видеоподкаст
+          button(type="button" data-target="podcasts__audio-slider").btn-primary_nobg.podcasts__header-btn.active Аудиоподкаст
+      .podcasts__content
+        .podcasts__video-slider.podcasts__element-slider
+          .podcasts__slider.podcasts__video.swiper
+            .swiper-wrapper   
+              .swiper-slide.podcasts__video-item.video-container 
+                .podcasts__video-item-media
+                  video.video(controls='' preload='metadata' poster='img/poster.png')
+                    source(src='files/video-1.mp4' type='video/mp4')
+                  .playback-animation
+                    .playback-icons
+                      svg.playback-icon(width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M37.6042 20.9961C39.0937 21.8554 40 23.3691 40 25C40 26.6308 39.0937 28.1445 37.6042 28.916L7.60729 46.1035C6.06354 47.0703 4.13125 47.1093 2.55417 46.2793C0.976771 45.4492 0 43.8867 0 42.1875V7.81247C0 6.11716 0.976771 4.55368 2.55417 3.72361C4.13125 2.89451 6.06354 2.92869 7.60729 3.81247L37.6042 20.9961Z" fill="white")
+                      svg.playback-icon.hidden(width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M34 6.16211H30C26.6862 6.16211 24 8.26074 24 10.7617V38.8867C24 41.4756 26.6862 43.5742 30 43.5742L34 43.75C37.3138 43.75 40 41.6514 40 39.0625V10.9375C40 8.34863 37.3125 6.16211 34 6.16211ZM10 6.16211H6C2.68625 6.16211 0 8.26074 0 10.8496V38.9746C0 41.6504 2.68625 43.75 6 43.75H10C13.3138 43.75 16 41.6514 16 39.0625V10.9375C16 8.34863 13.3125 6.16211 10 6.16211Z" fill="white")
+                .podcasts__video-item-content
+                  .podcasts__video-item-content-header 
+                    img(src="@img/client-1.png", alt="" draggable="false")
+                    a(href="#!" target="_blank" rel="noopener") YouTube канал <br>«FIGHT SHOW»
+                  .podcasts__video-item-content-body 
+                    a(href="#!" target="_blank" rel="noopener").podcasts__video-item-content-social 
+                      img(src="@img/instagram.svg", alt="" draggable="false") 
+                      p @fight_show 
+                    a(href="#!" target="_blank" rel="noopener").podcasts__video-item-content-social 
+                      img(src="@img/youtube.svg", alt="" draggable="false") 
+                      p @fight_show 
+                .podcasts__video-item-controls.video-controls.hidden.hide 
+                  p.podcasts__video-item-controls-title YouTube канал «FIGHT SHOW» 
+                  .podcasts__video-item-controls-socials
+                    a(href="#!" target="_blank" rel="noopener" title="youtube")
+                      img(src="@img/youtube.svg", alt="") 
+                    a(href="#!" target="_blank" rel="noopener" title="instagram")
+                      img(src="@img/instagram.svg", alt="") 
+                  .video-progress.podcasts__video-item-controls-progress 
+                    progress(value="0" min="0").progress-bar 
+                    input(value="0" min="0" type="range" step="1").seek 
+                    .seek-tooltip 00:00 
+                  .podcasts__video-item-controls-time.time
+                    time.time-elapsed 00:00 
+                    time.duration 00:00
+                  .podcasts__video-item-controls-btns
+                    button(data-title='Play').play 
+                      .playback-icons 
+                        svg.playback-icon(width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                          ellipse(cx="25" cy="25" rx="9" ry="11" fill="white")
+                          path(d="M25 45C13.9593 44.9879 5.01212 36.0407 5 25V24.6C5.21986 13.6091 14.2692 4.85595 25.2613 5.0018C36.2535 5.14764 45.0674 14.1378 44.9955 25.1307C44.9237 36.1236 35.9931 44.9978 25 45ZM21 16V34L33 25L21 16Z" fill="#8D1AEF")
+                        svg.playback-icon.hidden(width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                          path.hidden(d="M25.0001 45.8333C13.4941 45.8333 4.16675 36.5059 4.16675 25C4.16675 13.494 13.4941 4.16663 25.0001 4.16663C36.506 4.16663 45.8334 13.494 45.8334 25C45.8208 36.5007 36.5008 45.8207 25.0001 45.8333ZM27.0834 16.6666V33.3333H31.2501V16.6666H27.0834ZM18.7501 16.6666V33.3333H22.9167V16.6666H18.7501Z" fill="#8D1AEF")
+              .swiper-slide.podcasts__video-item.video-container 
+                .podcasts__video-item-media
+                  video.video(controls='' preload='metadata' poster='img/poster.png')
+                    source(src='files/video-1.mp4' type='video/mp4')
+                  .playback-animation
+                    .playback-icons
+                      svg.playback-icon(width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M37.6042 20.9961C39.0937 21.8554 40 23.3691 40 25C40 26.6308 39.0937 28.1445 37.6042 28.916L7.60729 46.1035C6.06354 47.0703 4.13125 47.1093 2.55417 46.2793C0.976771 45.4492 0 43.8867 0 42.1875V7.81247C0 6.11716 0.976771 4.55368 2.55417 3.72361C4.13125 2.89451 6.06354 2.92869 7.60729 3.81247L37.6042 20.9961Z" fill="white")
+                      svg.playback-icon.hidden(width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M34 6.16211H30C26.6862 6.16211 24 8.26074 24 10.7617V38.8867C24 41.4756 26.6862 43.5742 30 43.5742L34 43.75C37.3138 43.75 40 41.6514 40 39.0625V10.9375C40 8.34863 37.3125 6.16211 34 6.16211ZM10 6.16211H6C2.68625 6.16211 0 8.26074 0 10.8496V38.9746C0 41.6504 2.68625 43.75 6 43.75H10C13.3138 43.75 16 41.6514 16 39.0625V10.9375C16 8.34863 13.3125 6.16211 10 6.16211Z" fill="white")
+                .podcasts__video-item-content
+                  .podcasts__video-item-content-header 
+                    img(src="@img/client-1.png", alt="" draggable="false")
+                    a(href="#!" target="_blank" rel="noopener") YouTube канал <br>«FIGHT SHOW»
+                  .podcasts__video-item-content-body 
+                    a(href="#!" target="_blank" rel="noopener").podcasts__video-item-content-social 
+                      img(src="@img/instagram.svg", alt="" draggable="false") 
+                      p @fight_show 
+                    a(href="#!" target="_blank" rel="noopener").podcasts__video-item-content-social 
+                      img(src="@img/youtube.svg", alt="" draggable="false") 
+                      p @fight_show 
+                .podcasts__video-item-controls.video-controls.hidden.hide 
+                  p.podcasts__video-item-controls-title YouTube канал «FIGHT SHOW» 
+                  .podcasts__video-item-controls-socials
+                    a(href="#!" target="_blank" rel="noopener" title="youtube")
+                      img(src="@img/youtube.svg", alt="") 
+                    a(href="#!" target="_blank" rel="noopener" title="instagram")
+                      img(src="@img/instagram.svg", alt="") 
+                  .video-progress.podcasts__video-item-controls-progress 
+                    progress(value="0" min="0").progress-bar 
+                    input(value="0" min="0" type="range" step="1").seek 
+                    .seek-tooltip 00:00 
+                  .podcasts__video-item-controls-time.time
+                    time.time-elapsed 00:00 
+                    time.duration 00:00
+                  .podcasts__video-item-controls-btns
+                    button(data-title='Play').play 
+                      .playback-icons 
+                        svg.playback-icon(width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                          ellipse(cx="25" cy="25" rx="9" ry="11" fill="white")
+                          path(d="M25 45C13.9593 44.9879 5.01212 36.0407 5 25V24.6C5.21986 13.6091 14.2692 4.85595 25.2613 5.0018C36.2535 5.14764 45.0674 14.1378 44.9955 25.1307C44.9237 36.1236 35.9931 44.9978 25 45ZM21 16V34L33 25L21 16Z" fill="#8D1AEF")
+                        svg.playback-icon.hidden(width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                          path.hidden(d="M25.0001 45.8333C13.4941 45.8333 4.16675 36.5059 4.16675 25C4.16675 13.494 13.4941 4.16663 25.0001 4.16663C36.506 4.16663 45.8334 13.494 45.8334 25C45.8208 36.5007 36.5008 45.8207 25.0001 45.8333ZM27.0834 16.6666V33.3333H31.2501V16.6666H27.0834ZM18.7501 16.6666V33.3333H22.9167V16.6666H18.7501Z" fill="#8D1AEF")
+              .swiper-slide.podcasts__video-item.video-container 
+                .podcasts__video-item-media
+                  video.video(controls='' preload='metadata' poster='img/poster.png')
+                    source(src='files/video-1.mp4' type='video/mp4')
+                  .playback-animation
+                    .playback-icons
+                      svg.playback-icon(width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M37.6042 20.9961C39.0937 21.8554 40 23.3691 40 25C40 26.6308 39.0937 28.1445 37.6042 28.916L7.60729 46.1035C6.06354 47.0703 4.13125 47.1093 2.55417 46.2793C0.976771 45.4492 0 43.8867 0 42.1875V7.81247C0 6.11716 0.976771 4.55368 2.55417 3.72361C4.13125 2.89451 6.06354 2.92869 7.60729 3.81247L37.6042 20.9961Z" fill="white")
+                      svg.playback-icon.hidden(width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M34 6.16211H30C26.6862 6.16211 24 8.26074 24 10.7617V38.8867C24 41.4756 26.6862 43.5742 30 43.5742L34 43.75C37.3138 43.75 40 41.6514 40 39.0625V10.9375C40 8.34863 37.3125 6.16211 34 6.16211ZM10 6.16211H6C2.68625 6.16211 0 8.26074 0 10.8496V38.9746C0 41.6504 2.68625 43.75 6 43.75H10C13.3138 43.75 16 41.6514 16 39.0625V10.9375C16 8.34863 13.3125 6.16211 10 6.16211Z" fill="white")
+                .podcasts__video-item-content
+                  .podcasts__video-item-content-header 
+                    img(src="@img/client-1.png", alt="" draggable="false")
+                    a(href="#!" target="_blank" rel="noopener") YouTube канал <br>«FIGHT SHOW»
+                  .podcasts__video-item-content-body 
+                    a(href="#!" target="_blank" rel="noopener").podcasts__video-item-content-social 
+                      img(src="@img/instagram.svg", alt="" draggable="false") 
+                      p @fight_show 
+                    a(href="#!" target="_blank" rel="noopener").podcasts__video-item-content-social 
+                      img(src="@img/youtube.svg", alt="" draggable="false") 
+                      p @fight_show 
+                .podcasts__video-item-controls.video-controls.hidden.hide 
+                  p.podcasts__video-item-controls-title YouTube канал «FIGHT SHOW» 
+                  .podcasts__video-item-controls-socials
+                    a(href="#!" target="_blank" rel="noopener" title="youtube")
+                      img(src="@img/youtube.svg", alt="") 
+                    a(href="#!" target="_blank" rel="noopener" title="instagram")
+                      img(src="@img/instagram.svg", alt="") 
+                  .video-progress.podcasts__video-item-controls-progress 
+                    progress(value="0" min="0").progress-bar 
+                    input(value="0" min="0" type="range" step="1").seek 
+                    .seek-tooltip 00:00 
+                  .podcasts__video-item-controls-time.time
+                    time.time-elapsed 00:00 
+                    time.duration 00:00
+                  .podcasts__video-item-controls-btns
+                    button(data-title='Play').play 
+                      .playback-icons 
+                        svg.playback-icon(width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                          ellipse(cx="25" cy="25" rx="9" ry="11" fill="white")
+                          path(d="M25 45C13.9593 44.9879 5.01212 36.0407 5 25V24.6C5.21986 13.6091 14.2692 4.85595 25.2613 5.0018C36.2535 5.14764 45.0674 14.1378 44.9955 25.1307C44.9237 36.1236 35.9931 44.9978 25 45ZM21 16V34L33 25L21 16Z" fill="#8D1AEF")
+                        svg.playback-icon.hidden(width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                          path.hidden(d="M25.0001 45.8333C13.4941 45.8333 4.16675 36.5059 4.16675 25C4.16675 13.494 13.4941 4.16663 25.0001 4.16663C36.506 4.16663 45.8334 13.494 45.8334 25C45.8208 36.5007 36.5008 45.8207 25.0001 45.8333ZM27.0834 16.6666V33.3333H31.2501V16.6666H27.0834ZM18.7501 16.6666V33.3333H22.9167V16.6666H18.7501Z" fill="#8D1AEF")
+              .swiper-slide.podcasts__video-item.video-container 
+                .podcasts__video-item-media
+                  video.video(controls='' preload='metadata' poster='img/poster.png')
+                    source(src='files/video-1.mp4' type='video/mp4')
+                  .playback-animation
+                    .playback-icons
+                      svg.playback-icon(width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M37.6042 20.9961C39.0937 21.8554 40 23.3691 40 25C40 26.6308 39.0937 28.1445 37.6042 28.916L7.60729 46.1035C6.06354 47.0703 4.13125 47.1093 2.55417 46.2793C0.976771 45.4492 0 43.8867 0 42.1875V7.81247C0 6.11716 0.976771 4.55368 2.55417 3.72361C4.13125 2.89451 6.06354 2.92869 7.60729 3.81247L37.6042 20.9961Z" fill="white")
+                      svg.playback-icon.hidden(width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M34 6.16211H30C26.6862 6.16211 24 8.26074 24 10.7617V38.8867C24 41.4756 26.6862 43.5742 30 43.5742L34 43.75C37.3138 43.75 40 41.6514 40 39.0625V10.9375C40 8.34863 37.3125 6.16211 34 6.16211ZM10 6.16211H6C2.68625 6.16211 0 8.26074 0 10.8496V38.9746C0 41.6504 2.68625 43.75 6 43.75H10C13.3138 43.75 16 41.6514 16 39.0625V10.9375C16 8.34863 13.3125 6.16211 10 6.16211Z" fill="white")
+                .podcasts__video-item-content
+                  .podcasts__video-item-content-header 
+                    img(src="@img/client-1.png", alt="" draggable="false")
+                    a(href="#!" target="_blank" rel="noopener") YouTube канал <br>«FIGHT SHOW»
+                  .podcasts__video-item-content-body 
+                    a(href="#!" target="_blank" rel="noopener").podcasts__video-item-content-social 
+                      img(src="@img/instagram.svg", alt="" draggable="false") 
+                      p @fight_show 
+                    a(href="#!" target="_blank" rel="noopener").podcasts__video-item-content-social 
+                      img(src="@img/youtube.svg", alt="" draggable="false") 
+                      p @fight_show 
+                .podcasts__video-item-controls.video-controls.hidden.hide 
+                  p.podcasts__video-item-controls-title YouTube канал «FIGHT SHOW» 
+                  .podcasts__video-item-controls-socials
+                    a(href="#!" target="_blank" rel="noopener" title="youtube")
+                      img(src="@img/youtube.svg", alt="") 
+                    a(href="#!" target="_blank" rel="noopener" title="instagram")
+                      img(src="@img/instagram.svg", alt="") 
+                  .video-progress.podcasts__video-item-controls-progress 
+                    progress(value="0" min="0").progress-bar 
+                    input(value="0" min="0" type="range" step="1").seek 
+                    .seek-tooltip 00:00 
+                  .podcasts__video-item-controls-time.time
+                    time.time-elapsed 00:00 
+                    time.duration 00:00
+                  .podcasts__video-item-controls-btns
+                    button(data-title='Play').play 
+                      .playback-icons 
+                        svg.playback-icon(width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                          ellipse(cx="25" cy="25" rx="9" ry="11" fill="white")
+                          path(d="M25 45C13.9593 44.9879 5.01212 36.0407 5 25V24.6C5.21986 13.6091 14.2692 4.85595 25.2613 5.0018C36.2535 5.14764 45.0674 14.1378 44.9955 25.1307C44.9237 36.1236 35.9931 44.9978 25 45ZM21 16V34L33 25L21 16Z" fill="#8D1AEF")
+                        svg.playback-icon.hidden(width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                          path.hidden(d="M25.0001 45.8333C13.4941 45.8333 4.16675 36.5059 4.16675 25C4.16675 13.494 13.4941 4.16663 25.0001 4.16663C36.506 4.16663 45.8334 13.494 45.8334 25C45.8208 36.5007 36.5008 45.8207 25.0001 45.8333ZM27.0834 16.6666V33.3333H31.2501V16.6666H27.0834ZM18.7501 16.6666V33.3333H22.9167V16.6666H18.7501Z" fill="#8D1AEF")
+            .podcasts__video-prev.swiper-button-prev
+            .podcasts__video-next.swiper-button-next
+        .podcasts__audio-slider.podcasts__element-slider.active 
+          .podcasts__slider.podcasts__audio.swiper
+            .swiper-wrapper 
+              .swiper-slide.podcasts__audio-item.audio-container 
+                .podcasts__audio-item-header 
+                  p YouTube канал  «FIGHT SHOW» 
+                .podcasts__audio-item-body 
+                  .podcasts__audio-item-media
+                    img(src="@img/audio.png", alt="" draggable="false")
+                    .playback-animation
+                      .playback-icons
+                        svg.playback-icon(width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                          path(d="M37.6042 20.9961C39.0937 21.8554 40 23.3691 40 25C40 26.6308 39.0937 28.1445 37.6042 28.916L7.60729 46.1035C6.06354 47.0703 4.13125 47.1093 2.55417 46.2793C0.976771 45.4492 0 43.8867 0 42.1875V7.81247C0 6.11716 0.976771 4.55368 2.55417 3.72361C4.13125 2.89451 6.06354 2.92869 7.60729 3.81247L37.6042 20.9961Z" fill="white")
+                        svg.playback-icon.hidden(width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                          path(d="M34 6.16211H30C26.6862 6.16211 24 8.26074 24 10.7617V38.8867C24 41.4756 26.6862 43.5742 30 43.5742L34 43.75C37.3138 43.75 40 41.6514 40 39.0625V10.9375C40 8.34863 37.3125 6.16211 34 6.16211ZM10 6.16211H6C2.68625 6.16211 0 8.26074 0 10.8496V38.9746C0 41.6504 2.68625 43.75 6 43.75H10C13.3138 43.75 16 41.6514 16 39.0625V10.9375C16 8.34863 13.3125 6.16211 10 6.16211Z" fill="white")
+                  .podcasts__audio-item-controls.audio-controls.hidden 
+                    audio(src="files/audio-1.mp3").audio
+                    .podcasts__audio-item-controls-time.time 
+                      time.time-elapsed 00:00 
+                      time.duration 00:00 
+                    .audio-progress.podcasts__audio-item-controls-progress 
+                      progress(value="0" min="0").progress-bar 
+                      input(value="0" min="0" type="range" step="1").seek 
+                      .seek-tooltip 00:00 
+                    .podcasts__audio-item-controls-btns 
+                      button(data-title='Play').play  
+                        .playback-icons 
+                          svg.playback-icon(width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            ellipse(cx="25" cy="25" rx="9" ry="11" fill="white")
+                            path(d="M25 45C13.9593 44.9879 5.01212 36.0407 5 25V24.6C5.21986 13.6091 14.2692 4.85595 25.2613 5.0018C36.2535 5.14764 45.0674 14.1378 44.9955 25.1307C44.9237 36.1236 35.9931 44.9978 25 45ZM21 16V34L33 25L21 16Z" fill="#8D1AEF")
+                          svg.playback-icon.hidden(width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            path.hidden(d="M25.0001 45.8333C13.4941 45.8333 4.16675 36.5059 4.16675 25C4.16675 13.494 13.4941 4.16663 25.0001 4.16663C36.506 4.16663 45.8334 13.494 45.8334 25C45.8208 36.5007 36.5008 45.8207 25.0001 45.8333ZM27.0834 16.6666V33.3333H31.2501V16.6666H27.0834ZM18.7501 16.6666V33.3333H22.9167V16.6666H18.7501Z" fill="#8D1AEF")
+              .swiper-slide.podcasts__audio-item.audio-container 
+                .podcasts__audio-item-header 
+                  p YouTube канал  «FIGHT SHOW» 
+                .podcasts__audio-item-body 
+                  .podcasts__audio-item-media
+                    img(src="@img/audio.png", alt="" draggable="false")
+                    .playback-animation
+                      .playback-icons
+                        svg.playback-icon(width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                          path(d="M37.6042 20.9961C39.0937 21.8554 40 23.3691 40 25C40 26.6308 39.0937 28.1445 37.6042 28.916L7.60729 46.1035C6.06354 47.0703 4.13125 47.1093 2.55417 46.2793C0.976771 45.4492 0 43.8867 0 42.1875V7.81247C0 6.11716 0.976771 4.55368 2.55417 3.72361C4.13125 2.89451 6.06354 2.92869 7.60729 3.81247L37.6042 20.9961Z" fill="white")
+                        svg.playback-icon.hidden(width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                          path(d="M34 6.16211H30C26.6862 6.16211 24 8.26074 24 10.7617V38.8867C24 41.4756 26.6862 43.5742 30 43.5742L34 43.75C37.3138 43.75 40 41.6514 40 39.0625V10.9375C40 8.34863 37.3125 6.16211 34 6.16211ZM10 6.16211H6C2.68625 6.16211 0 8.26074 0 10.8496V38.9746C0 41.6504 2.68625 43.75 6 43.75H10C13.3138 43.75 16 41.6514 16 39.0625V10.9375C16 8.34863 13.3125 6.16211 10 6.16211Z" fill="white")
+                  .podcasts__audio-item-controls.audio-controls.hidden 
+                    audio(src="files/audio-2.mp3").audio
+                    .podcasts__audio-item-controls-time.time 
+                      time.time-elapsed 00:00 
+                      time.duration 00:00 
+                    .audio-progress.podcasts__audio-item-controls-progress 
+                      progress(value="0" min="0").progress-bar 
+                      input(value="0" min="0" type="range" step="1").seek 
+                      .seek-tooltip 00:00 
+                    .podcasts__audio-item-controls-btns 
+                      button(data-title='Play').play  
+                        .playback-icons 
+                          svg.playback-icon(width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            ellipse(cx="25" cy="25" rx="9" ry="11" fill="white")
+                            path(d="M25 45C13.9593 44.9879 5.01212 36.0407 5 25V24.6C5.21986 13.6091 14.2692 4.85595 25.2613 5.0018C36.2535 5.14764 45.0674 14.1378 44.9955 25.1307C44.9237 36.1236 35.9931 44.9978 25 45ZM21 16V34L33 25L21 16Z" fill="#8D1AEF")
+                          svg.playback-icon.hidden(width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            path.hidden(d="M25.0001 45.8333C13.4941 45.8333 4.16675 36.5059 4.16675 25C4.16675 13.494 13.4941 4.16663 25.0001 4.16663C36.506 4.16663 45.8334 13.494 45.8334 25C45.8208 36.5007 36.5008 45.8207 25.0001 45.8333ZM27.0834 16.6666V33.3333H31.2501V16.6666H27.0834ZM18.7501 16.6666V33.3333H22.9167V16.6666H18.7501Z" fill="#8D1AEF")
+              .swiper-slide.podcasts__audio-item.audio-container 
+                .podcasts__audio-item-header 
+                  p YouTube канал  «FIGHT SHOW» 
+                .podcasts__audio-item-body 
+                  .podcasts__audio-item-media
+                    img(src="@img/audio.png", alt="" draggable="false")
+                    .playback-animation
+                      .playback-icons
+                        svg.playback-icon(width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                          path(d="M37.6042 20.9961C39.0937 21.8554 40 23.3691 40 25C40 26.6308 39.0937 28.1445 37.6042 28.916L7.60729 46.1035C6.06354 47.0703 4.13125 47.1093 2.55417 46.2793C0.976771 45.4492 0 43.8867 0 42.1875V7.81247C0 6.11716 0.976771 4.55368 2.55417 3.72361C4.13125 2.89451 6.06354 2.92869 7.60729 3.81247L37.6042 20.9961Z" fill="white")
+                        svg.playback-icon.hidden(width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                          path(d="M34 6.16211H30C26.6862 6.16211 24 8.26074 24 10.7617V38.8867C24 41.4756 26.6862 43.5742 30 43.5742L34 43.75C37.3138 43.75 40 41.6514 40 39.0625V10.9375C40 8.34863 37.3125 6.16211 34 6.16211ZM10 6.16211H6C2.68625 6.16211 0 8.26074 0 10.8496V38.9746C0 41.6504 2.68625 43.75 6 43.75H10C13.3138 43.75 16 41.6514 16 39.0625V10.9375C16 8.34863 13.3125 6.16211 10 6.16211Z" fill="white")
+                  .podcasts__audio-item-controls.audio-controls.hidden 
+                    audio(src="files/audio-3.mp3").audio
+                    .podcasts__audio-item-controls-time.time 
+                      time.time-elapsed 00:00 
+                      time.duration 00:00 
+                    .audio-progress.podcasts__audio-item-controls-progress 
+                      progress(value="0" min="0").progress-bar 
+                      input(value="0" min="0" type="range" step="1").seek 
+                      .seek-tooltip 00:00 
+                    .podcasts__audio-item-controls-btns 
+                      button(data-title='Play').play  
+                        .playback-icons 
+                          svg.playback-icon(width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            ellipse(cx="25" cy="25" rx="9" ry="11" fill="white")
+                            path(d="M25 45C13.9593 44.9879 5.01212 36.0407 5 25V24.6C5.21986 13.6091 14.2692 4.85595 25.2613 5.0018C36.2535 5.14764 45.0674 14.1378 44.9955 25.1307C44.9237 36.1236 35.9931 44.9978 25 45ZM21 16V34L33 25L21 16Z" fill="#8D1AEF")
+                          svg.playback-icon.hidden(width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            path.hidden(d="M25.0001 45.8333C13.4941 45.8333 4.16675 36.5059 4.16675 25C4.16675 13.494 13.4941 4.16663 25.0001 4.16663C36.506 4.16663 45.8334 13.494 45.8334 25C45.8208 36.5007 36.5008 45.8207 25.0001 45.8333ZM27.0834 16.6666V33.3333H31.2501V16.6666H27.0834ZM18.7501 16.6666V33.3333H22.9167V16.6666H18.7501Z" fill="#8D1AEF")
+              .swiper-slide.podcasts__audio-item.audio-container 
+                .podcasts__audio-item-header 
+                  p YouTube канал  «FIGHT SHOW» 
+                .podcasts__audio-item-body 
+                  .podcasts__audio-item-media
+                    img(src="@img/audio.png", alt="" draggable="false")
+                    .playback-animation
+                      .playback-icons
+                        svg.playback-icon(width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                          path(d="M37.6042 20.9961C39.0937 21.8554 40 23.3691 40 25C40 26.6308 39.0937 28.1445 37.6042 28.916L7.60729 46.1035C6.06354 47.0703 4.13125 47.1093 2.55417 46.2793C0.976771 45.4492 0 43.8867 0 42.1875V7.81247C0 6.11716 0.976771 4.55368 2.55417 3.72361C4.13125 2.89451 6.06354 2.92869 7.60729 3.81247L37.6042 20.9961Z" fill="white")
+                        svg.playback-icon.hidden(width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                          path(d="M34 6.16211H30C26.6862 6.16211 24 8.26074 24 10.7617V38.8867C24 41.4756 26.6862 43.5742 30 43.5742L34 43.75C37.3138 43.75 40 41.6514 40 39.0625V10.9375C40 8.34863 37.3125 6.16211 34 6.16211ZM10 6.16211H6C2.68625 6.16211 0 8.26074 0 10.8496V38.9746C0 41.6504 2.68625 43.75 6 43.75H10C13.3138 43.75 16 41.6514 16 39.0625V10.9375C16 8.34863 13.3125 6.16211 10 6.16211Z" fill="white")
+                  .podcasts__audio-item-controls.audio-controls.hidden 
+                    audio(src="files/audio-4.mp3").audio
+                    .podcasts__audio-item-controls-time.time 
+                      time.time-elapsed 00:00 
+                      time.duration 00:00 
+                    .audio-progress.podcasts__audio-item-controls-progress 
+                      progress(value="0" min="0").progress-bar 
+                      input(value="0" min="0" type="range" step="1").seek 
+                      .seek-tooltip 00:00 
+                    .podcasts__audio-item-controls-btns 
+                      button(data-title='Play').play  
+                        .playback-icons 
+                          svg.playback-icon(width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            ellipse(cx="25" cy="25" rx="9" ry="11" fill="white")
+                            path(d="M25 45C13.9593 44.9879 5.01212 36.0407 5 25V24.6C5.21986 13.6091 14.2692 4.85595 25.2613 5.0018C36.2535 5.14764 45.0674 14.1378 44.9955 25.1307C44.9237 36.1236 35.9931 44.9978 25 45ZM21 16V34L33 25L21 16Z" fill="#8D1AEF")
+                          svg.playback-icon.hidden(width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            path.hidden(d="M25.0001 45.8333C13.4941 45.8333 4.16675 36.5059 4.16675 25C4.16675 13.494 13.4941 4.16663 25.0001 4.16663C36.506 4.16663 45.8334 13.494 45.8334 25C45.8208 36.5007 36.5008 45.8207 25.0001 45.8333ZM27.0834 16.6666V33.3333H31.2501V16.6666H27.0834ZM18.7501 16.6666V33.3333H22.9167V16.6666H18.7501Z" fill="#8D1AEF")
+            .podcasts__audio-prev.swiper-button-prev
+            .podcasts__audio-next.swiper-button-next
