@@ -53,6 +53,30 @@ new Swiper(".clients__slider", {
   }
 });
 
+new Swiper(".examples__slider", {
+  modules: [Navigation, Pagination],
+  slidesPerView: 1,
+  loop: true,
+  spaceBetween: 20,
+  watchSlidesProgress: true,
+  watchSlidesVisibility: true,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+    1200: {
+      slidesPerView: 3,
+    },
+    1400: {
+      slidesPerView: 3,
+    }
+  },
+  navigation: {
+    nextEl: ".examples__next",
+    prevEl: ".examples__prev",
+  },
+});
+
 new Swiper(".podcasts__slider", {
   modules: [Navigation],
   // loop: true,

@@ -1,5 +1,11 @@
 // Sass функции
 .enable{
+    &-xxl{
+        display: none !important;
+        @include media(1400){
+            display: block !important;
+        }
+    }
     &-xl{
         display: none !important;
         @include media(1200){
@@ -32,6 +38,11 @@
     }
 }
 .disable{
+    &-xxl{
+        @include media(1400){
+            display: none !important;
+        }
+    }
     &-xl{
         @include media(1200){
             display: none !important;

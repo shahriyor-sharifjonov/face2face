@@ -2,10 +2,6 @@
     &__body{
         display: flex;
         flex-direction: column;
-        row-gap: 25px;
-        @include media(1200){
-            row-gap: 30px;
-        }
     }
     &__title{
         font-weight: 800;
@@ -24,18 +20,22 @@
             line-height: 30px;
             margin-bottom: 20px;
         }
+        @include media(576){
+            font-size: 24px;
+        }
     }
     &__list{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 26px;
+        margin-bottom: 40px;
+        gap: 20px;
         @include media(767){
             flex-wrap: wrap;
-            gap: 20px;
             max-width: 320px;
             width: 100%;
             margin: 0 auto;
+            margin-bottom: 30px;
         }
         @include media(360){
             flex-direction: column;
@@ -49,7 +49,8 @@
         border: 1px solid #8D1AEF;
         border-left: none;
         border-radius: 30px;
-        padding-right: 31px;
+        padding-right: 30px;
+        width: calc(25% - 10px);
         @include media(767){
             max-width: 150px;
             height: 40px;
