@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.min.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css")
+        link(rel="stylesheet", href="css/style.min.css")
+        title Document
+    body.light  
+        .wrapper 
+            include components/header 
+            +header 
+            main.main.light-page 
+                - var title = "Аудио оборудование"
+                - var desc = "Качество звучания — внешний вид вашего подкаста. Тембр голоса, яркость звука, динамика и громкость дают 50% к лояльности слушателя. Поэтому мы отобрали лучшее профессиональное оборудование для Вас!"
+                include components/equipments/equipments-header 
+                +equipments-header('audio', 'audio-img', '1', title, desc) 
+                include components/equipments/use 
+                +use-light 
+                include components/equipments/examples 
+                +examples 
+                include components/form 
+                +form 
+            include components/footer 
+            +footer
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+        script(src="js/app.min.js") 

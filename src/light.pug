@@ -13,10 +13,12 @@ html(lang="en")
             include components/header 
             +header 
             main.main.light-page
-                include components/equipments/lamps 
-                +lamps
+                - var title = "Световое оборудование"
+                - var desc = "Свет - важная составляющая для создания атмосферы.В вашем распоряжении софтбоксы, RGB и светодиодные лампы."
+                include components/equipments/equipments-header 
+                +equipments-header('light', 'lamps-img', '3', title, desc)
                 include components/equipments/use 
-                +use
+                +use-light 
                 include components/equipments/examples 
                 +examples
                 include components/form 
