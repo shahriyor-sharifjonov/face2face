@@ -1,5 +1,23 @@
 .clients{
-    &__title{
+    background: url('../img/clients-bg.png'), #FEFBFB;
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
+    @include media(992){
+        background: url('../img/clients-bg-md.png'), #FEFBFB;
+    }
+    @include media(568){
+        background: url('../img/clients-bg-sm.png'), #FEFBFB;
+    }
+    &-page{
+        padding: 150px 0 130px 0 !important;
+        @include media(992){
+            padding: 150px 0 100px 0 !important;
+        }
+        @include media(767){
+            padding: 80px 0 50px 0 !important;
+        }
+    }
+    &__title{ 
         font-weight: 800;
         font-size: 40px;
         line-height: 49px;
@@ -35,7 +53,7 @@
             margin-right: -50px;
             padding-right: 50px;
         }
-        @include media(1400){
+        @include media(1399){
             margin-left: -75px;
             padding-left: 75px;
             margin-right: -75px;
@@ -134,71 +152,73 @@
             }
         }
     }
-    .swiper{
-        &-slide{
-            transition: 200ms ease;
-            &-prev{
-                opacity: 0;
-                visibility: hidden;
-            }
-            &-duplicate{
+    &-block{
+        .swiper{
+            &-slide{
+                transition: 200ms ease;
                 &-prev{
-                    @include media(1400){
+                    opacity: 0;
+                    visibility: hidden;
+                }
+                &-duplicate{
+                    &-prev{
+                        @include media(1400){
+                            opacity: 0;
+                            visibility: hidden;
+                        }
+                    }
+                    &-active{
                         opacity: 0;
                         visibility: hidden;
                     }
                 }
-                &-active{
-                    opacity: 0;
-                    visibility: hidden;
-                }
             }
-        }
-        &-button{
-            &-next,
-            &-prev{
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                top: 100px;
-                margin-top: 0;
-                @include media(992){
-                    top: 80px;
-                }
-                @include media(576){
-                    width: 30px;
-                    height: 30px;
-                }
-                @include media(767){
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
-                &:after{
-                    content: '';
+            &-button{
+                &-next,
+                &-prev{
                     width: 50px;
                     height: 50px;
-                    background-size: 100% 100% !important;
+                    border-radius: 50%;
+                    top: 100px;
+                    margin-top: 0;
+                    @include media(992){
+                        top: 80px;
+                    }
                     @include media(576){
                         width: 30px;
                         height: 30px;
                     }
-                }
-            }
-            &-next{
-                right: 0;
-                &::after{
-                    background: url('../img/next-slide.png') 100% 100%;
-                    @include media(576){
-                        background: url('../img/next-slide-sm.png') 100% 100%;
+                    @include media(767){
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                    &:after{
+                        content: '';
+                        width: 50px;
+                        height: 50px;
+                        background-size: 100% 100% !important;
+                        @include media(576){
+                            width: 30px;
+                            height: 30px;
+                        }
                     }
                 }
-            }
-            &-prev{
-                left: 0;
-                &::after{
-                    background: url('../img/prev-slide.png') 100% 100%;
-                    @include media(576){
-                        background: url('../img/prev-slide-sm.png') 100% 100%;
+                &-next{
+                    right: 0;
+                    &::after{
+                        background: url('../img/next-slide.png') 100% 100%;
+                        @include media(576){
+                            background: url('../img/next-slide-sm.png') 100% 100%;
+                        }
+                    }
+                }
+                &-prev{
+                    left: 0;
+                    &::after{
+                        background: url('../img/prev-slide.png') 100% 100%;
+                        @include media(576){
+                            background: url('../img/prev-slide-sm.png') 100% 100%;
+                        }
                     }
                 }
             }

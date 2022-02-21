@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.min.css")
+        link(rel="stylesheet", href="css/style.min.css")
+        title Document
+    body.clients 
+        .wrapper 
+            include components/header 
+            +header 
+            main.main.clients-page  
+                include components/clients 
+                +clients
+                include components/podcasts 
+                +podcasts 
+                include components/reviews  
+                +reviews 
+                include components/form 
+                +form
+            include components/footer 
+            +footer
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js") 
+        script(src="js/app.min.js") 
