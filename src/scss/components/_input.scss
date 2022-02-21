@@ -61,6 +61,7 @@ input[type='range'] {
     -webkit-appearance: none;
     background: #FAF9FF;
     border-radius: 5px;
+    cursor: pointer;
 }
   
 input[type='range']::-webkit-slider-runnable-track {
@@ -74,7 +75,23 @@ input[type='range']::-webkit-slider-thumb {
     width: 10px;
     -webkit-appearance: none;
     height: 10px;
-    cursor: ew-resize;
+    cursor: pointer;
     background: #F59139;
     box-shadow: -378px 0 0 378px #F59139;
+}
+
+// violet progress
+input.violet[type='range']::-webkit-slider-runnable-track {
+    color: #8D1AEF;
+    border: 1px solid #F8F8F8;
+}
+
+input.violet[type='range']::-webkit-slider-runnable-track {
+    color: #8D1AEF;
+    border: 1px solid #F8F8F8;
+}
+  
+input.violet[type='range']::-webkit-slider-thumb {
+    background: #8D1AEF;
+    box-shadow: -378px 0 0 378px #8D1AEF;
 }

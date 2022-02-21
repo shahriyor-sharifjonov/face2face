@@ -14,12 +14,12 @@
     }
     &__content{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 20px;
         align-items: flex-start !important;
         @include media(1200){
-            flex-direction: column;
+            flex-wrap: wrap;
             margin: 0 auto;
-            row-gap: 20px;
         }
     }
     &__item{
@@ -31,14 +31,21 @@
         @include media(1200){
             flex-direction: row;
             column-gap: 20px;
-            max-width: 70%;
+            max-width: calc(50% - 10px);
             width: 100%;
             margin: 0 auto;
+            &.enable-xl{
+                display: flex !important;
+            }
         }  
+        @include media(992){
+            max-width: 70%;
+            width: 100%;
+        }
         @include media(576){
             column-gap: 10px;
-        } 
-        @include media(450){
+        }
+        @include media(470){
             max-width: 100%;
         }
         &-title{
@@ -67,7 +74,7 @@
                 max-width: 160px;
                 width: 100%;
             }
-            &:nth-of-type(even){
+            &:not(:last-child){
                 margin-bottom: 10px;
                 @include media(576){
                     margin-bottom: 5px;
@@ -86,6 +93,8 @@
         }
     }
     &__info{
+        max-width: 100%;
+        width: 100%;
         display: flex;
         flex-direction: column;
     }
