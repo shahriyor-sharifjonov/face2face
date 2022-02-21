@@ -324,6 +324,12 @@ document.querySelectorAll('.video-container').forEach(function(el){
     }
   }
 
+  video.addEventListener('play', function(e){
+    video.classList.add('playes');
+  })
+  video.addEventListener('pause', function(e){
+    video.classList.remove('playes')
+  })
   playButton.addEventListener('click', togglePlay);
 
   function updatePlayButton() {

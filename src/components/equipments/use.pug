@@ -5,33 +5,33 @@ mixin use-light()
             .use__content 
                 .use__item 
                     .use__img   
-                        img(src="@img/use-img-1.png", alt="").use-img
+                        img(src="@img/use-img-1.png", alt="" draggable="false").use-img
                     .use__info
                         h3.use__item-title Основной свет
                         p.use__item-p Aputure Amaran 200x
                         p.use__item-p Godox FL150R
                 .use__item 
                     .use__img 
-                        img(src="@img/use-img-2.png", alt="").use-img
+                        img(src="@img/use-img-2.png", alt="" draggable="false").use-img
                     .use__info
                         h3.use__item-title RGB лампы для заливки фона
                         p.use__item-p Светодиодная Youngnou III 360 PRO
                         p.use__item-p Светодиодная Soonlao
                 .use__item 
                     .use__img 
-                        img(src="@img/use-img-3.png", alt="").use-img
+                        img(src="@img/use-img-3.png", alt="" draggable="false").use-img
                     .use__info  
                         h3.use__item-title Доп.освещение
                         p.use__item-p Светодиодные 3200-6500к
                 .use__item 
                     .use__img  
-                        img(src="@img/use-img-4.png", alt="").use-img 
+                        img(src="@img/use-img-4.png", alt="" draggable="false").use-img 
                     .use__info 
                         h3.use__item-title Стойки 
                         p.use__item-p Журавль Avenger (высота до 3 м) (вес до 40 кг) 
                 .use__item 
                     .use__img    
-                        img(src="@img/use-img-5.png", alt="").use-img 
+                        img(src="@img/use-img-5.png", alt="" draggable="false").use-img 
                     .use__info 
                         h3.use__item-title Софтбоксы 
                         p.use__item-p Софтбокс Aputure Light Dome mini II 
@@ -46,7 +46,7 @@ mixin use-audio()
             .use__content 
                 .use__item 
                     .use__img   
-                        img(src="@img/use-audio-1.png", alt="").use-img
+                        img(src="@img/use-audio-1.png", alt="" draggable="false").use-img
                     .use__info
                         h3.use__item-title Рекордеры
                         p.use__item-p Rode Caster Pro
@@ -54,13 +54,13 @@ mixin use-audio()
                         p.use__item-p Zoom H8
                 .use__item 
                     .use__img 
-                        img(src="@img/use-audio-2.png", alt="").use-img
+                        img(src="@img/use-audio-2.png", alt="" draggable="false").use-img
                     .use__info
                         h3.use__item-title Микшер
                         p.use__item-p Beringer Xenus X1204USB
                 .use__item 
                     .use__img 
-                        img(src="@img/use-audio-3.png", alt="").use-img
+                        img(src="@img/use-audio-3.png", alt="" draggable="false").use-img
                     .use__info  
                         h3.use__item-title Микрофоны
                         p.use__item-p Shure SM7B
@@ -69,7 +69,7 @@ mixin use-audio()
                         p.use__item-p AudioTechnika 2020USB+
                 .use__item 
                     .use__img 
-                        img(src="@img/use-audio-4.png", alt="").use-img
+                        img(src="@img/use-audio-4.png", alt="" draggable="false").use-img
                     .use__info
                         h3.use__item-title Петличные микрофоны
                         p.use__item-p Rode Wireless Go II
@@ -77,9 +77,55 @@ mixin use-audio()
                         p.use__item-p Rode SmartLav +
                 .use__item 
                     .use__img   
-                        img(src="@img/use-audio-5.png", alt="").use-img
+                        img(src="@img/use-audio-5.png", alt="" draggable="false").use-img
                     .use__info
                         h3.use__item-title Наушники
                         p.use__item-p Sony MDR-XB550
                         p.use__item-p AKG K52
+
+mixin use-video()
+    .use 
+        .use__body.container 
+            h2.use__title Мы используем
+            .use__content 
+                .use__item 
+                    .use__img   
+                        img(src="@img/use-video-1.png", alt="" draggable="false").use-img
+                    .use__info
+                        h3.use__item-title Камеры
+                        p.use__item-p Sony A7C
+                        p.use__item-p Sony A6400
+                .use__item 
+                    .use__img 
+                        img(src="@img/use-video-2.png", alt="" draggable="false").use-img
+                    .use__info
+                        h3.use__item-title Видеомикшер
+                        p.use__item-p Blackmagic Atem Mini Pro ISO
+                .use__item 
+                    .use__img 
+                        img(src="@img/use-video-3.png", alt="" draggable="false").use-img
+                    .use__info  
+                        h3.use__item-title Мониторы
+                        p.use__item-p Режиссерский монитор Seetec
+                        p.use__item-p Мониторы для презентаций 24-28'
+                .use__item 
+                    .use__img 
+                        img(src="@img/use-video-4.png", alt="" draggable="false").use-img
+                    .use__info
+                        h3.use__item-title Штативы и стабилизаторы
+                        p.use__item-p Штативы Newer
+                        p.use__item-p Стабилизатор DJI RSC2
+                        p.use__item-p Стабилизатор OM4
+                .use__item 
+                    .use__img   
+                        img(src="@img/use-video-5.png", alt="" draggable="false").use-img
+                    .use__info
+                        h3.use__item-title Суфлер
+                        p.use__item-p Телесуфлер для планшетов 9'
+                .use__item.disable-xxl.enable-xl 
+                    .use__img   
+                        img(src="@img/use-video-6.png", alt="" draggable="false").use-img
+                    .use__info
+                        h3.use__item-title Интерактивная доска
+                        p.use__item-p Прозрачная LED RGB доска 2.3м х 1,3м
 
