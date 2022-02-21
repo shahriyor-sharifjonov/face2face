@@ -7,15 +7,17 @@ html(lang="en")
         link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.min.css")
         link(rel="stylesheet", href="css/style.min.css")
         title Document
-    body.contacts  
+    body.home 
         .wrapper 
             include components/header 
             +header 
-            main.main.contacts-page
-                include components/contacts  
-                +contacts 
-                include components/form  
-                +form 
+            main.main.light-page
+                include components/equipments/lamps 
+                +lamps
+                include components/equipments/use 
+                +use
+                include components/form 
+                +form
             include components/footer 
             +footer
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js") 
