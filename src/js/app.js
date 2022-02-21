@@ -77,34 +77,6 @@ new Swiper(".podcasts__slider", {
   },
 });
 
-// new Swiper(".podcasts__audio", {
-//   modules: [Navigation],
-//   // loop: true,
-//   allowTouchMove: false,
-//   watchSlidesProgress: true,
-//   watchSlidesVisibility: true,
-//   slidesPerView: 1,
-//   spaceBetween: 20,
-//   navigation: {
-//     nextEl: ".podcasts__audio-next",
-//     prevEl: ".podcasts__audio-prev",
-//   },
-//   breakpoints: {
-//     767: {
-//       slidesPerView: 2,
-//       watchSlidesVisibility: true,
-//       watchSlidesProgress: true,
-//       spaceBetween: 20,
-//     },
-//     1200: {
-//       slidesPerView: 3,
-//       watchSlidesVisibility: true,
-//       watchSlidesProgress: true,
-//       spaceBetween: 20,
-//     },
-//   },
-// });
-
 // Header Menu
 const headerButton = document.querySelector(".header__button");
 const headerMenu = document.querySelector(".header__menu");
