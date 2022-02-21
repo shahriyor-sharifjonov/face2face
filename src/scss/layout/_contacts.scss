@@ -1,5 +1,13 @@
 .contacts{
-    
+    background: url('../img/contacts-bg.png'), #FEFBFB;
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
+    @include media(992){
+        background: url('../img/contacts-bg-md.png'), #FEFBFB;
+    }
+    @include media(568){
+        background: url('../img/contacts-bg-sm.png'), #FEFBFB;
+    }
     &-page{
         padding: 150px 0 130px 0 !important;
         @include media(992){
