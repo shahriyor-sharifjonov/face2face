@@ -3514,6 +3514,70 @@ input.violet[type=range]::-webkit-slider-thumb {
   z-index: -1;
 }
 
+.use__slider-container {
+  position: relative;
+}
+
+.use__slider-container .swiper-button-next,
+.use__slider-container .swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-top: 0;
+}
+
+.use__slider-container .swiper-button-next:after,
+.use__slider-container .swiper-button-prev:after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-size: 100% 100% !important;
+}
+
+.use__slider-container .swiper-button-next {
+  right: -75px;
+}
+
+.no-webp .use__slider-container .swiper-button-next::after {
+  background: url("../img/next-slide.png") 100% 100%; }
+
+.use__slider-container .swiper-button-prev {
+  left: -75px;
+}
+
+.no-webp .use__slider-container .swiper-button-prev::after {
+  background: url("../img/prev-slide.png") 100% 100%; }
+
+.use__slider-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 10px;
+}
+
+.use__slider-item img {
+  width: 100%;
+}
+
+.use__slider-item p {
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #101010;
+}
+
 .examples__title {
   font-weight: 800;
   font-size: 40px;
@@ -4023,6 +4087,14 @@ picture {
     left: -50px;
   }
 
+  .use__slider-container .swiper-button-next {
+    right: -50px;
+  }
+
+  .use__slider-container .swiper-button-prev {
+    left: -50px;
+  }
+
   .examples__slider {
     margin-left: -50px;
     padding-left: 50px;
@@ -4273,6 +4345,14 @@ picture {
   .podcasts .swiper-button-prev {
     left: -75px;
   }
+
+  .use__slider-container .swiper-button-next {
+    right: -75px;
+  }
+
+  .use__slider-container .swiper-button-prev {
+    left: -75px;
+  }
 }
 
 @media (max-width: 1270px) {
@@ -4303,6 +4383,14 @@ picture {
   }
 
   .podcasts .swiper-button-prev {
+    left: -20px;
+  }
+
+  .use__slider-container .swiper-button-next {
+    right: -20px;
+  }
+
+  .use__slider-container .swiper-button-prev {
     left: -20px;
   }
 
@@ -6145,6 +6233,14 @@ picture {
     width: 100%;
   }
 
+  .use__slider-container .swiper-button-next,
+  .use__slider-container .swiper-button-prev {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+
   .audio__item-author {
     font-size: 14px;
   }
@@ -6516,6 +6612,37 @@ picture {
     width: 149px;
   }
 
+  .use__slider-container .swiper-button-next,
+  .use__slider-container .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+  }
+
+  .use__slider-container .swiper-button-next:after,
+  .use__slider-container .swiper-button-prev:after {
+    width: 30px;
+    height: 30px;
+  }
+
+  .use__slider-container .swiper-button-next {
+    right: -15px;
+  }
+
+  .no-webp .use__slider-container .swiper-button-next::after {
+    background: url("../img/next-slide-sm.png") 100% 100%; }
+
+  .use__slider-container .swiper-button-prev {
+    left: -15px;
+  }
+
+  .no-webp .use__slider-container .swiper-button-prev::after {
+    background: url("../img/prev-slide-sm.png") 100% 100%; }
+
+  .use__slider-item p {
+    font-size: 16px;
+    line-height: 120%;
+  }
+
   .examples__title {
     font-size: 24px;
   }
@@ -6681,6 +6808,10 @@ picture {
 
 .webp .lamps__right { background: url(../img/back-img.webp) center/cover no-repeat; }
 
+.webp .use__slider-container .swiper-button-next::after { background: url(../img/next-slide.webp) 100% 100%; }
+
+.webp .use__slider-container .swiper-button-prev::after { background: url(../img/prev-slide.webp) 100% 100%; }
+
 .webp .examples .swiper-button-next::after { background: url(../img/next-slide.webp) 100% 100%; }
 
 .webp .examples .swiper-button-prev::after { background: url(../img/prev-slide.webp) 100% 100%; }
@@ -6768,6 +6899,16 @@ picture {
 @media (max-width: 576px) {
 
   .webp .podcasts .swiper-button-prev::after { background: url(../img/prev-slide-sm.webp) 100% 100%; }
+}
+
+@media (max-width: 576px) {
+
+  .webp .use__slider-container .swiper-button-next::after { background: url(../img/next-slide-sm.webp) 100% 100%; }
+}
+
+@media (max-width: 576px) {
+
+  .webp .use__slider-container .swiper-button-prev::after { background: url(../img/prev-slide-sm.webp) 100% 100%; }
 }
 
 @media (max-width: 576px) {

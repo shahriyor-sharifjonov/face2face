@@ -134,5 +134,26 @@ mixin use-fon()
     .use 
         .use__body.container 
             h2.use__title Мы используем
-            .use__slider 
-                .use__slider
+            .use__slider-container
+                .use__slider.swiper
+                    .swiper-wrapper
+                        .use__slider-item.swiper-slide
+                            img(src="@img/fon-1.png", alt="" draggable="false")
+                            p Хромакей
+                        .use__slider-item.swiper-slide
+                            img(src="@img/fon-2.png", alt="" draggable="false")
+                            p Светло-серый
+                        .use__slider-item.swiper-slide
+                            img(src="@img/fon-3.png", alt="" draggable="false")
+                            p Темно-серый
+                        .use__slider-item.swiper-slide
+                            img(src="@img/fon-4.png", alt="" draggable="false")
+                            p Черный
+                        .use__slider-item.swiper-slide
+                            img(src="@img/fon-5.png", alt="" draggable="false")
+                            p Бордовый (красный)
+                        .use__slider-item.swiper-slide
+                            img(src="@img/fon-6.png", alt="" draggable="false")
+                            p Голубой
+                .swiper-button-prev.use__slider-prev
+                .swiper-button-next.use__slider-next
