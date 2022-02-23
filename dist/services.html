@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.min.css?_v=20220223214548">
     <title>Document</title>
   </head>
-  <body class="clients"> 
+  <body class="services"> 
     <div class="wrapper"> 
             <header class="header"> 
               <nav class="header__nav container"> 
@@ -30,39 +30,77 @@
                 </div><a class="btn-primary_nobg header__btn disable-md" href="#!">Забронировать </a><a class="btn-primary_nobg header__btn enable-md" href="tel:+74950212992"> <picture><source srcset="img/phone.webp" type="image/webp"><img src="img/phone.png" alt="" draggable="false"></picture></a>
               </nav>
             </header>
-      <main class="main clients-page"> 
-                <div class="clients-block"> 
-                  <div class="clients__body container"> 
-                    <h2 class="clients__title">Наши клиенты</h2>
-                    <div class="clients__slider swiper"> 
-                      <div class="clients__wrapper swiper-wrapper">  
-                        <div class="clients__item swiper-slide"> <a class="clients__item-img" href="https://www.youtube.com/c/FIGHTSHOW" target="_blank" rel="noopener"><picture><source srcset="img/client-1.webp" type="image/webp"><img src="img/client-1.png" alt="" draggable="false"></picture></a>
-                          <p class="clients__item-title"> <img src="img/youtube.svg" alt="" draggable="false">Fight Show</p>
-                          <p class="clients__item-desc">Армен Гулян, Эдуард Вартанян</p>
+      <main class="main services-page"> 
+                <div class="services-block"> 
+                  <div class="services__body container"> 
+                    <h2 class="use__title services__title">Услуги</h2>
+                    <div class="services__content"> 
+                      <div class="services__sidebar"> 
+                        <button class="services__button" type="button" data-target="podcasts">Подкасты</button>
+                        <button class="services__button" type="button" data-target="vebinar">Онлайн трансляция, вебинар</button>
+                        <button class="services__button" type="button" data-target="interview">Интервью</button>
+                        <button class="services__button" type="button" data-target="tutorial">Видеоуроки и мастер-классы</button>
+                        <button class="services__button active" type="button" data-target="youtube">Видео для YouTube</button>
+                      </div>
+                      <div class="services__main"> 
+                        <div class="services__item" id="podcasts"> 
+                          <div class="services__item-bg"><picture><source srcset="img/services-bg.webp" type="image/webp"><img src="img/services-bg.png" alt=""></picture></div><img class="services__item-img services__item-img_1 disable-xxl" src="img/services-1.png" alt=""><img class="services__item-img services__item-img_1 enable-xxl" src="img/services-4.png" alt="">
+                          <div class="services__item-content"> 
+                            <p class="services__item-title">Выполним все задачи связанные с производством подкаста и видеокаста!</p>
+                            <p class="services__item-li">Звукозаписывающие студии с профессиональным оборудованием;</p>
+                            <p class="services__item-li">Конденсаторные и динамические микрофоны;</p>
+                            <p class="services__item-li">Звуковые рекордеры Zoom;</p>
+                            <p class="services__item-li">Аудиомикшеры;</p>
+                            <p class="services__item-li">Камеры для видеозаписи подкастов в 4K;</p>
+                            <p class="services__item-li">Профессиональная команда</p><a class="btn-primary services__item-btn" href="#!"><span class="services__item-btn-inline">Заказать “под ключ” от&nbsp;<b>11 600 руб</b></span></a>
+                          </div>
                         </div>
-                        <div class="clients__item swiper-slide"> <a class="clients__item-img" href="https://www.youtube.com/c/%D0%96%D0%98%D0%92%D0%90%D0%AF%D0%A1%D0%A2%D0%90%D0%9B%D0%AC" target="_blank" rel="noopener"><picture><source srcset="img/client-2.webp" type="image/webp"><img src="img/client-2.png" alt="" draggable="false"></picture></a>
-                          <p class="clients__item-title"> <img src="img/youtube.svg" alt="" draggable="false">Живая сталь</p>
-                          <p class="clients__item-desc">(бойцы) <br>Артем</p>
+                        <div class="services__item" id="vebinar"> 
+                          <div class="services__item-bg"><picture><source srcset="img/services-bg.webp" type="image/webp"><img src="img/services-bg.png" alt=""></picture></div><img class="services__item-img services__item-img_2" src="img/services-2.png" alt="">
+                          <div class="services__item-content"> 
+                            <p class="services__item-title services__item-title_2">Создавайте качественный контент вместе с нами!</p>
+                            <p class="services__item-li">Студии с фоном на выбор (есть хромакей);</p>
+                            <p class="services__item-li">Студийный свет;</p>
+                            <p class="services__item-li">Более 100 различных сетапов;</p>
+                            <p class="services__item-li">Камеры для съемки в формате 4K;</p>
+                            <p class="services__item-li">Отличная шумоизоляция и отсутствие эха;</p>
+                            <p class="services__item-li">Профессиональная команда</p><a class="btn-primary services__item-btn" href="#!"><span class="services__item-btn-inline">Заказать “под ключ” от&nbsp;<b>32 500 руб</b></span></a>
+                          </div>
                         </div>
-                        <div class="clients__item swiper-slide"> <a class="clients__item-img" href="https://www.youtube.com/" target="_blank" rel="noopener"><picture><source srcset="img/client-3.webp" type="image/webp"><img src="img/client-3.png" alt="" draggable="false"></picture></a>
-                          <p class="clients__item-title"> <img src="img/youtube.svg" alt="" draggable="false">Боксер</p>
-                          <p class="clients__item-desc">Athletic Training</p>
+                        <div class="services__item" id="interview"> 
+                          <div class="services__item-bg"><picture><source srcset="img/services-bg.webp" type="image/webp"><img src="img/services-bg.png" alt=""></picture></div><img class="services__item-img services__item-img_3" src="img/services-3.png" alt="">
+                          <div class="services__item-content"> 
+                            <p class="services__item-title">Профессиональный уровень подготовки гарантирован!</p>
+                            <p class="services__item-li">Студии с профессиональным светом;</p>
+                            <p class="services__item-li">Более 100 различных сетапов;</p>
+                            <p class="services__item-li">Качественные петличные микрофоны;</p>
+                            <p class="services__item-li">Камеры с записью в формате 4K;</p>
+                            <p class="services__item-li">Профессиональная команда</p><a class="btn-primary services__item-btn" href="#!"><span class="services__item-btn-inline">Заказать “под ключ” от&nbsp;<b>16 700 руб</b></span></a>
+                          </div>
                         </div>
-                        <div class="clients__item swiper-slide"> <a class="clients__item-img" href="https://www.youtube.com/c/DBNN27" target="_blank" rel="noopener"><picture><source srcset="img/client-4.webp" type="image/webp"><img src="img/client-4.png" alt="" draggable="false"></picture></a>
-                          <p class="clients__item-title"> <img src="img/youtube.svg" alt="" draggable="false">dbnn</p>
-                          <p class="clients__item-desc">Саша музыкант</p>
+                        <div class="services__item" id="tutorial"> 
+                          <div class="services__item-bg"><picture><source srcset="img/services-bg.webp" type="image/webp"><img src="img/services-bg.png" alt=""></picture></div><img class="services__item-img services__item-img_4" src="img/services-4.png" alt="">
+                          <div class="services__item-content"> 
+                            <p class="services__item-title">Выбор за вами: от съемки 1 человека до организации YouTube-шоу на несколько человек!</p>
+                            <p class="services__item-li">Студии с профессиональным светом;</p>
+                            <p class="services__item-li">Более 100 различных сетапов;</p>
+                            <p class="services__item-li">Качественные петличные микрофоны;</p>
+                            <p class="services__item-li">Камеры с записью в формате 4K;</p>
+                            <p class="services__item-li">Профессиональная команда</p><a class="btn-primary services__item-btn" href="#!"><span class="services__item-btn-inline">Заказать “под ключ” от&nbsp;<b>18 600 руб</b></span></a>
+                          </div>
                         </div>
-                        <div class="clients__item swiper-slide"> <a class="clients__item-img" href="https://www.youtube.com/channel/UCyZnEY-8BN92vT8dhIU2g4w" target="_blank" rel="noopener"><picture><source srcset="img/client-5.webp" type="image/webp"><img src="img/client-5.png" alt="" draggable="false"></picture></a>
-                          <p class="clients__item-title"> <img src="img/youtube.svg" alt="" draggable="false">Живая сталь</p>
-                          <p class="clients__item-desc">(качки) <br>Артем</p>
-                        </div>
-                        <div class="clients__item swiper-slide"> <a class="clients__item-img" href="https://youtube.com/" target="_blank" rel="noopener"><picture><source srcset="img/client-6.webp" type="image/webp"><img src="img/client-6.png" alt="" draggable="false"></picture></a>
-                          <p class="clients__item-title"> <img src="img/youtube.svg" alt="" draggable="false">ИПшники</p>
-                          <p class="clients__item-desc">Паша</p>
+                        <div class="services__item active" id="youtube"> 
+                          <div class="services__item-bg"><picture><source srcset="img/services-bg.webp" type="image/webp"><img src="img/services-bg.png" alt=""></picture></div><img class="services__item-img services__item-img_5" src="img/services-5.png" alt="">
+                          <div class="services__item-content"> 
+                            <p class="services__item-title">Выбор за вами: от съемки 1 человека до организации YouTube-шоу на несколько человек!</p>
+                            <p class="services__item-li">Студии с профессиональным светом;</p>
+                            <p class="services__item-li">Более 100 различных сетапов;</p>
+                            <p class="services__item-li">Качественные петличные микрофоны;</p>
+                            <p class="services__item-li">Камеры с записью в формате 4K;</p>
+                            <p class="services__item-li">Профессиональная команда</p><a class="btn-primary services__item-btn" href="#!"><span class="services__item-btn-inline">Заказать “под ключ” от&nbsp;<b>18 600 руб</b></span></a>
+                          </div>
                         </div>
                       </div>
-                      <div class="clients__prev swiper-button-prev"></div>
-                      <div class="clients__next swiper-button-next"> </div>
                     </div>
                   </div>
                 </div>
@@ -474,250 +512,54 @@
                     </div>
                   </div>
                 </div>
-                <div class="podcasts reviews">
-                  <div class="podcasts__body container"> 
-                    <div class="podcasts__header"> 
-                      <div class="podcasts__header-info"> 
-                        <h2 class="podcasts__title reviews__title">Отзывы о нас</h2>
+                <div class="price"> 
+                  <div class="price__body container"> 
+                    <h2 class="price__title">Из чего складывается стоимость?</h2>
+                    <div class="price__content"> 
+                      <div class="price__item"> 
+                        <div class="price__img"> <picture><source srcset="img/price-img-1.webp" type="image/webp"><img class="price-img" src="img/price-img-1.png" alt=""></picture></div>
+                        <div class="price__info"> 
+                          <h3 class="price__info-title">От количества часов </h3>
+                          <p class="price__info-p">Минимальный срок аренды студии — 2 часа. При аренде на 1 час стоимость аренды студии — 2500 рублей. При покупке пакета на аренду 10 записей подкаста, первые 2 часа аренды — 1000 рублей.</p>
+                          <p class="price__info-price">от 2500 руб.</p>
+                        </div>
                       </div>
-                      <div class="podcasts__header-buttons"> 
-                        <button class="btn-primary_nobg reviews__header-btn podcasts__header-btn" type="button" data-target="reviews__text-slider">Текстовые </button>
-                        <button class="btn-primary_nobg reviews__header-btn podcasts__header-btn active" type="button" data-target="reviews__video-slider">Видеоотзывы</button>
+                      <div class="price__item"> 
+                        <div class="price__img"> <picture><source srcset="img/price-img-2.webp" type="image/webp"><img class="price-img" src="img/price-img-2.png" alt=""></picture></div>
+                        <div class="price__info"> 
+                          <h3 class="price__info-title">Количество видео камер</h3>
+                          <p class="price__info-p">Видеозапись вашего подкаста в формате FullHD или 4k. На выходе вы получите "красивый кадр" с хорошим освещением и в студийной обстановке. 1 камера + 2500 руб. 2 камеры + 4000 руб. 3 камеры + 6000 руб.</p>
+                          <p class="price__info-price">от 2500 руб.</p>
+                        </div>
+                      </div>
+                      <div class="price__item"> 
+                        <div class="price__img"> <picture><source srcset="img/price-img-3.webp" type="image/webp"><img class="price-img" src="img/price-img-3.png" alt=""></picture></div>
+                        <div class="price__info"> 
+                          <h3 class="price__info-title">Выставление композиции кадра и настройка освещения и камер</h3>
+                          <p class="price__info-p">Наш оператор и гафер выставят вам правильное освещение под ваш запрос. Настроят композицию кадра, настроят камеры для наилучшей "картинки". </p>
+                          <p class="price__info-price">от 2000 руб.</p>
+                        </div>
+                      </div>
+                      <div class="price__item"> 
+                        <div class="price__img"> <picture><source srcset="img/price-img-4.webp" type="image/webp"><img class="price-img" src="img/price-img-4.png" alt=""></picture></div>
+                        <div class="price__info"> 
+                          <h3 class="price__info-title">Оператор</h3>
+                          <p class="price__info-p price__info-p_mb">При проведении видеозаписи с 2-х или 3-х камер целесообразно использовать оператора. </p>
+                          <p class="price__info-p">Он будет следить за камерами, менять ракурсы и держать в кадре необходимую "картинку".</p>
+                          <p class="price__info-price">от 2500 руб.</p>
+                        </div>
                       </div>
                     </div>
-                    <div class="podcasts__content"> 
-                      <div class="reviews__video-slider podcasts__element-slider active"> 
-                        <div class="podcasts__slider reviews__video swiper">
-                          <div class="swiper-wrapper">  
-                            <div class="swiper-slide podcasts__video-item video-containers reviews__video-item"> 
-                              <div class="reviews__video-header"> <img src="img/youtube.svg" alt="">
-                                <p>YouTube канал  «FIGHT SHOW»</p>
-                              </div>
-                              <div class="podcasts__video-item-media video-container"> 
-                                <video class="video" controls="" preload="metadata" poster="img/poster-2.png">
-                                  <source src="files/video-1.mp4" type="video/mp4">
-                                </video>
-                                <div class="play"><picture><source srcset="img/video-play.webp" type="image/webp"><img src="img/video-play.png" alt="" draggable="false"></picture></div>
-                                <div class="playback-animation">
-                                  <div class="playback-icons"> 
-                                    <svg class="playback-icon" width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path d="M37.6042 20.9961C39.0937 21.8554 40 23.3691 40 25C40 26.6308 39.0937 28.1445 37.6042 28.916L7.60729 46.1035C6.06354 47.0703 4.13125 47.1093 2.55417 46.2793C0.976771 45.4492 0 43.8867 0 42.1875V7.81247C0 6.11716 0.976771 4.55368 2.55417 3.72361C4.13125 2.89451 6.06354 2.92869 7.60729 3.81247L37.6042 20.9961Z" fill="white"></path>
-                                    </svg>
-                                    <svg class="playback-icon hidden" width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path d="M34 6.16211H30C26.6862 6.16211 24 8.26074 24 10.7617V38.8867C24 41.4756 26.6862 43.5742 30 43.5742L34 43.75C37.3138 43.75 40 41.6514 40 39.0625V10.9375C40 8.34863 37.3125 6.16211 34 6.16211ZM10 6.16211H6C2.68625 6.16211 0 8.26074 0 10.8496V38.9746C0 41.6504 2.68625 43.75 6 43.75H10C13.3138 43.75 16 41.6514 16 39.0625V10.9375C16 8.34863 13.3125 6.16211 10 6.16211Z" fill="white"></path>
-                                    </svg>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="video-content"></div>
-                              <div class="podcasts__video-item-controls video-controls hidden hide"> 
-                                <div class="video-progress podcasts__video-item-controls-progress"> 
-                                  <progress class="progress-bar" value="0" min="0"> </progress>
-                                  <input class="seek" value="0" min="0" type="range" step="1">
-                                  <div class="seek-tooltip">00:00 </div>
-                                </div>
-                                <div class="podcasts__video-item-controls-time time">
-                                  <time class="time-elapsed">00:00 </time>
-                                  <time class="duration">00:00</time>
-                                </div>
-                                <div class="podcasts__video-item-controls-btns">
-                                  <button class="play" data-title="Play"> 
-                                    <div class="playback-icons"> 
-                                      <svg class="playback-icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <ellipse cx="25" cy="25" rx="9" ry="11" fill="white"></ellipse>
-                                        <path d="M25 45C13.9593 44.9879 5.01212 36.0407 5 25V24.6C5.21986 13.6091 14.2692 4.85595 25.2613 5.0018C36.2535 5.14764 45.0674 14.1378 44.9955 25.1307C44.9237 36.1236 35.9931 44.9978 25 45ZM21 16V34L33 25L21 16Z" fill="#8D1AEF"></path>
-                                      </svg>
-                                      <svg class="playback-icon hidden" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path class="hidden" d="M25.0001 45.8333C13.4941 45.8333 4.16675 36.5059 4.16675 25C4.16675 13.494 13.4941 4.16663 25.0001 4.16663C36.506 4.16663 45.8334 13.494 45.8334 25C45.8208 36.5007 36.5008 45.8207 25.0001 45.8333ZM27.0834 16.6666V33.3333H31.2501V16.6666H27.0834ZM18.7501 16.6666V33.3333H22.9167V16.6666H18.7501Z" fill="#8D1AEF"></path>
-                                      </svg>
-                                    </div>
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="swiper-slide podcasts__video-item video-containers reviews__video-item"> 
-                              <div class="reviews__video-header"> <img src="img/youtube.svg" alt="">
-                                <p>YouTube канал  «FIGHT SHOW»</p>
-                              </div>
-                              <div class="podcasts__video-item-media video-container"> 
-                                <video class="video" controls="" preload="metadata" poster="img/poster-2.png">
-                                  <source src="files/video-1.mp4" type="video/mp4">
-                                </video>
-                                <div class="play"><picture><source srcset="img/video-play.webp" type="image/webp"><img src="img/video-play.png" alt="" draggable="false"></picture></div>
-                                <div class="playback-animation">
-                                  <div class="playback-icons"> 
-                                    <svg class="playback-icon" width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path d="M37.6042 20.9961C39.0937 21.8554 40 23.3691 40 25C40 26.6308 39.0937 28.1445 37.6042 28.916L7.60729 46.1035C6.06354 47.0703 4.13125 47.1093 2.55417 46.2793C0.976771 45.4492 0 43.8867 0 42.1875V7.81247C0 6.11716 0.976771 4.55368 2.55417 3.72361C4.13125 2.89451 6.06354 2.92869 7.60729 3.81247L37.6042 20.9961Z" fill="white"></path>
-                                    </svg>
-                                    <svg class="playback-icon hidden" width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path d="M34 6.16211H30C26.6862 6.16211 24 8.26074 24 10.7617V38.8867C24 41.4756 26.6862 43.5742 30 43.5742L34 43.75C37.3138 43.75 40 41.6514 40 39.0625V10.9375C40 8.34863 37.3125 6.16211 34 6.16211ZM10 6.16211H6C2.68625 6.16211 0 8.26074 0 10.8496V38.9746C0 41.6504 2.68625 43.75 6 43.75H10C13.3138 43.75 16 41.6514 16 39.0625V10.9375C16 8.34863 13.3125 6.16211 10 6.16211Z" fill="white"></path>
-                                    </svg>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="video-content"></div>
-                              <div class="podcasts__video-item-controls video-controls hidden hide"> 
-                                <div class="video-progress podcasts__video-item-controls-progress"> 
-                                  <progress class="progress-bar" value="0" min="0"> </progress>
-                                  <input class="seek" value="0" min="0" type="range" step="1">
-                                  <div class="seek-tooltip">00:00 </div>
-                                </div>
-                                <div class="podcasts__video-item-controls-time time">
-                                  <time class="time-elapsed">00:00 </time>
-                                  <time class="duration">00:00</time>
-                                </div>
-                                <div class="podcasts__video-item-controls-btns">
-                                  <button class="play" data-title="Play"> 
-                                    <div class="playback-icons"> 
-                                      <svg class="playback-icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <ellipse cx="25" cy="25" rx="9" ry="11" fill="white"></ellipse>
-                                        <path d="M25 45C13.9593 44.9879 5.01212 36.0407 5 25V24.6C5.21986 13.6091 14.2692 4.85595 25.2613 5.0018C36.2535 5.14764 45.0674 14.1378 44.9955 25.1307C44.9237 36.1236 35.9931 44.9978 25 45ZM21 16V34L33 25L21 16Z" fill="#8D1AEF"></path>
-                                      </svg>
-                                      <svg class="playback-icon hidden" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path class="hidden" d="M25.0001 45.8333C13.4941 45.8333 4.16675 36.5059 4.16675 25C4.16675 13.494 13.4941 4.16663 25.0001 4.16663C36.506 4.16663 45.8334 13.494 45.8334 25C45.8208 36.5007 36.5008 45.8207 25.0001 45.8333ZM27.0834 16.6666V33.3333H31.2501V16.6666H27.0834ZM18.7501 16.6666V33.3333H22.9167V16.6666H18.7501Z" fill="#8D1AEF"></path>
-                                      </svg>
-                                    </div>
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="swiper-slide podcasts__video-item video-containers reviews__video-item"> 
-                              <div class="reviews__video-header"> <img src="img/youtube.svg" alt="">
-                                <p>YouTube канал  «FIGHT SHOW»</p>
-                              </div>
-                              <div class="podcasts__video-item-media video-container"> 
-                                <video class="video" controls="" preload="metadata" poster="img/poster-2.png">
-                                  <source src="files/video-1.mp4" type="video/mp4">
-                                </video>
-                                <div class="play"><picture><source srcset="img/video-play.webp" type="image/webp"><img src="img/video-play.png" alt="" draggable="false"></picture></div>
-                                <div class="playback-animation">
-                                  <div class="playback-icons"> 
-                                    <svg class="playback-icon" width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path d="M37.6042 20.9961C39.0937 21.8554 40 23.3691 40 25C40 26.6308 39.0937 28.1445 37.6042 28.916L7.60729 46.1035C6.06354 47.0703 4.13125 47.1093 2.55417 46.2793C0.976771 45.4492 0 43.8867 0 42.1875V7.81247C0 6.11716 0.976771 4.55368 2.55417 3.72361C4.13125 2.89451 6.06354 2.92869 7.60729 3.81247L37.6042 20.9961Z" fill="white"></path>
-                                    </svg>
-                                    <svg class="playback-icon hidden" width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path d="M34 6.16211H30C26.6862 6.16211 24 8.26074 24 10.7617V38.8867C24 41.4756 26.6862 43.5742 30 43.5742L34 43.75C37.3138 43.75 40 41.6514 40 39.0625V10.9375C40 8.34863 37.3125 6.16211 34 6.16211ZM10 6.16211H6C2.68625 6.16211 0 8.26074 0 10.8496V38.9746C0 41.6504 2.68625 43.75 6 43.75H10C13.3138 43.75 16 41.6514 16 39.0625V10.9375C16 8.34863 13.3125 6.16211 10 6.16211Z" fill="white"></path>
-                                    </svg>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="video-content"></div>
-                              <div class="podcasts__video-item-controls video-controls hidden hide"> 
-                                <div class="video-progress podcasts__video-item-controls-progress"> 
-                                  <progress class="progress-bar" value="0" min="0"> </progress>
-                                  <input class="seek" value="0" min="0" type="range" step="1">
-                                  <div class="seek-tooltip">00:00 </div>
-                                </div>
-                                <div class="podcasts__video-item-controls-time time">
-                                  <time class="time-elapsed">00:00 </time>
-                                  <time class="duration">00:00</time>
-                                </div>
-                                <div class="podcasts__video-item-controls-btns">
-                                  <button class="play" data-title="Play"> 
-                                    <div class="playback-icons"> 
-                                      <svg class="playback-icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <ellipse cx="25" cy="25" rx="9" ry="11" fill="white"></ellipse>
-                                        <path d="M25 45C13.9593 44.9879 5.01212 36.0407 5 25V24.6C5.21986 13.6091 14.2692 4.85595 25.2613 5.0018C36.2535 5.14764 45.0674 14.1378 44.9955 25.1307C44.9237 36.1236 35.9931 44.9978 25 45ZM21 16V34L33 25L21 16Z" fill="#8D1AEF"></path>
-                                      </svg>
-                                      <svg class="playback-icon hidden" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path class="hidden" d="M25.0001 45.8333C13.4941 45.8333 4.16675 36.5059 4.16675 25C4.16675 13.494 13.4941 4.16663 25.0001 4.16663C36.506 4.16663 45.8334 13.494 45.8334 25C45.8208 36.5007 36.5008 45.8207 25.0001 45.8333ZM27.0834 16.6666V33.3333H31.2501V16.6666H27.0834ZM18.7501 16.6666V33.3333H22.9167V16.6666H18.7501Z" fill="#8D1AEF"></path>
-                                      </svg>
-                                    </div>
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="swiper-slide podcasts__video-item video-containers reviews__video-item"> 
-                              <div class="reviews__video-header"> <img src="img/youtube.svg" alt="">
-                                <p>YouTube канал  «FIGHT SHOW»</p>
-                              </div>
-                              <div class="podcasts__video-item-media video-container"> 
-                                <video class="video" controls="" preload="metadata" poster="img/poster-2.png">
-                                  <source src="files/video-1.mp4" type="video/mp4">
-                                </video>
-                                <div class="play"><picture><source srcset="img/video-play.webp" type="image/webp"><img src="img/video-play.png" alt="" draggable="false"></picture></div>
-                                <div class="playback-animation">
-                                  <div class="playback-icons"> 
-                                    <svg class="playback-icon" width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path d="M37.6042 20.9961C39.0937 21.8554 40 23.3691 40 25C40 26.6308 39.0937 28.1445 37.6042 28.916L7.60729 46.1035C6.06354 47.0703 4.13125 47.1093 2.55417 46.2793C0.976771 45.4492 0 43.8867 0 42.1875V7.81247C0 6.11716 0.976771 4.55368 2.55417 3.72361C4.13125 2.89451 6.06354 2.92869 7.60729 3.81247L37.6042 20.9961Z" fill="white"></path>
-                                    </svg>
-                                    <svg class="playback-icon hidden" width="15" height="20" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path d="M34 6.16211H30C26.6862 6.16211 24 8.26074 24 10.7617V38.8867C24 41.4756 26.6862 43.5742 30 43.5742L34 43.75C37.3138 43.75 40 41.6514 40 39.0625V10.9375C40 8.34863 37.3125 6.16211 34 6.16211ZM10 6.16211H6C2.68625 6.16211 0 8.26074 0 10.8496V38.9746C0 41.6504 2.68625 43.75 6 43.75H10C13.3138 43.75 16 41.6514 16 39.0625V10.9375C16 8.34863 13.3125 6.16211 10 6.16211Z" fill="white"></path>
-                                    </svg>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="video-content"></div>
-                              <div class="podcasts__video-item-controls video-controls hidden hide"> 
-                                <div class="video-progress podcasts__video-item-controls-progress"> 
-                                  <progress class="progress-bar" value="0" min="0"> </progress>
-                                  <input class="seek" value="0" min="0" type="range" step="1">
-                                  <div class="seek-tooltip">00:00 </div>
-                                </div>
-                                <div class="podcasts__video-item-controls-time time">
-                                  <time class="time-elapsed">00:00 </time>
-                                  <time class="duration">00:00</time>
-                                </div>
-                                <div class="podcasts__video-item-controls-btns">
-                                  <button class="play" data-title="Play"> 
-                                    <div class="playback-icons"> 
-                                      <svg class="playback-icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <ellipse cx="25" cy="25" rx="9" ry="11" fill="white"></ellipse>
-                                        <path d="M25 45C13.9593 44.9879 5.01212 36.0407 5 25V24.6C5.21986 13.6091 14.2692 4.85595 25.2613 5.0018C36.2535 5.14764 45.0674 14.1378 44.9955 25.1307C44.9237 36.1236 35.9931 44.9978 25 45ZM21 16V34L33 25L21 16Z" fill="#8D1AEF"></path>
-                                      </svg>
-                                      <svg class="playback-icon hidden" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path class="hidden" d="M25.0001 45.8333C13.4941 45.8333 4.16675 36.5059 4.16675 25C4.16675 13.494 13.4941 4.16663 25.0001 4.16663C36.506 4.16663 45.8334 13.494 45.8334 25C45.8208 36.5007 36.5008 45.8207 25.0001 45.8333ZM27.0834 16.6666V33.3333H31.2501V16.6666H27.0834ZM18.7501 16.6666V33.3333H22.9167V16.6666H18.7501Z" fill="#8D1AEF"></path>
-                                      </svg>
-                                    </div>
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="reviews__video-prev swiper-button-prev"> </div>
-                        <div class="reviews__video-next swiper-button-next"> </div>
-                      </div>
-                      <div class="reviews__text-slider podcasts__element-slider"> 
-                        <div class="podcasts__slider reviews__text swiper">
-                          <div class="swiper-wrapper"> 
-                            <div class="swiper-slide reviews__text-item podcasts__video-item">
-                              <div class="reviews__video-header"> <img src="img/youtube.svg" alt="">
-                                <p>YouTube канал  «FIGHT SHOW»</p>
-                              </div>
-                              <div class="reviews__text-content">
-                                <p class="reviews__text-p">На записи присутствует звукорежиссёр который настроит оборудование и расскажет как работать с микрофонами и наушниками. Вам нужно будет просто говорить. После записи Вашего подкаста звукорежиссёр передаст ссылку на по которой будут находиться записанные Вами дорожки в формате.</p>
-                              </div>
-                            </div>
-                            <div class="swiper-slide reviews__text-item podcasts__video-item">
-                              <div class="reviews__video-header"> <img src="img/youtube.svg" alt="">
-                                <p>YouTube канал  «FIGHT SHOW»</p>
-                              </div>
-                              <div class="reviews__text-content">
-                                <p class="reviews__text-p">На записи присутствует звукорежиссёр который настроит оборудование и расскажет как работать с микрофонами и наушниками. Вам нужно будет просто говорить. После записи Вашего подкаста звукорежиссёр передаст ссылку на по которой будут находиться записанные Вами дорожки в формате.</p>
-                              </div>
-                            </div>
-                            <div class="swiper-slide reviews__text-item podcasts__video-item">
-                              <div class="reviews__video-header"> <img src="img/youtube.svg" alt="">
-                                <p>YouTube канал  «FIGHT SHOW»</p>
-                              </div>
-                              <div class="reviews__text-content">
-                                <p class="reviews__text-p">На записи присутствует звукорежиссёр который настроит оборудование и расскажет как работать с микрофонами и наушниками. Вам нужно будет просто говорить. После записи Вашего подкаста звукорежиссёр передаст ссылку на по которой будут находиться записанные Вами дорожки в формате.</p>
-                              </div>
-                            </div>
-                            <div class="swiper-slide reviews__text-item podcasts__video-item">
-                              <div class="reviews__video-header"> <img src="img/youtube.svg" alt="">
-                                <p>YouTube канал  «FIGHT SHOW»</p>
-                              </div>
-                              <div class="reviews__text-content">
-                                <p class="reviews__text-p">На записи присутствует звукорежиссёр который настроит оборудование и расскажет как работать с микрофонами и наушниками. Вам нужно будет просто говорить. После записи Вашего подкаста звукорежиссёр передаст ссылку на по которой будут находиться записанные Вами дорожки в формате.</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="reviews__text-prev swiper-button-prev"></div>
-                        <div class="reviews__text-next swiper-button-next"></div>
-                      </div>
+                  </div>
+                </div>
+                <div class="offer"> 
+                  <div class="offer__body container"> 
+                    <div class="offer__content"> 
+                      <h2 class="offer__title disable-md2"><span class="color-secondary">Для Вашего удобства предлагаем</span> подобрать время и обсудить все интересующие вас вопросы:</h2>
+                      <p class="offer__title enable-md2"><span class="color-secondary">Для Вашего удобства</span> предлагаем подобрать дату и время:</p><a class="btn-primary offer__btn" href="#!">Оставить заявку </a>
+                    </div>
+                    <div class="offer__img"> <picture><source srcset="img/calendar.webp" type="image/webp"><img class="offer__img-calendar" src="img/calendar.png" alt="" draggable="false"></picture><img class="offer__img-check" src="img/check.png" alt="" draggable="false"><img class="offer__img-clock" src="img/clock.png" alt="" draggable="false"><img class="offer__img-people" src="img/people.png" alt="" draggable="false">
+                      <div class="offer__img-platform"> </div>
                     </div>
                   </div>
                 </div>

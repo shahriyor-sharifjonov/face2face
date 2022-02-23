@@ -1,0 +1,75 @@
+mixin services()
+    .services-block 
+        .services__body.container 
+            h2.use__title.services__title Услуги
+            .services__content 
+                .services__sidebar 
+                    button(type='button' data-target="podcasts").services__button Подкасты
+                    button(type='button' data-target="vebinar").services__button Онлайн трансляция, вебинар
+                    button(type='button' data-target="interview").services__button Интервью
+                    button(type='button' data-target="tutorial").services__button Видеоуроки и мастер-классы
+                    button(type='button' data-target="youtube").services__button.active Видео для YouTube
+                .services__main 
+                    .services__item#podcasts 
+                        .services__item-bg
+                            img(src="@img/services-bg.png", alt="")
+                        img(src="@img/services-1.png", alt="").services__item-img.services__item-img_1.disable-xxl
+                        img(src="@img/services-4.png", alt="").services__item-img.services__item-img_1.enable-xxl
+                        .services__item-content 
+                            p.services__item-title Выполним все задачи связанные с производством подкаста и видеокаста!
+                            p.services__item-li Звукозаписывающие студии с профессиональным оборудованием;
+                            p.services__item-li Конденсаторные и динамические микрофоны;
+                            p.services__item-li Звуковые рекордеры Zoom;
+                            p.services__item-li Аудиомикшеры;
+                            p.services__item-li Камеры для видеозаписи подкастов в 4K;
+                            p.services__item-li Профессиональная команда
+                            a(href="#!").btn-primary.services__item-btn #[span.services__item-btn-inline Заказать “под ключ” от&nbsp;#[b 11 600 руб]]
+                    .services__item#vebinar 
+                        .services__item-bg
+                            img(src="@img/services-bg.png", alt="")
+                        img(src="@img/services-2.png", alt="").services__item-img.services__item-img_2
+                        .services__item-content 
+                            p.services__item-title.services__item-title_2 Создавайте качественный контент вместе с нами!
+                            p.services__item-li Студии с фоном на выбор (есть хромакей);
+                            p.services__item-li Студийный свет;
+                            p.services__item-li Более 100 различных сетапов;
+                            p.services__item-li Камеры для съемки в формате 4K;
+                            p.services__item-li Отличная шумоизоляция и отсутствие эха;
+                            p.services__item-li Профессиональная команда
+                            a(href="#!").btn-primary.services__item-btn #[span.services__item-btn-inline Заказать “под ключ” от&nbsp;#[b 32 500 руб]]
+                    .services__item#interview 
+                        .services__item-bg
+                            img(src="@img/services-bg.png", alt="")
+                        img(src="@img/services-3.png", alt="").services__item-img.services__item-img_3
+                        .services__item-content 
+                            p.services__item-title Профессиональный уровень подготовки гарантирован!
+                            p.services__item-li Студии с профессиональным светом;
+                            p.services__item-li Более 100 различных сетапов;
+                            p.services__item-li Качественные петличные микрофоны;
+                            p.services__item-li Камеры с записью в формате 4K;
+                            p.services__item-li Профессиональная команда
+                            a(href="#!").btn-primary.services__item-btn #[span.services__item-btn-inline Заказать “под ключ” от&nbsp;#[b 16 700 руб]]
+                    .services__item#tutorial 
+                        .services__item-bg
+                            img(src="@img/services-bg.png", alt="")
+                        img(src="@img/services-4.png", alt="").services__item-img.services__item-img_4
+                        .services__item-content 
+                            p.services__item-title Выбор за вами: от съемки 1 человека до организации YouTube-шоу на несколько человек!
+                            p.services__item-li Студии с профессиональным светом;
+                            p.services__item-li Более 100 различных сетапов;
+                            p.services__item-li Качественные петличные микрофоны;
+                            p.services__item-li Камеры с записью в формате 4K;
+                            p.services__item-li Профессиональная команда
+                            a(href="#!").btn-primary.services__item-btn #[span.services__item-btn-inline Заказать “под ключ” от&nbsp;#[b 18 600 руб]]
+                    .services__item.active#youtube 
+                        .services__item-bg
+                            img(src="@img/services-bg.png", alt="")
+                        img(src="@img/services-5.png", alt="").services__item-img.services__item-img_5
+                        .services__item-content 
+                            p.services__item-title Выбор за вами: от съемки 1 человека до организации YouTube-шоу на несколько человек!
+                            p.services__item-li Студии с профессиональным светом;
+                            p.services__item-li Более 100 различных сетапов;
+                            p.services__item-li Качественные петличные микрофоны;
+                            p.services__item-li Камеры с записью в формате 4K;
+                            p.services__item-li Профессиональная команда
+                            a(href="#!").btn-primary.services__item-btn #[span.services__item-btn-inline Заказать “под ключ” от&nbsp;#[b 18 600 руб]]

@@ -1,0 +1,20 @@
+.services{
+    background: url('../img/questions-bg.png'), #FEFBFB;
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
+    @include media(992){
+        background: url('../img/questions-bg-md.png'), #FEFBFB;
+    }
+    @include media(568){
+        background: url('../img/questions-bg-sm.png'), #FEFBFB;
+    }
+    &-page{
+        padding: 150px 0 130px 0 !important;
+        @include media(992){
+            padding: 150px 0 100px 0 !important;
+        }
+        @include media(767){
+            padding: 80px 0 50px 0 !important;
+        }
+    }
+}

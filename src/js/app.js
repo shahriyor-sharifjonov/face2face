@@ -574,3 +574,22 @@ document.querySelectorAll('.contacts').forEach(function(contact){
     })
   })
 })
+
+document.querySelectorAll('.services-block').forEach( ( services ) => {
+  const buttons = services.querySelectorAll('.services__button');
+  const items = services.querySelectorAll('.services__item');
+  buttons.forEach( ( button ) => {
+    button.addEventListener('click', ( e ) => {
+      const target = button.getAttribute('data-target');
+      const item = services.querySelector(`#${target}`);
+      items.forEach( ( el ) => {
+        el.classList.remove('active');
+      })
+      buttons.forEach( ( el ) => {
+        el.classList.remove('active');
+      })
+      item.classList.add('active');
+      button.classList.add('active');
+    })
+  })
+})
