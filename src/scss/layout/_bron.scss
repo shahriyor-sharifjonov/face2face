@@ -1,0 +1,308 @@
+.bron{
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        @include media(1200){
+            flex-wrap: wrap;
+        }
+    }
+    &__col{
+        width: calc(33.3333% - 13px);
+        @include media(1200){
+            width: calc(50% - 10px);
+        }
+        @include media(767){
+            width: 100%;
+        }
+    }
+    &__title{
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 49px;
+        margin-bottom: 60px;
+        @include media(992){
+            font-size: 35px;
+            line-height: 43px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        @include media(576){
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+    &__subtitle{
+        font-weight: 900;
+        font-size: 25px;
+        line-height: 30px;
+        color: #101010;
+        margin-bottom: 40px;
+        @include media(1400){
+            font-size: 23px;
+            margin-bottom: 20px;
+        }
+        @include media(576){
+            font-size: 15px;
+            line-height: 18px;
+        }
+        span{
+            color: #8D1AEF;
+        }
+    }
+    &__left{
+        display: flex;
+        flex-direction: column;
+        row-gap: 55px;
+        @include media(1200){
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            column-gap: 20px;
+        }
+        @include media(767){
+            flex-direction: column;
+            row-gap: 20px;
+        }
+        &-buttons{
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+        }
+        &-button{
+            input:checked{
+                &~label{
+                    color: #8D1AEF;
+                    border-color: #8D1AEF;
+                }
+            }
+            label{
+                font-size: 18px;
+                line-height: 22px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid #8B8B8B;
+                box-sizing: border-box;
+                border-radius: 60px;
+                width: 100%;
+                padding: 18px 20px;
+                cursor: pointer;
+                text-align: center;
+                color: #8B8B8B;
+                @include media(1400){
+                    font-size: 16px;
+                }
+                @include media(576){
+                    padding: 12px 10px;
+                    font-size: 15px;
+                    line-height: 18px;
+                }
+            }
+        }
+        &-item{
+            @include media(1200){
+                width: 100%;
+            }
+        }
+    }
+    &__datapicker{
+        background: linear-gradient(110.34deg, rgba(238, 235, 255, 0.86) -1.55%, rgba(255, 255, 255, 0.6) 111.86%);
+        box-shadow: 0px 10px 50px rgba(101, 126, 255, 0.1);
+        backdrop-filter: blur(20px);
+        border-radius: 20px;
+        padding: 33px 38px;
+        position: relative;
+        @include media(576){
+            padding: 33px 20px;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 20px;
+            background: linear-gradient(105.73deg, rgba(255, 255, 255, 0.28) 39.01%, rgba(255, 160, 166, 0.28) 77.46%, rgba(255, 255, 255, 0.28) 110.69%);
+            z-index: -2;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            right: 2px;
+            bottom: 2px;
+            border-radius: 20px;
+            background: linear-gradient(110.34deg, rgba(238, 235, 255, 0.86) -1.55%, rgba(255, 255, 255, 0.6) 111.86%);
+            z-index: -2;
+        }
+        .ui-datepicker{
+            &-header{
+                position: relative;
+                margin-bottom: 30px;
+            }
+            &-title{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 900;
+                font-size: 18px;
+                line-height: 22px;
+                color: #101010;
+            }
+            &-prev{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                width: 24px;
+                height: 24px;
+                background: url('../img/datepicker-prev.svg') 100% 100% / cover no-repeat;
+                &.ui-state-disabled{
+                    opacity: 0.5;
+                }
+                span{
+                    display: none;
+                }
+            }
+            &-next{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+                width: 24px;
+                height: 24px;
+                background: url('../img/datepicker-next.svg') 100% 100% / cover no-repeat;
+                &.ui-state-disabled{
+                    opacity: 0.5;
+                }
+                span{
+                    display: none;
+                }
+            }
+            &-calendar{
+                width: 100%;
+                thead{
+                    tr{
+                        th{
+                            padding-bottom: 30px;
+                            span{
+                                font-size: 18px;
+                                line-height: 130%;
+                                color: #8D1AEF;
+                            }
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        td{
+                            font-size: 15px;
+                            line-height: 130%;
+                            text-align: center;
+                            color: #101010;
+                            padding: 5px 0;
+                            a{
+                                color: #101010;
+                                font-weight: 500;
+                                &.ui-state-active{
+                                    color: #8D1AEF;
+                                }
+                            }
+                            &.ui-state-disabled{
+                                color: #8B8B8B;
+                                font-weight: 300;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__time{
+        margin-top: 35px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px;
+        @include media(767){
+            gap: 20px;
+            justify-content: flex-start;
+        }
+        &-item{
+            input{
+                &:disabled{
+                    &~label{
+                        color: #8B8B8B;
+                    }
+                }
+                &:checked{
+                    &~label{
+                        color: #FFFFFF;
+                        background: #8D1AEF;
+                    }
+                }
+            }
+            label{
+                background: #FFFFFF;
+                border-radius: 30px;
+                width: 70px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 130%;
+                text-align: center;
+                color: #101010;
+                transition: 200ms ease;
+            }
+        }
+    }
+    &__info{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 18px;
+        &:not(:last-of-type){
+            margin-bottom: 14px;
+        }
+        p{
+            font-size: 15px;
+            line-height: 130%;
+            font-weight: 500;
+            color: #101010;
+            span{
+                color: #8D1AEF;
+            }
+        }
+    }
+    &__terms{
+        margin-bottom: 20px;
+    }
+    &__right{
+        display: flex;
+        flex-direction: column;
+        &-item{
+            &.first{
+                margin-top: 30px;
+            }
+            &:not(:last-of-type){
+                margin-bottom: 15px;    
+            }
+        }
+        &-btn{
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            &-button{
+                width: 100%;
+                padding: 18px 20px;
+            }
+        }
+    }
+}

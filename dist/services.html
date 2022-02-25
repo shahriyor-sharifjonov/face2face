@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20220225182319">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220225182319">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20220225223333">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220225223333">
     <title>Document</title>
   </head>
   <body class="services"> 
@@ -810,6 +810,129 @@
                     </div>
                   </div>
                 </div>
+                <div class="bron">  
+                  <div class="bron__body container"> 
+                    <h2 class="bron__title">Забронировать студию</h2>
+                    <form class="bron__content" action=""> 
+                      <div class="bron__left bron__col"> 
+                        <div class="bron__left-item">
+                          <h3 class="bron__subtitle"><span>1.</span> Выберите студию</h3>
+                          <div class="bron__left-buttons"> 
+                            <div class="bron__left-button">
+                              <input type="radio" name="studios" hidden id="studios-1" checked>
+                              <label for="studios-1">Студия м. Отрадное </label>
+                            </div>
+                            <div class="bron__left-button">
+                              <input type="radio" name="studios" hidden id="studios-2">
+                              <label for="studios-2">Студия м. Тульская</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="bron__left-item">
+                          <h3 class="bron__subtitle"><span>2.</span>  Выберите зону </h3>
+                          <div class="bron__left-buttons"> 
+                            <div class="bron__left-button">
+                              <input type="radio" name="zona" hidden id="zona-1" checked>
+                              <label for="zona-1">Малая зона 18 м² 1 900 руб/час</label>
+                            </div>
+                            <div class="bron__left-button">
+                              <input type="radio" name="zona" hidden id="zona-2">
+                              <label for="zona-2">Средняя зона 25 м² 2 500 руб/час</label>
+                            </div>
+                            <div class="bron__left-button">
+                              <input type="radio" name="zona" hidden id="zona-3">
+                              <label for="zona-3">Большая зона 47 м² 2 900 руб/час</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="bron__mid bron__col"> 
+                        <h3 class="bron__subtitle"><span>3.</span> Выберите время:</h3>
+                        <div class="bron__datapicker">               
+                          <div class="datepicker"> </div>
+                          <div class="bron__time">
+                            <div class="bron__time-item">
+                              <input type="radio" name="time" id="time-9" hidden>
+                              <label for="time-9">9:00 </label>
+                            </div>
+                            <div class="bron__time-item">
+                              <input type="radio" name="time" id="time-10" hidden disabled>
+                              <label for="time-10">10:00 </label>
+                            </div>
+                            <div class="bron__time-item">
+                              <input type="radio" name="time" id="time-11" hidden disabled>
+                              <label for="time-11">11:00 </label>
+                            </div>
+                            <div class="bron__time-item">
+                              <input type="radio" name="time" id="time-12" hidden>
+                              <label for="time-12">12:00 </label>
+                            </div>
+                            <div class="bron__time-item">
+                              <input type="radio" name="time" id="time-13" hidden>
+                              <label for="time-13">13:00 </label>
+                            </div>
+                            <div class="bron__time-item">
+                              <input type="radio" name="time" id="time-14" hidden checked>
+                              <label for="time-14">14:00</label>
+                            </div>
+                            <div class="bron__time-item">
+                              <input type="radio" name="time" id="time-15" hidden>
+                              <label for="time-15">15:00</label>
+                            </div>
+                            <div class="bron__time-item">
+                              <input type="radio" name="time" id="time-16" hidden>
+                              <label for="time-16">16:00</label>
+                            </div>
+                            <div class="bron__time-item">
+                              <input type="radio" name="time" id="time-17" hidden>
+                              <label for="time-17">17:00</label>
+                            </div>
+                            <div class="bron__time-item">
+                              <input type="radio" name="time" id="time-18" hidden>
+                              <label for="time-18">18:00</label>
+                            </div>
+                            <div class="bron__time-item">
+                              <input type="radio" name="time" id="time-19" hidden>
+                              <label for="time-19">19:00</label>
+                            </div>
+                            <div class="bron__time-item">
+                              <input type="radio" name="time" id="time-20" hidden>
+                              <label for="time-20">20:00</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="bron__right bron__col"> 
+                        <h3 class="bron__subtitle"><span>4.</span> Укажите свои контакты:</h3>
+                        <div class="bron__info"> <img src="img/icon-calendar.svg" alt="" draggable="false">
+                          <p>Запись на <span>30/10/2021 14:00</span></p>
+                        </div>
+                        <div class="bron__info"> <img src="img/icon-time.svg" alt="" draggable="false">
+                          <p>Всего времени: <span>1 час</span></p>
+                        </div>
+                        <div class="bron__info"> <img src="img/item-card.svg" alt="" draggable="false">
+                          <p>Итоговая сумма: <span>1500р.</span></p>
+                        </div>
+                        <div class="bron__right-item first">
+                          <input class="input required" type="text" required placeholder="ФИО"><span> </span>
+                        </div>
+                        <div class="bron__right-item">
+                          <input class="input required" type="tel" required placeholder="+7 ___ ___-__-__"><span> </span>
+                        </div>
+                        <div class="bron__right-item">
+                          <input class="input" type="text" placeholder="Комментарий"><span>   </span>
+                        </div>
+                        <div class="terms bron__terms">
+                          <input class="terms__checkbox" type="checkbox" checked id="terms">
+                          <label class="terms__label" for="terms">Я принимаю условия пользовательского соглашения</label>
+                        </div>
+                        <div class="bron__right-btn"> 
+                          <button class="btn-secondary bron__right-btn-button" type="submit">Забронировать зал   </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
                 <div class="form"> 
                   <div class="form__body container"> 
                     <h2 class="form__title">Остались вопросы? Мы вам перезвоним:</h2>
@@ -856,7 +979,8 @@
               </nav>
             </footer>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js?_v=20220225182319"> </script>
-    <script src="js/app.min.js?_v=20220225182319"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js?_v=20220225223333"> </script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js?_v=20220225223333"> </script>
+    <script src="js/app.min.js?_v=20220225223333"> </script>
   </body>
 </html>
