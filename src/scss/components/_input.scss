@@ -25,7 +25,8 @@
         }  
     }
 }
-input[type="checkbox"]{
+input[type="checkbox"],
+input[type="radio"]{
     appearance: none;
     min-width: 14px;
     width: 14px;
@@ -94,4 +95,26 @@ input.violet[type='range']::-webkit-slider-runnable-track {
 input.violet[type='range']::-webkit-slider-thumb {
     background: #8D1AEF;
     box-shadow: -378px 0 0 378px #8D1AEF;
+}
+
+// quiz range
+.quiz__range{
+    input[type="range"]{
+        overflow: visible;
+        background: linear-gradient(to right, #F59139 0%, #F59139 50%, #E5DCFF 50%, #E5DCFF 100%);
+        border-radius: 10px;
+        &::-webkit-slider-thumb{
+            appearance: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            background: #000;
+            box-shadow: none;
+            margin-top: -12px;
+            background: url('../img/range.png');
+        }
+        &::-webkit-slider-runnable-track {
+            border-radius: 10px;
+        }
+    }
 }

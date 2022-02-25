@@ -593,3 +593,53 @@ document.querySelectorAll('.services-block').forEach( ( services ) => {
     })
   })
 })
+
+// range
+function range() {
+  var value = (this.value-this.min)/(this.max-this.min)*100
+  this.style.background = 'linear-gradient(to right, #F59139 0%, #F59139 ' + value + '%, #E5DCFF ' + value + '%, #E5DCFF 100%)'
+}
+
+document.querySelectorAll('.range-2').forEach( function ( el ) {
+  el.oninput = range
+})
+
+document.querySelectorAll('.quiz__range').forEach( ( el ) => {
+  const seek = el.querySelector('.range-2');
+  const seekTooltip = el.querySelector('.abs');
+
+  function updateSeekTooltip(event) {
+    seekTooltip.innerHTML = `${seek.value} ${seek.getAttribute('data-name')}`
+  }
+
+  seek.addEventListener('input', updateSeekTooltip);
+})
+
+document.querySelectorAll('.quiz').forEach(function ( el ) {
+  const item = el.querySelectorAll('.quiz__item');
+  const next = el.querySelectorAll('.quiz__next');
+  const prev = el.querySelectorAll('.quiz__prev');
+
+  next.forEach( function ( next ) {
+    next.addEventListener('click', function ( e ) {
+      for (let i = 0; i < item.length; i++) {
+        if ( item[i].classList.contains('active') && !item[i].classList.contains('last') ) {
+          item[i].classList.remove('active');
+          item[i += 1].classList.add('active');
+        }
+      }
+    })
+  })
+
+  prev.forEach( function ( prev ) {
+    prev.addEventListener('click', function ( e ) {
+      for (let i = 0; i < item.length; i++) {
+        if ( item[i].classList.contains('active') && i > 0 ) {
+          item[i].classList.remove('active');
+          item[i -= 1].classList.add('active');
+        }
+      }
+    })
+  })
+
+})

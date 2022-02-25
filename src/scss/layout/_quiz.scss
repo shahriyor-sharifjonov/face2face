@@ -1,0 +1,491 @@
+.quiz{
+  &__title{
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 49px;
+    color: #101010;    
+    margin-bottom: 30px;
+    @include media(992){
+      font-weight: 800;
+      font-size: 35px;
+      line-height: 43px;
+    }
+    @include media(767){
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 20px;
+      color: #101010;
+    }
+  }
+  &__subtitle{
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 30px;
+    color: #101010;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+    @include media(992){
+      margin-bottom: 20px;
+      max-width: 415px;
+      font-weight: bold;
+      font-size: 25px;
+      line-height: 30px;
+    }
+    @include media(767){
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 18px;
+      margin-bottom: 25px;
+      max-width: 100%;
+    }
+    span{
+      color: #8D1AEF;
+      margin-right: 14px;
+      @include media(767){
+        margin-right: 7px;
+      }
+    }
+  }
+  &__item{
+    background: #FFFFFF;
+    box-shadow: 0px 10px 50px rgba(150, 101, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    min-height: 540px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    display: none;
+    &.last{
+      flex-direction: column;
+      .quiz__content{
+        @include media(992){
+          padding: 100px 40px 40px 40px;
+        }
+        @include media(576){
+          padding: 100px 15px 40px 15px;
+        }
+      }
+    }
+    &.active{
+      display: flex;
+    }
+    @include media(767){
+      min-height: 500px;
+    }
+  }
+  &__inner{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 540px;
+    @include media(767){
+      min-height: 500px;
+    }
+    .quiz__elements{
+      border-radius: 0 30px 0 0;
+      @include media(992){
+        border-radius: 0px 30px;
+      }
+      @include media(767){
+        border-radius: 20px 20px 0px 0px;
+      }
+    }
+  }
+  &__total{
+    background: #8D1AEF;
+    border-radius: 0px 0px 30px 30px;
+    padding: 35px 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+    @include media(992){
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      row-gap: 20px;
+      padding: 40px;
+    }
+    &-btn{
+      color: #101010;
+      padding: 19px 58px;
+      font-weight: 500;
+    }
+    &-row{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      column-gap: 100px;
+      @include media(576){
+        column-gap: 30px;
+      }
+      p{
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 37px;
+        color: #FFFFFF; 
+        @include media(576){
+          font-size: 18px;
+        }       
+      }
+      b{
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 37px;
+        color: #FFFFFF;
+        @include media(576){
+          font-size: 18px;
+        }
+      }
+    }
+    &-p{
+      font-size: 15px;
+      line-height: 18px;
+      margin-top: 5px;
+      color: #D0C1FE;      
+    }
+    &-item{
+      width: 100%;
+      &:not(:last-of-type){
+          margin-bottom: 30px;
+      }
+      &[data-cols="3"]{
+        .quiz__total-item-header{
+          p, b{
+            width: 25%;
+            @include media(1200){
+              width: 100%;
+            }
+          }
+          .big{
+            width: 50%;
+            @include media(1200){
+              width: 100%;
+            }
+          }
+        }
+        .quiz__total-item-row{
+          p, b{
+            width: 25%;
+            @include media(1200){
+              width: 100%;
+            }
+          }
+          .big{
+            width: 50%;
+            @include media(1200){
+              width: 100%;
+            }
+          }
+        }
+      }
+      &[data-cols="4"]{
+        .quiz__total-item-header{
+          p, b{
+            width: 25%;
+            @include media(1200){
+              width: 100%;
+            }
+          }
+        }
+        .quiz__total-item-row{
+          p, b{
+            width: 25%;
+            @include media(1200){
+              width: 100%;
+            }
+          }
+        }
+      }
+      &-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #F2EEFF;
+        border-radius: 15px 15px 0px 0px;
+        padding: 14px 20px;
+        column-gap: 30px;
+        p, b{
+          font-size: 18px;
+          line-height: 130%;
+          color: #8D1AEF;
+          @include media(576){
+            font-size: 14px;
+          }
+          &:not(:first-child){
+            @include media(1200){
+              display: none;
+            }
+          }
+        }
+      }
+      &-rows{
+        border: 1px solid #F2EEFF;
+        box-sizing: border-box;
+        border-radius: 0px 0px 15px 15px;
+      }
+      &-row{
+        padding: 22px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        column-gap: 30px;
+        @include media(1200){
+          flex-direction: column;
+          row-gap: 10px;
+        }
+        &:not(:last-of-type){
+          border-bottom: 1px solid #F2EEFF;
+        }
+        p, b{
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 130%;
+          color: #101010;
+          @include media(576){
+            font-size: 14px;
+          }
+        }
+        b{
+          font-weight: 800;
+        }
+      }
+    }
+  }
+  &__content{
+    padding: 60px 110px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    @include media(992){
+      padding: 40px;
+      width: 100%;
+    }
+    @include media(767){
+      padding: 80px 20px 0 20px;
+    }
+  }
+  &__elements{
+    background: url('../img/quiz-item-bg.png') 100% 100% / cover no-repeat;
+    border-radius: 0px 30px 30px 0px;
+    min-width: 200px;
+    width: 200px;
+    position: relative;
+    @include media(992){
+      border-radius: 0px 30px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 230px;
+      height: 120px;
+    }
+    @include media(767){
+      width: 100%;
+      height: 50px;
+      border-radius: 20px 20px 0px 0px;
+    }
+    &-img{
+      &_1{
+        position: absolute;
+        top: 23px;
+        right: 50px;
+        border-radius: 1px;
+        filter: drop-shadow(0px 15px 20px rgba(159, 140, 255, 0.15));
+        @include media(992){
+          width: 110px;
+          height: 110px;
+          top: -31px;
+          left: 10px;
+        }
+        @include media(767){
+          width: 75px;
+          height: 75px;
+          top: -25px;
+          left: 47px;
+          right: auto;
+        }
+      }
+      &_2{
+        position: absolute;
+        right: -70px;
+        bottom: 92px;
+        border-radius: 1px;
+        filter: drop-shadow(0px 15px 20px rgba(159, 140, 255, 0.15));
+        @include media(1440){
+          right: 0;
+        }
+        @include media(1400){
+          right: -70px;
+        }
+        @include media(1250){
+          right: 0;
+        }
+        @include media(1200){
+          right: -70px;
+        }
+        @include media(1080){
+          right: 0;
+        }
+        @include media(992){
+          right: 5px;
+          top: 30px;
+          width: 125px;
+          height: 125px;
+        }
+        @include media(767){
+          width: 81px;
+          height: 77px;
+          top: 0;
+          right: 43px;
+        }
+      }
+    }
+  }
+  &__list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    flex: 1 1 auto;
+    &-item{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      column-gap: 20px;
+      @include media(767){
+        column-gap: 15px;
+      }
+      input:checked{
+        &~label{
+          font-weight: 600;
+        }
+      }
+      label{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 130%;
+        color: #101010;
+        @include media(767){
+          font-size: 15px;
+          line-height: 130%;
+        }
+      }
+    }
+  }
+  &__img{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+    flex: 1 1 auto;
+    @include media(992){
+      column-gap: 20px;
+    }
+    @include media(767){
+      flex-direction: column;
+      row-gap: 20px;
+    }
+    &-item{
+      @include media(767){
+        width: 100%;
+      }
+      img{
+        border-radius: 10px;
+        margin-bottom: 10px;
+        max-width: 100%;
+        @include media(767){
+          width: 100%;
+        }
+      }
+      .quiz__list-item{
+        @include media(992){
+          column-gap: 15px;
+        }
+      }
+      label{
+        @include media(1400){
+          font-size: 15px;
+        }
+        @include media(992){
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 130%;
+        }
+      }
+    }
+  }
+  &__range{
+    position: relative;
+    &-field{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 11px;
+    }
+    &-value{
+      font-size: 18px;
+      line-height: 130%;
+      color: #101010;
+      &.abs{
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 130%;
+        color: #F59139;
+      }
+    }
+  }
+  &__buttons{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 18px;
+    column-gap: 52px;
+    @include media(992){
+      width: 100%;
+      justify-content: space-between;
+    }
+    @include media(767){
+      margin-left: -20px;
+      margin-right: -20px;
+      width: calc(100% + 40px);
+      flex-direction: row-reverse;
+      column-gap: 0;
+    }
+  }
+  &__next{
+    padding: 13px 70px;
+    @include media(767){
+      background: #F59139;
+      border-radius: 0px 0px 20px 0px;
+      flex: 1 1 auto;
+    }
+  }
+  &__prev{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration-line: underline;
+    color: #8D1AEF; 
+    svg{
+      display: none;
+    }
+    @include media(767){
+      background: #E5DCFF;
+      width: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0 0 0 20px;
+      svg{
+        display: block;
+      }
+      span{
+        display: none;
+      }
+    }   
+  }
+}

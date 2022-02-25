@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20220223214548">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220223214548">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20220225182319">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220225182319">
     <title>Document</title>
   </head>
   <body class="services"> 
@@ -39,8 +39,8 @@
                         <button class="services__button" type="button" data-target="podcasts">Подкасты</button>
                         <button class="services__button" type="button" data-target="vebinar">Онлайн трансляция, вебинар</button>
                         <button class="services__button" type="button" data-target="interview">Интервью</button>
-                        <button class="services__button" type="button" data-target="tutorial">Видеоуроки и мастер-классы</button>
-                        <button class="services__button active" type="button" data-target="youtube">Видео для YouTube</button>
+                        <button class="services__button active" type="button" data-target="tutorial">Видеоуроки и мастер-классы</button>
+                        <button class="services__button" type="button" data-target="youtube">Видео для YouTube</button>
                       </div>
                       <div class="services__main"> 
                         <div class="services__item" id="podcasts"> 
@@ -78,7 +78,7 @@
                             <p class="services__item-li">Профессиональная команда</p><a class="btn-primary services__item-btn" href="#!"><span class="services__item-btn-inline">Заказать “под ключ” от&nbsp;<b>16 700 руб</b></span></a>
                           </div>
                         </div>
-                        <div class="services__item" id="tutorial"> 
+                        <div class="services__item active" id="tutorial"> 
                           <div class="services__item-bg"><picture><source srcset="img/services-bg.webp" type="image/webp"><img src="img/services-bg.png" alt=""></picture></div><img class="services__item-img services__item-img_4" src="img/services-4.png" alt="">
                           <div class="services__item-content"> 
                             <p class="services__item-title">Выбор за вами: от съемки 1 человека до организации YouTube-шоу на несколько человек!</p>
@@ -89,7 +89,7 @@
                             <p class="services__item-li">Профессиональная команда</p><a class="btn-primary services__item-btn" href="#!"><span class="services__item-btn-inline">Заказать “под ключ” от&nbsp;<b>18 600 руб</b></span></a>
                           </div>
                         </div>
-                        <div class="services__item active" id="youtube"> 
+                        <div class="services__item" id="youtube"> 
                           <div class="services__item-bg"><picture><source srcset="img/services-bg.webp" type="image/webp"><img src="img/services-bg.png" alt=""></picture></div><img class="services__item-img services__item-img_5" src="img/services-5.png" alt="">
                           <div class="services__item-content"> 
                             <p class="services__item-title">Выбор за вами: от съемки 1 человека до организации YouTube-шоу на несколько человек!</p>
@@ -552,6 +552,253 @@
                     </div>
                   </div>
                 </div>
+                <div class="quiz"> 
+                  <form class="quiz__body container" action="#!">
+                    <div class="quiz__item active"> 
+                      <div class="quiz__content"> 
+                        <p class="quiz__title">Расчет стоимости</p>
+                        <p class="quiz__subtitle"><span>1</span> Выберите услугу, которая вас интересует и студию:                    </p>
+                        <div class="quiz__list"> 
+                          <div class="quiz__list-item">
+                            <input type="radio" name="service" id="service-1" checked>
+                            <label for="service-1"> Подкаст </label>
+                          </div>
+                          <div class="quiz__list-item">
+                            <input type="radio" name="service" id="service-2">
+                            <label for="service-2"> Онлайн трансляция / вебинар </label>
+                          </div>
+                          <div class="quiz__list-item">
+                            <input type="radio" name="service" id="service-3">
+                            <label for="service-3"> Видеоуроки и мастер-классы </label>
+                          </div>
+                          <div class="quiz__list-item">
+                            <input type="radio" name="service" id="service-4">
+                            <label for="service-4"> Шоу для YouTube </label>
+                          </div>
+                          <div class="quiz__list-item">
+                            <input type="radio" name="service" id="service-5">
+                            <label for="service-5"> Интервью </label>
+                          </div>
+                          <div class="quiz__list-item">
+                            <input type="radio" name="service" id="service-6">
+                            <label for="service-6"> Led-доска </label>
+                          </div>
+                        </div>
+                        <div class="quiz__buttons"> 
+                          <button class="btn-primary quiz__next" type="button">Далее</button>
+                          <button class="quiz__prev" type="button"><span>Назад</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.83 11L11.41 7.41L10 6L4 12L10 18L11.41 16.59L7.83 13H20V11H7.83Z" fill="#8D1AEF"/>
+</svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="quiz__elements"> <picture><source srcset="img/calculator.webp" type="image/webp"><img class="quiz__elements-img quiz__elements-img_1" src="img/calculator.png" alt="" draggable="false"></picture><img class="quiz__elements-img quiz__elements-img_2" src="img/camera.png" alt="" draggable="false"></div>
+                    </div>
+                    <div class="quiz__item">
+                      <div class="quiz__content"> 
+                        <p class="quiz__title">Расчет стоимости</p>
+                        <p class="quiz__subtitle"><span>2</span> Какая студия вас интересует?             </p>
+                        <div class="quiz__list"> 
+                          <div class="quiz__list-item">
+                            <input type="radio" name="studio" id="studio-1" checked>
+                            <label for="studio-1"> Студия м. Отрадное</label>
+                          </div>
+                          <div class="quiz__list-item">
+                            <input type="radio" name="studio" id="studio-2">
+                            <label for="studio-2"> Студия м. Тульская</label>
+                          </div>
+                        </div>
+                        <div class="quiz__buttons"> 
+                          <button class="btn-primary quiz__next" type="button">Далее</button>
+                          <button class="quiz__prev" type="button"><span>Назад</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.83 11L11.41 7.41L10 6L4 12L10 18L11.41 16.59L7.83 13H20V11H7.83Z" fill="#8D1AEF"/>
+</svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="quiz__elements"> <picture><source srcset="img/calculator.webp" type="image/webp"><img class="quiz__elements-img quiz__elements-img_1" src="img/calculator.png" alt="" draggable="false"></picture><img class="quiz__elements-img quiz__elements-img_2" src="img/camera.png" alt="" draggable="false"></div>
+                    </div>
+                    <div class="quiz__item">
+                      <div class="quiz__content"> 
+                        <p class="quiz__title">Расчет стоимости</p>
+                        <p class="quiz__subtitle"><span>3</span> Какой зал вас интересует   </p>
+                        <div class="quiz__img"> 
+                          <div class="quiz__img-item"><picture><source srcset="img/quiz-img-1.webp" type="image/webp"><img src="img/quiz-img-1.png" alt="" draggable="false"></picture>
+                            <div class="quiz__list-item">
+                              <input type="radio" name="zal" id="zal-1" checked>
+                              <label for="zal-1"> Малый (1900р час)</label>
+                            </div>
+                          </div>
+                          <div class="quiz__img-item"> <picture><source srcset="img/quiz-img-2.webp" type="image/webp"><img src="img/quiz-img-2.png" alt=""></picture>
+                            <div class="quiz__list-item">
+                              <input type="radio" name="zal" id="zal-2">
+                              <label for="zal-2"> Средний (2500р час)</label>
+                            </div>
+                          </div>
+                          <div class="quiz__img-item"> <picture><source srcset="img/quiz-img-3.webp" type="image/webp"><img src="img/quiz-img-3.png" alt=""></picture>
+                            <div class="quiz__list-item">
+                              <input type="radio" name="zal" id="zal-3">
+                              <label for="zal-3"> Большой (2900р час)</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="quiz__buttons"> 
+                          <button class="btn-primary quiz__next" type="button">Далее</button>
+                          <button class="quiz__prev" type="button"><span>Назад</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.83 11L11.41 7.41L10 6L4 12L10 18L11.41 16.59L7.83 13H20V11H7.83Z" fill="#8D1AEF"/>
+</svg> 
+                          </button>
+                        </div>
+                      </div>
+                      <div class="quiz__elements"> <picture><source srcset="img/calculator.webp" type="image/webp"><img class="quiz__elements-img quiz__elements-img_1" src="img/calculator.png" alt="" draggable="false"></picture><img class="quiz__elements-img quiz__elements-img_2" src="img/camera.png" alt="" draggable="false"></div>
+                    </div>
+                    <div class="quiz__item">
+                      <div class="quiz__content"> 
+                        <p class="quiz__title">Расчет стоимости</p>
+                        <p class="quiz__subtitle"><span>4</span> Сколько часов аренды вам необходимо?</p>
+                        <div class="quiz__list"> 
+                          <div class="quiz__range"> 
+                            <input class="range-2" type="range" min="2" max="12" value="7" steps="1" name="time" data-name="часов">
+                            <div class="quiz__range-field"> 
+                              <div class="quiz__range-value left">2 часа</div>
+                              <div class="quiz__range-value abs">7 часов </div>
+                              <div class="quiz__range-value right">12 часов</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="quiz__buttons"> 
+                          <button class="btn-primary quiz__next" type="button">Далее </button>
+                          <button class="quiz__prev" type="button"><span>Назад</span> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.83 11L11.41 7.41L10 6L4 12L10 18L11.41 16.59L7.83 13H20V11H7.83Z" fill="#8D1AEF"/>
+</svg> 
+                          </button>
+                        </div>
+                      </div>
+                      <div class="quiz__elements"> <picture><source srcset="img/calculator.webp" type="image/webp"><img class="quiz__elements-img quiz__elements-img_1" src="img/calculator.png" alt="" draggable="false"></picture><img class="quiz__elements-img quiz__elements-img_2" src="img/camera.png" alt="" draggable="false"></div>
+                    </div>
+                    <div class="quiz__item">
+                      <div class="quiz__content"> 
+                        <p class="quiz__title">Расчет стоимости</p>
+                        <p class="quiz__subtitle"><span>5</span> Какие дополнительные услуги вам интересны?</p>
+                        <div class="quiz__list"> 
+                          <div class="quiz__list-item">
+                            <input type="checkbox" id="sound" checked>
+                            <label for="sound"> Запись звука, включена в стоимость</label>
+                          </div>
+                          <div class="quiz__list-item">
+                            <input type="checkbox" id="camera">
+                            <label for="camera"> Выставление композиции кадра, настройка камер и света </label>
+                          </div>
+                          <div class="quiz__list-item">
+                            <input type="checkbox" id="rgb">
+                            <label for="rgb"> RGB лампы</label>
+                          </div>
+                          <div class="quiz__list-item">
+                            <input type="checkbox" id="rgbcamera" checked>
+                            <label for="rgbcamera"> Аренда камер (Источники света и RGB-лампы включены в стоимость)</label>
+                          </div>
+                          <div class="quiz__range"> 
+                            <input class="range-2" type="range" min="1" max="5" value="3" steps="1" data-name="камеры">
+                            <div class="quiz__range-field"> 
+                              <div class="quiz__range-value left">1 </div>
+                              <div class="quiz__range-value abs">3 камеры </div>
+                              <div class="quiz__range-value right">5 </div>
+                            </div>
+                          </div>
+                          <div class="quiz__list-item">
+                            <input type="checkbox" id="istochniksveta" checked>
+                            <label for="istochniksveta">Источники света. Кол-во источников:</label>
+                          </div>
+                          <div class="quiz__range"> 
+                            <input class="range-2" type="range" min="1" max="4" value="3" steps="1" data-name="источника света" style="background: linear-gradient(to right, #F59139 0%, #F59139 68%, #E5DCFF 68%, #E5DCFF 100%);">
+                            <div class="quiz__range-field"> 
+                              <div class="quiz__range-value left">1</div>
+                              <div class="quiz__range-value abs">2 источника света</div>
+                              <div class="quiz__range-value right">4</div>
+                            </div>
+                          </div>
+                          <div class="quiz__list-item">
+                            <input type="checkbox" id="operator" checked>
+                            <label for="operator">Оператор. Кол-во часов:</label>
+                          </div>
+                          <div class="quiz__range"> 
+                            <input class="range-2" type="range" min="1" max="12" value="7" steps="1" data-name="часов" style="background: linear-gradient(to right, #F59139 0%, #F59139 54%, #E5DCFF 54%, #E5DCFF 100%);">
+                            <div class="quiz__range-field"> 
+                              <div class="quiz__range-value left">1 час</div>
+                              <div class="quiz__range-value abs">7 часов</div>
+                              <div class="quiz__range-value right">12 часов</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="quiz__buttons"> 
+                          <button class="btn-primary quiz__next" type="button">Далее </button>
+                          <button class="quiz__prev" type="button"><span>Назад</span> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.83 11L11.41 7.41L10 6L4 12L10 18L11.41 16.59L7.83 13H20V11H7.83Z" fill="#8D1AEF"/>
+</svg> 
+                          </button>
+                        </div>
+                      </div>
+                      <div class="quiz__elements"> <picture><source srcset="img/calculator.webp" type="image/webp"><img class="quiz__elements-img quiz__elements-img_1" src="img/calculator.png" alt="" draggable="false"></picture><img class="quiz__elements-img quiz__elements-img_2" src="img/camera.png" alt="" draggable="false"></div>
+                    </div>
+                    <div class="quiz__item last">
+                      <div class="quiz__inner"> 
+                        <div class="quiz__content"> 
+                          <p class="quiz__title">Готово! </p>
+                          <div class="quiz__total-item" data-cols="4"> 
+                            <div class="quiz__total-item-header"> 
+                              <p>Услуга </p>
+                              <p>Студия </p>
+                              <p>Кол-во часов </p>
+                              <p>Цена </p>
+                            </div>
+                            <div class="quiz__total-item-rows"> 
+                              <div class="quiz__total-item-row"> 
+                                <p>Подкаст </p>
+                                <p>м. Отрадное, Малый зал </p>
+                                <p>8 часов </p><b>15 200 руб </b>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="quiz__total-item" data-cols="3"> 
+                            <div class="quiz__total-item-header"> 
+                              <p class="big">Дополнительные услуги </p>
+                              <p>Кол-во </p>
+                              <p>Цена </p>
+                            </div>
+                            <div class="quiz__total-item-rows"> 
+                              <div class="quiz__total-item-row"> 
+                                <p class="big">Запись звука</p>
+                                <p>-</p><b>включена в стоимость </b>
+                              </div>
+                              <div class="quiz__total-item-row"> 
+                                <p class="big">Аренда камер</p>
+                                <p>4 камеры</p><b>включена в стоимость </b>
+                              </div>
+                              <div class="quiz__total-item-row"> 
+                                <p class="big">Источники света</p>
+                                <p>3 источника света</p><b>5 000 руб</b>
+                              </div>
+                              <div class="quiz__total-item-row"> 
+                                <p class="big">Работа оператора</p>
+                                <p>8 часов</p><b>5 000 руб</b>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="quiz__elements"> <picture><source srcset="img/calculator.webp" type="image/webp"><img class="quiz__elements-img quiz__elements-img_1" src="img/calculator.png" alt="" draggable="false"></picture><img class="quiz__elements-img quiz__elements-img_2" src="img/camera.png" alt="" draggable="false"></div>
+                      </div>
+                      <div class="quiz__total"> 
+                        <button class="quiz__total-btn btn-secondary" type="submit">Заказать </button>
+                        <div class="quiz__total-info"> 
+                          <div class="quiz__total-row"> 
+                            <p>Итого: </p><b>25 200 руб </b>
+                          </div>
+                          <p class="quiz__total-p">Рассчет носит справочный характер и не является публичной офертой</p>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
                 <div class="offer"> 
                   <div class="offer__body container"> 
                     <div class="offer__content"> 
@@ -609,7 +856,7 @@
               </nav>
             </footer>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js?_v=20220223214548"> </script>
-    <script src="js/app.min.js?_v=20220223214548"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js?_v=20220225182319"> </script>
+    <script src="js/app.min.js?_v=20220225182319"> </script>
   </body>
 </html>

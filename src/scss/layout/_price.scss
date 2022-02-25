@@ -94,6 +94,9 @@
         position: relative;
         min-height: 180px;
         margin-bottom: 10px;
+        @include media(767){
+            min-height: auto;
+        }
         @include media(576){
             min-height: 100% !important;
         }

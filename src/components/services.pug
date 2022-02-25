@@ -7,8 +7,8 @@ mixin services()
                     button(type='button' data-target="podcasts").services__button Подкасты
                     button(type='button' data-target="vebinar").services__button Онлайн трансляция, вебинар
                     button(type='button' data-target="interview").services__button Интервью
-                    button(type='button' data-target="tutorial").services__button Видеоуроки и мастер-классы
-                    button(type='button' data-target="youtube").services__button.active Видео для YouTube
+                    button(type='button' data-target="tutorial").services__button.active Видеоуроки и мастер-классы
+                    button(type='button' data-target="youtube").services__button Видео для YouTube
                 .services__main 
                     .services__item#podcasts 
                         .services__item-bg
@@ -49,7 +49,7 @@ mixin services()
                             p.services__item-li Камеры с записью в формате 4K;
                             p.services__item-li Профессиональная команда
                             a(href="#!").btn-primary.services__item-btn #[span.services__item-btn-inline Заказать “под ключ” от&nbsp;#[b 16 700 руб]]
-                    .services__item#tutorial 
+                    .services__item.active#tutorial 
                         .services__item-bg
                             img(src="@img/services-bg.png", alt="")
                         img(src="@img/services-4.png", alt="").services__item-img.services__item-img_4
@@ -61,7 +61,7 @@ mixin services()
                             p.services__item-li Камеры с записью в формате 4K;
                             p.services__item-li Профессиональная команда
                             a(href="#!").btn-primary.services__item-btn #[span.services__item-btn-inline Заказать “под ключ” от&nbsp;#[b 18 600 руб]]
-                    .services__item.active#youtube 
+                    .services__item#youtube 
                         .services__item-bg
                             img(src="@img/services-bg.png", alt="")
                         img(src="@img/services-5.png", alt="").services__item-img.services__item-img_5
