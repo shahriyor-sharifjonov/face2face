@@ -73,3 +73,72 @@ mixin services()
                             p.services__item-li Камеры с записью в формате 4K;
                             p.services__item-li Профессиональная команда
                             a(href="#!").btn-primary.services__item-btn #[span.services__item-btn-inline Заказать “под ключ” от&nbsp;#[b 18 600 руб]]
+
+
+mixin services2()
+    .services-block 
+        .services__body.container 
+            h2.use__title.services__title Как мы работаем?
+            .services__content 
+                .services__sidebar 
+                    button(type='button' data-target="podcasts").services__button Заявка
+                    button(type='button' data-target="vebinar").services__button Согласование ТЗ
+                    button(type='button' data-target="interview").services__button Договор (можно без него)
+                    button(type='button' data-target="tutorial").services__button.active Оплата
+                    button(type='button' data-target="youtube").services__button Получение услуг
+                .services__main 
+                    .services__item#podcasts 
+                        .services__item-bg
+                            img(src="@img/services-bg.png", alt="")
+                        img(src="@img/services-6.png", alt="").services__item-img.services__item-img_6
+                        .services__item-content 
+                            p.services__item-title.big Заявка
+                            p.services__item-text Оставьте заявку. В течение дня с Вами свяжется наш менеджер, обсудит детали и подтвердит бронирование. 
+                            .services__item-form
+                                .services__item-form-input
+                                    input(type="tel" required placeholder="+7 ___ ___-__-__").input.required
+                                    span
+                                button(type="submit").services__item-form-btn.btn-primary Отправить
+                                .terms.services__item-form-terms
+                                    input(type="checkbox" checked)#terms3.terms__checkbox
+                                    label(for="terms3").terms__label Я принимаю условия пользовательского соглашения
+                    .services__item#vebinar 
+                        .services__item-bg
+                            img(src="@img/services-bg.png", alt="")
+                        img(src="@img/services-7.png", alt="").services__item-img.services__item-img_7
+                        .services__item-content.pb  
+                            p.services__item-title.big.services__item-title_2 Согласование ТЗ
+                            p.services__item-p Наш специалист ответит на любые интересующие вас вопросы, поможет определиться с комплектацией оборудования и сориентирует по цене.
+                            a(href="#!").btn-primary.services__item-btn Забронировать зал
+                    .services__item#interview 
+                        .services__item-bg
+                            img(src="@img/services-bg.png", alt="")
+                        img(src="@img/services-8.png", alt="").services__item-img.services__item-img_8
+                        .services__item-content 
+                            p.services__item-title.big Договор
+                            p.services__item-p(style="max-width: 333px;") При необходимости заключаем договор, с указанием всех условий, и предоставим закрывающие документы.
+                            a(href="#!").btn-primary.services__item-btn Забронировать зал
+                    .services__item.active#tutorial 
+                        .services__item-bg
+                            img(src="@img/services-bg.png", alt="")
+                        img(src="@img/services-9.png", alt="").services__item-img.services__item-img_8
+                        .services__item-content 
+                            p.services__item-title.big Оплата
+                            p.services__item-text Окончательно согласовываем и утверждаем все детали. Вы вносите оплату за аренду.
+                            .services__item-form
+                                .services__item-form-input
+                                    input(type="tel" required placeholder="+7 ___ ___-__-__").input.required
+                                    span
+                                button(type="submit").services__item-form-btn.btn-primary Отправить
+                                .terms.services__item-form-terms
+                                    input(type="checkbox" checked)#terms3.terms__checkbox
+                                    label(for="terms3").terms__label Я принимаю условия пользовательского соглашения
+                    .services__item#youtube 
+                        .services__item-bg
+                            img(src="@img/services-bg.png", alt="")
+                        img(src="@img/services-1.png", alt="").services__item-img.services__item-img_1.disable-xxl
+                        img(src="@img/services-4.png", alt="").services__item-img.services__item-img_1.enable-xxl
+                        .services__item-content.pb  
+                            p.services__item-title.big Получение услуг 
+                            p.services__item-p(style="max-width: 250px;") К выбранному времени ждем Вас на студии!
+                            a(href="#!").btn-primary.services__item-btn Забронировать зал

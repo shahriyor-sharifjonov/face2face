@@ -53,3 +53,37 @@ mixin studios()
                 a(href="#!").btn-primary_nobg.studios__slide-btn Подробнее 
         .studios__prev.swiper-button-prev
         .studios__next.swiper-button-next
+
+
+mixin studios2()
+  .studios 
+    .studios__body.container
+      h2.studios__title.studios__title_2 Выберите студию
+      .studios__items 
+        .studios__item 
+          img(src="@img/studio-1.png", alt="" draggable="false").studios__item-img 
+          .studios__item-content 
+            p.studios__item-title Студия м. Тульское:
+            ul.studios__item-ul 
+              li.studios__item-li Малая зона 18 м2
+              li.studios__item-li Средняя зона 25 м2
+              li.studios__item-li Большая зона 47 м2 
+            .studios__item-row 
+              .studios__item-location
+                img(src="@img/location.png", alt="")
+                p ул. Городская 8, Москва
+              p.studios__item-price от 2200 руб/час 
+            a(href="#!").studios__item-btn Выбрать 
+        .studios__item 
+          img(src="@img/studio-2.png", alt="" draggable="false").studios__item-img 
+          .studios__item-content 
+            p.studios__item-title Студия м. Отрадное 50м2 :
+            ul.studios__item-ul 
+              li.studios__item-li Малая зона 15 м2 
+              li.studios__item-li Большая зона  28 м2 
+            .studios__item-row 
+              .studios__item-location
+                img(src="@img/location.png", alt="")
+                p ул. Городская 8, Москва
+              p.studios__item-price от 1900 руб/час 
+            a(href="#!").studios__item-btn Выбрать 

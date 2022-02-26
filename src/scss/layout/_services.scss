@@ -107,6 +107,7 @@
         justify-content: space-between;
         position: relative;
         display: none;
+        min-height: 337px;
         @include media(1400){
             flex-direction: column;
             box-shadow: 0px 10px 30px rgba(101, 126, 255, 0.1);
@@ -228,12 +229,65 @@
                     height: auto;
                 }
             }
+            &_6{
+                top: -15px;
+                left: 35px;
+                @include media(1400){
+                    width: auto;
+                    height: 149px;
+                    left: auto;
+                    right: 20px;
+                    top: -40px;
+                }
+                @include media(767){
+                    bottom: 20px;
+                    top: auto;
+                    max-height: 178px;
+                    height: auto;
+                }
+            }
+            &_7{
+                top: 27px;
+                left: 47px;
+                @include media(1400){
+                    width: auto;
+                    height: 149px;
+                    left: auto;
+                    right: -20px;
+                    top: -40px;
+                }
+                @include media(767){
+                    bottom: 20px;
+                    top: auto;
+                    max-height: 178px;
+                    height: auto;
+                }
+            }
+            &_8{
+                top: 17px;
+                left: 13px;
+                @include media(1400){
+                    width: auto;
+                    height: 149px;
+                    left: auto;
+                    right: -20px;
+                    top: -40px;
+                }
+                @include media(767){
+                    bottom: 20px;
+                    top: auto;
+                    max-height: 178px;
+                    height: auto;
+                }
+            }
         }
         &-content{
             position: relative;
             isolation: isolate;
             flex: 1 1 auto;
             padding: 30px 80px;
+            display: flex;
+            flex-direction: column;
             box-shadow: 0px 10px 30px rgba(101, 126, 255, 0.1);
             @include media(1400){
                 border-radius: 0 0 20px 20px;
@@ -278,6 +332,16 @@
                     display: none;
                 }
             }
+            &.pb{
+                padding-top: 40px;
+                padding-bottom: 60px;
+                @include media(1400){
+                    padding: 15px 30px;
+                }
+                @include media(767){
+                    padding: 0;
+                }
+            }
         }
         &-title{
             font-weight: 800;
@@ -285,6 +349,14 @@
             line-height: 22px;
             color: #101010;       
             margin-bottom: 15px; 
+            &.big{
+                font-size: 25px;
+                line-height: 30px;
+                @include media(767){
+                    font-size: 15px;
+                    line-height: 18px;
+                }
+            }
             &_2{
                 @include media(1200){
                     max-width: 341px;
@@ -323,6 +395,17 @@
                 border-radius: 50%;
             }
         }
+        &-p{
+            font-size: 15px;
+            line-height: 130%;
+            flex: 1 1 auto;
+            color: #101010;
+        }
+        &-text{
+            font-size: 15px;
+            line-height: 130%;
+            color: #101010;
+        }
         &-btn{
             margin-top: 20px;
             padding: 13px 33px;
@@ -338,6 +421,23 @@
             }
             b{
                 color: #F59139;
+            }
+        }
+        &-form{
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            max-width: 310px;
+            width: 100%;
+            row-gap: 15px;
+            @include media(767){
+                margin-left: auto;
+                margin-right: auto;
+            }
+            &-btn{
+                width: 100%;
+                height: 50px;
+                margin-bottom: -5px;
             }
         }
     }

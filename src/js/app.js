@@ -640,8 +640,7 @@ document.querySelectorAll('.quiz').forEach(function ( el ) {
         }
       }
     })
-  })
-
+  }) 
 })
 
 $( function() {
