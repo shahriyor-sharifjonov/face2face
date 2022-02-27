@@ -12,7 +12,7 @@
         justify-content: space-between;
         flex-direction: row;
         align-items: center;
-        &:nth-of-type(2){
+        &:nth-of-type(even){
             flex-direction: row-reverse;
             @include media(992){
                 flex-direction: column-reverse;

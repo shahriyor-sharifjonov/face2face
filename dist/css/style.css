@@ -5158,14 +5158,14 @@ input.violet[type=range]::-webkit-slider-thumb {
           align-items: center;
 }
 
-.area__item:nth-of-type(2) {
+.area__item:nth-of-type(even) {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
 
-.area__item:nth-of-type(2) .area__right {
+.area__item:nth-of-type(even) .area__right {
   padding-right: 160px;
   padding-left: 0;
 }
@@ -7151,14 +7151,14 @@ picture {
     row-gap: 50px;
   }
 
-  .area__item:nth-of-type(2) {
+  .area__item:nth-of-type(even) {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
 
-  .area__item:nth-of-type(2) .area__right {
+  .area__item:nth-of-type(even) .area__right {
     padding-right: 0;
   }
 
