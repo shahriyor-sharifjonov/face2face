@@ -439,6 +439,23 @@
                 height: 50px;
                 margin-bottom: -5px;
             }
+            &.sending{
+                .services__item-sending{
+                    display: block;
+                }
+            }
+            &.success{
+                .services__item-success{
+                    display: block;
+                }
+            }
+        }
+        &-sending,
+        &-success{
+            display: none;
+            color: #101010;
+            font-weight: 400;
+            text-align: center;
         }
     }
 }

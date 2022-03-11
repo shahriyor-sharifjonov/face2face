@@ -29,6 +29,12 @@
             width: 310px;
             height: 60px;
             border-width: 2px;
+            border: 2px solid #8B8B8B;
+            color: #8B8B8B;
+            &:hover{
+                background: transparent;
+                color: #8B8B8B;
+            }
             @include media(1200){
                 font-weight: 600;
                 font-size: 18px;
@@ -46,14 +52,20 @@
                 line-height: 18px;
             }
             &.active{
-                border: 2px solid #8B8B8B;
-                color: #8B8B8B;
-                @include media(767){
-                    border-width: 1px;
-                }
-                &:hover{
-                    background: transparent;
-                }
+                cursor: auto;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 22px;
+                text-align: center;
+                color: var(--primary-color);
+                padding: 4px 10px;
+                transition: .2s ease;
+                border: 2px solid var(--primary-color);
+                border-radius: 30px;
+                transition: .2s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
     }

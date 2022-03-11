@@ -94,11 +94,13 @@ mixin services2()
                         .services__item-content 
                             p.services__item-title.big Заявка
                             p.services__item-text Оставьте заявку. В течение дня с Вами свяжется наш менеджер, обсудит детали и подтвердит бронирование. 
-                            .services__item-form
+                            form(action="#").services__item-form
                                 .services__item-form-input
-                                    input(type="tel" required placeholder="+7 ___ ___-__-__").input.required
+                                    input(type="tel" name="phone" required placeholder="+7 ___ ___-__-__").input.required
                                     span
                                 button(type="submit").services__item-form-btn.btn-primary Отправить
+                                p.services__item-success Данные отправлено!
+                                p.services__item-sending Отправляем ... 
                                 .terms.services__item-form-terms
                                     input(type="checkbox" checked)#terms3.terms__checkbox
                                     label(for="terms3").terms__label Я принимаю условия пользовательского соглашения
@@ -125,11 +127,13 @@ mixin services2()
                         .services__item-content 
                             p.services__item-title.big Оплата
                             p.services__item-text Окончательно согласовываем и утверждаем все детали. Вы вносите оплату за аренду.
-                            .services__item-form
+                            form(action="#").services__item-form
                                 .services__item-form-input
-                                    input(type="tel" required placeholder="+7 ___ ___-__-__").input.required
+                                    input(type="tel" name="phone" required placeholder="+7 ___ ___-__-__").input.required
                                     span
                                 button(type="submit").services__item-form-btn.btn-primary Отправить
+                                p.services__item-success Данные отправлено!
+                                p.services__item-sending Отправляем ... 
                                 .terms.services__item-form-terms
                                     input(type="checkbox" checked)#terms3.terms__checkbox
                                     label(for="terms3").terms__label Я принимаю условия пользовательского соглашения

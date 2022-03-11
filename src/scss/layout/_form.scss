@@ -74,6 +74,32 @@
             flex-direction: column;
             gap: 15px;
         }
+        &.success{
+            &~.form__success{
+                display: flex;
+            }
+        }
+        &.sending{
+            &~.form__sending{
+                display: flex;
+            }
+        }
+    }
+    &__success{
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding-top: 10px;
+        font-weight: 600;
+        color: #fff;
+    }
+    &__sending{
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding-top: 10px;
+        font-weight: 600;
+        color: #fff;
     }
     &__item{
         width: calc(50% - 10px);

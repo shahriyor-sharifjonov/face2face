@@ -45,14 +45,30 @@
         button{
             width: 420px;
             height: 60px;
-            &.active{
+            color: #8B8B8B;
+            border: 1px solid #8B8B8B;
+            &:hover{
                 color: #8B8B8B;
                 border: 1px solid #8B8B8B;
-                &:hover{
-                    color: #8B8B8B;
-                    border: 1px solid #8B8B8B;
-                    background: transparent;
-                }
+                background: transparent;
+            }
+            &.active{
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 22px;
+                text-align: center;
+                color: var(--primary-color);
+                padding: 4px 10px;
+                transition: .2s ease;
+                border: 1px solid var(--primary-color);
+                border-radius: 30px;
+                transition: .2s ease;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: auto;
             }
             @include media(1200){
                 max-width: 350px;

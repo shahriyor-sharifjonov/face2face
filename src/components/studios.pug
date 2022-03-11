@@ -55,7 +55,7 @@ mixin studios()
         .studios__next.swiper-button-next
 
 
-mixin studios2()
+mixin studios2(num)
   .studios 
     .studios__body.container
       h2.studios__title.studios__title_2 Выберите студию
@@ -65,25 +65,31 @@ mixin studios2()
           .studios__item-content 
             p.studios__item-title Студия м. Тульская:
             ul.studios__item-ul 
-              li.studios__item-li Малая зона 18 м2
-              li.studios__item-li Средняя зона 25 м2
-              li.studios__item-li Большая зона 47 м2 
+              li.studios__item-li Малая зона 18 м#[sup 2]
+              li.studios__item-li Средняя зона 25 м#[sup 2]
+              li.studios__item-li Большая зона 47 м#[sup 2] 
             .studios__item-row 
               .studios__item-location
                 img(src="@img/location.png", alt="")
                 a(href="#contacts") ул. Городская 8, Москва 
-              p.studios__item-price от 2200 руб/час 
-            a(href="tula.html").studios__item-btn Выбрать 
+              p.studios__item-price от 1900 руб/час 
+            if num == 1
+              a(href="#!").studios__item-btn.active Выбрать 
+            else
+              a(href="tula.html#!").studios__item-btn Выбрать 
         .studios__item 
           img(src="@img/studio-2.png", alt="" draggable="false").studios__item-img 
           .studios__item-content 
-            p.studios__item-title Студия м. Отрадное 50м2 :
+            p.studios__item-title Студия м. Отрадное 50м#[sup 2] :
             ul.studios__item-ul 
-              li.studios__item-li Малая зона 15 м2 
-              li.studios__item-li Большая зона  28 м2 
+              li.studios__item-li Малая зона 15 м#[sup 2] 
+              li.studios__item-li Большая зона  28 м#[sup 2] 
             .studios__item-row 
               .studios__item-location
                 img(src="@img/location.png", alt="")
                 a(href="#contacts") Алтуфьевское ш.37, стр.1, Москва
               p.studios__item-price от 1900 руб/час 
-            a(href="otradnoe.html").studios__item-btn Выбрать 
+            if num == 2
+              a(href="#!").studios__item-btn.active Выбрать 
+            else
+              a(href="otradnoe.html#!").studios__item-btn Выбрать 

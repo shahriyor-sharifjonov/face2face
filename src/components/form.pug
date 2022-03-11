@@ -1,13 +1,13 @@
 mixin form()
-    .form 
+    .form#form 
         .form__body.container 
             h2.form__title Остались вопросы? Мы вам перезвоним:
-            form(action="").form__content 
+            form(action="#").form__content#formContent 
                 .form__item
-                    input(type="text" required placeholder="ФИО").input.required.form__input
+                    input(type="text" required placeholder="ФИО" name="name").input.required.form__input
                     span
                 .form__item
-                    input(type="tel" required placeholder="+7 ___ ___-__-__").input.required.form__input
+                    input(type="tel" required placeholder="+7 ___ ___-__-__" name="phone").input.required.form__input
                     span
                 .form__item
                     button(type="submit").form__btn.btn-primary Отправить
@@ -15,6 +15,8 @@ mixin form()
                     .terms.form__terms
                         input(type="checkbox" checked)#terms.terms__checkbox
                         label(for="terms").terms__label Я принимаю условия пользовательского соглашения
+            p.form__success Данные отправлены!
+            p.form__sending Отправляем ...
             .form__bg 
             img(src="@img/basket.png", alt="" draggable="false").form__basket 
             img(src="@img/pencil.png", alt="" draggable="false").form__pencil 

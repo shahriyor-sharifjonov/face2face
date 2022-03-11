@@ -213,6 +213,8 @@
         flex-direction: column;
         justify-content: space-between;
         padding-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
         @include media(767){
             padding-bottom: 0;
             max-width: 100%;
@@ -423,7 +425,7 @@
         &-ul{
             display: flex;
             justify-content: flex-start;
-            column-gap: 20px;
+            column-gap: 16px;
             row-gap: 10px;
             width: 100%;
             margin-bottom: 15px;
@@ -498,6 +500,11 @@
             box-sizing: border-box;
             border-radius: 0px 0px 30px 30px;
             transition: 200ms ease;
+            &.active{
+                background: #FF9228;
+                border-color: #FF9228;
+                cursor: auto;
+            }
             @include media(576){
                 width: calc(100% + 30px);
             }
