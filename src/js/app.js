@@ -147,6 +147,125 @@ new Swiper(".podcasts__video", {
   },
 });
 
+new Swiper(".area__slider_1", {
+  modules: [Navigation],
+  slidesPerView: 1,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".area__next_1",
+    prevEl: ".area__prev_1",
+  },
+  breakpoints: {
+    767:{
+      slidesPerView: 2,
+    },
+    992:{
+      slidesPerView: 1,
+    },
+  },
+});
+new Swiper(".area__slider_1-sm", {
+  modules: [Navigation, Pagination],
+  slidesPerView: 1,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".area__next_1",
+    prevEl: ".area__prev_1",
+  },
+  breakpoints: {
+    767:{
+      slidesPerView: 2,
+    },
+    992:{
+      slidesPerView: 1,
+    },
+  },
+  pagination: {
+    el: ".area-pagination_1", 
+    clickable: true,
+  }
+});
+
+new Swiper(".area__slider_2", {
+  modules: [Navigation],
+  slidesPerView: 1,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".area__next_2",
+    prevEl: ".area__prev_2",
+  },
+  breakpoints: {
+    767:{
+      slidesPerView: 2,
+    },
+    992:{
+      slidesPerView: 1,
+    },
+  },
+});
+new Swiper(".area__slider_2-sm", {
+  modules: [Navigation, Pagination],
+  slidesPerView: 1,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".area__next_2",
+    prevEl: ".area__prev_2",
+  },
+  breakpoints: {
+    767:{
+      slidesPerView: 2,
+    },
+    992:{
+      slidesPerView: 1,
+    },
+  },
+  pagination: {
+    el: ".area-pagination_2",
+    clickable: true,
+  }
+});
+
+
+new Swiper(".area__slider_3", {
+  modules: [Navigation],
+  slidesPerView: 1,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".area__next_3",
+    prevEl: ".area__prev_3",
+  },
+  breakpoints: {
+    767:{
+      slidesPerView: 2,
+    },
+    992:{
+      slidesPerView: 1,
+    },
+  }
+});
+new Swiper(".area__slider_3-sm", {
+  modules: [Navigation, Pagination],
+  slidesPerView: 1,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".area__next_3",
+    prevEl: ".area__prev_3",
+  },
+  pagination: {
+    el: ".area-pagination_3",
+    clickable: true,
+  },
+  breakpoints: {
+    767:{
+      slidesPerView: 2,
+    },
+    992:{
+      slidesPerView: 1,
+    },
+  }
+});
+
+
 new Swiper(".reviews__video", {
   modules: [Navigation],
   // loop: true,
@@ -648,3 +767,4 @@ $( function() {
     minDate: 1, maxDate: "+1M +10D" 
   });
 } );
+
