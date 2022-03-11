@@ -1272,6 +1272,13 @@ input.violet[type=range]::-webkit-slider-thumb {
   line-height: 130%;
 }
 
+.studios__item-location a {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 130%;
+  color: #101010;
+}
+
 .studios__item-price {
   font-weight: 800;
   font-size: 20px;
@@ -5206,6 +5213,8 @@ input.violet[type=range]::-webkit-slider-thumb {
           box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+  scroll-margin: 120px;
 }
 
 *:focus,
@@ -6986,6 +6995,10 @@ picture {
   .audio__item-title {
     font-size: 16px;
     line-height: 120%;
+  }
+
+  * {
+    scroll-margin: 70px;
   }
 }
 

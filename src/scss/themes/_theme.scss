@@ -5,6 +5,11 @@
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+    scroll-margin: 120px;
+    @include media(768){
+        scroll-margin: 70px;
+    }
     &:focus,
     &:active{
         outline: none;
