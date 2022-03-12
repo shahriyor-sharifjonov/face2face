@@ -13,7 +13,7 @@
     // от кого письмо
     $mail->setFrom('f2fst@gmail.com', 'face2face');
     // кому отправить
-    $mail->addAddress('shahriyordeveloping@gmail.com');
+    $mail->addAddress('hello@f2fst.ru');
     // тема письмо
     $mail->Subject = 'Обратная связь c сайта f2fst.ru';
 
