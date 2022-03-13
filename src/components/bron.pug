@@ -3,28 +3,37 @@ mixin bron()
         .bron__body.container 
             h2.bron__title Забронировать студию
             form(action="").bron__content 
-                .bron__left.bron__col 
+                .bron__left.bron__col.prices 
                     .bron__left-item
                         h3.bron__subtitle #[span 1.] Выберите студию
                         .bron__left-buttons 
-                            .bron__left-button
-                                input(type="radio", name="studios" hidden id="studios-1" checked)
+                            .bron__left-button.zona-btn
+                                input(type="radio", name="studios" hidden id="studios-1" data-target="zona1" checked)
                                 label(for="studios-1") Студия м. Отрадное 
-                            .bron__left-button
-                                input(type="radio", name="studios" hidden id="studios-2")
+                            .bron__left-button.zona-btn
+                                input(type="radio", name="studios" hidden id="studios-2" data-target="zona2")
                                 label(for="studios-2") Студия м. Тульская
-                    .bron__left-item
+                    .bron__left-item.zona#zona1.active
                         h3.bron__subtitle #[span 2.]  Выберите зону 
-                        .bron__left-buttons.prices 
+                        .bron__left-buttons 
                             .bron__left-button
-                                input(type="radio", name="zona" hidden id="zona-1" data-price="1900" checked)
-                                label(for="zona-1") Малая зона 18 м² 1 900 руб/час
+                                input(type="radio", name="zona-1" hidden id="zona-1" data-price="1900" checked).data-price
+                                label(for="zona-1") Малая зона 15 м² 1 900 руб/час
                             .bron__left-button
-                                input(type="radio", name="zona" hidden id="zona-2" data-price="2500")
-                                label(for="zona-2") Средняя зона 25 м² 2 500 руб/час
+                                input(type="radio", name="zona-1" hidden id="zona-2" data-price="2500").data-price
+                                label(for="zona-2") Большая зона  28 м² 2 500 руб/час
+                    .bron__left-item.zona#zona2
+                        h3.bron__subtitle #[span 2.]  Выберите зону 
+                        .bron__left-buttons 
                             .bron__left-button
-                                input(type="radio", name="zona" hidden id="zona-3" data-price="2900")
-                                label(for="zona-3") Большая зона 47 м² 2 900 руб/час
+                                input(type="radio", name="zona-2" hidden id="zona-3" data-price="1900" checked).data-price
+                                label(for="zona-3") Малая зона 18 м² 1 900 руб/час
+                            .bron__left-button
+                                input(type="radio", name="zona-2" hidden id="zona-4" data-price="2500").data-price
+                                label(for="zona-4") Средняя зона 25 м² 2 500 руб/час
+                            .bron__left-button
+                                input(type="radio", name="zona-2" hidden id="zona-5" data-price="2900").data-price
+                                label(for="zona-5") Большая зона 47 м² 2 900 руб/час
                 .bron__mid.bron__col 
                     h3.bron__subtitle #[span 3.] Выберите время:
                     .bron__datapicker                
@@ -70,7 +79,7 @@ mixin bron()
                     h3.bron__subtitle #[span 4.] Укажите свои контакты:
                     .bron__info 
                         img(src="@img/icon-calendar.svg", alt="" draggable="false")
-                        p Запись на #[span#alternate 10/30/2021]
+                        p Запись на #[span#alternate 30/10/2021]
                     .bron__info 
                         img(src="@img/icon-time.svg", alt="" draggable="false")
                         p.times Всего времени: #[span 1 час]

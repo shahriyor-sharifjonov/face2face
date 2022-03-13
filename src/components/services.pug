@@ -4,13 +4,13 @@ mixin services()
             h2.use__title.services__title Услуги
             .services__content 
                 .services__sidebar 
-                    button(type='button' data-target="podcasts").services__button Подкасты
+                    button(type='button' data-target="podcasts").services__button.active Подкасты
                     button(type='button' data-target="vebinar").services__button Онлайн трансляция, вебинар
                     button(type='button' data-target="interview").services__button Интервью
-                    button(type='button' data-target="tutorial").services__button.active Видеоуроки и мастер-классы
+                    button(type='button' data-target="tutorial").services__button Видеоуроки и мастер-классы
                     button(type='button' data-target="youtube").services__button Видео для YouTube
                 .services__main 
-                    .services__item#podcasts 
+                    .services__item.active#podcasts 
                         .services__item-bg
                             img(src="@img/services-bg.png", alt="")
                         img(src="@img/services-1.png", alt="").services__item-img.services__item-img_1.disable-xxl
@@ -49,7 +49,7 @@ mixin services()
                             p.services__item-li Камеры с записью в формате 4K;
                             p.services__item-li Профессиональная команда
                             a(href="#!").btn-primary.services__item-btn #[span.services__item-btn-inline Заказать “под ключ” от&nbsp;#[b 16 700 руб]]
-                    .services__item.active#tutorial 
+                    .services__item#tutorial 
                         .services__item-bg
                             img(src="@img/services-bg.png", alt="")
                         img(src="@img/services-4.png", alt="").services__item-img.services__item-img_4
@@ -81,13 +81,13 @@ mixin services2()
             h2.use__title.services__title Как мы работаем?
             .services__content 
                 .services__sidebar 
-                    button(type='button' data-target="podcasts").services__button Заявка
+                    button(type='button' data-target="podcasts").services__button.active Заявка
                     button(type='button' data-target="vebinar").services__button Согласование ТЗ
                     button(type='button' data-target="interview").services__button Договор (можно без него)
-                    button(type='button' data-target="tutorial").services__button.active Оплата
+                    button(type='button' data-target="tutorial").services__button Оплата
                     button(type='button' data-target="youtube").services__button Получение услуг
                 .services__main 
-                    .services__item#podcasts 
+                    .services__item.active#podcasts 
                         .services__item-bg
                             img(src="@img/services-bg.png", alt="")
                         img(src="@img/services-6.png", alt="").services__item-img.services__item-img_6
@@ -120,7 +120,7 @@ mixin services2()
                             p.services__item-title.big Договор
                             p.services__item-p(style="max-width: 333px;") При необходимости заключаем договор, с указанием всех условий, и предоставим закрывающие документы.
                             a(href="#!").btn-primary.services__item-btn Забронировать зал
-                    .services__item.active#tutorial 
+                    .services__item#tutorial 
                         .services__item-bg
                             img(src="@img/services-bg.png", alt="")
                         img(src="@img/services-9.png", alt="").services__item-img.services__item-img_8

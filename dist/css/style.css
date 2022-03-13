@@ -4990,6 +4990,14 @@ input.violet[type=range]::-webkit-slider-thumb {
   color: #8B8B8B;
 }
 
+.bron__left-item.zona {
+  display: none;
+}
+
+.bron__left-item.zona.active {
+  display: block;
+}
+
 .bron__datapicker {
   background: -o-linear-gradient(339.66deg, rgba(238, 235, 255, 0.86) -1.55%, rgba(255, 255, 255, 0.6) 111.86%);
   background: linear-gradient(110.34deg, rgba(238, 235, 255, 0.86) -1.55%, rgba(255, 255, 255, 0.6) 111.86%);
@@ -5340,7 +5348,7 @@ input.violet[type=range]::-webkit-slider-thumb {
   font-size: 40px;
   line-height: 49px;
   color: #101010;
-  max-width: 412px;
+  max-width: 437px;
   width: 100%;
   margin-bottom: 20px;
 }
@@ -5544,6 +5552,14 @@ input.violet[type=range]::-webkit-slider-thumb {
   background: url("../img/questions-bg.png"), #FEFBFB; }
 
 .services {
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+}
+
+.no-webp .services-2 {
+  background: url("../img/bron-bg.png"), #FEFBFB; }
+
+.services-2 {
   background-size: 100% 100% !important;
   background-repeat: no-repeat !important;
 }
@@ -6109,6 +6125,14 @@ picture {
 
   .bron__left-button label {
     font-size: 16px;
+  }
+
+  .area__item:nth-of-type(even) .area__right {
+    padding-right: 82px;
+  }
+
+  .area__right {
+    padding-left: 82px;
   }
 }
 
@@ -7401,6 +7425,9 @@ picture {
   }
 
   .no-webp .services {
+    background: url("../img/questions-bg-md.png"), #FEFBFB; }
+
+  .no-webp .services-2 {
     background: url("../img/questions-bg-md.png"), #FEFBFB; }
 
   .services-page {
@@ -9265,6 +9292,9 @@ picture {
 
   .no-webp .services {
     background: url("../img/questions-bg-sm.png"), #FEFBFB; }
+
+  .no-webp .services-2 {
+    background: url("../img/questions-bg-sm.png"), #FEFBFB; }
 }
 
 @media (max-width: 470px) {
@@ -9407,6 +9437,8 @@ picture {
 
 .webp .services { background: url(../img/questions-bg.webp), #FEFBFB; }
 
+.webp .services-2 { background: url(../img/bron-bg.webp), #FEFBFB; }
+
 @media (max-width: 1400px) {
 
   .webp .services__item-bg { background: url(../img/services-bg-sm.webp) 100% 100%/cover no-repeat; }
@@ -9460,6 +9492,11 @@ picture {
 @media (max-width: 992px) {
 
   .webp .services { background: url(../img/questions-bg-md.webp), #FEFBFB; }
+}
+
+@media (max-width: 992px) {
+
+  .webp .services-2 { background: url(../img/questions-bg-md.webp), #FEFBFB; }
 }
 
 @media (max-width: 992px) and (max-width: 576px) {
@@ -9570,4 +9607,9 @@ picture {
 @media (max-width: 568px) {
 
   .webp .services { background: url(../img/questions-bg-sm.webp), #FEFBFB; }
+}
+
+@media (max-width: 568px) {
+
+  .webp .services-2 { background: url(../img/questions-bg-sm.webp), #FEFBFB; }
 }

@@ -20,6 +20,9 @@
             .area__right{
                 padding-right: 160px;
                 padding-left: 0;
+                @include media(1400){
+                    padding-right: 82px;
+                }
                 @include media(992){
                     padding-right: 0;
                 }
@@ -82,6 +85,9 @@
     &__right{
         flex: 1 1 auto;
         padding-left: 140px;
+        @include media(1400){
+            padding-left: 82px;
+        }
         @include media(992){
             padding-left: 0;
         }
@@ -91,7 +97,7 @@
         font-size: 40px;
         line-height: 49px;
         color: #101010;
-        max-width: 412px;
+        max-width: 437px;
         width: 100%;
         margin-bottom: 20px;
         @include media(1200){

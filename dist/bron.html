@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20220313130304">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220313130304">
+    <title>Document</title>
+  </head>
+  <body class="services-2"> 
+    <div class="wrapper"> 
+            <header class="header"> 
+              <nav class="header__nav container"> 
+                <div class="header__left"> 
+                  <button class="header__button" title="menu"> <span class="header__button-line"></span></button><a class="header__logo" href="index.html">FACE 2 FACE </a>
+                </div>
+                <div class="header__menu"> 
+                  <ul class="header__list"> 
+                    <li class="header__li"> <a class="header__link" href="studios.html">Наши студии </a></li>
+                    <li class="header__li"> <a class="header__link" href="services.html">Услуги и цены </a></li>
+                    <li class="header__li"> <a class="header__link" href="video.html">Наше оборудование </a></li>
+                    <li class="header__li"> <a class="header__link" href="clients.html">Наши клиенты </a></li>
+                    <li class="header__li"> <a class="header__link" href="questions.html">Ответы на вопросы </a></li>
+                    <li class="header__li"> <a class="header__link" href="contacts.html">Контакты </a></li>
+                    <li class="header__li"> <a class="header__link" href="produccers.html">Продюсерам </a></li>
+                    <li class="header__xxl"> 
+                      <div class="intro__social"> <a class="intro__social-item" href="#!" target="_blank" title="facebook"> <picture><source srcset="img/facebook.webp" type="image/webp"><img src="img/facebook.png" alt="" draggable="false"></picture></a><a class="intro__social-item" href="#!" target="_blank" title="wk"> <img src="img/wk.png" alt="" draggable="false"></a><a class="intro__social-item" href="#!" target="_blank" title="instagram"> <img src="img/instagram.png" alt="" draggable="false"></a><a class="intro__social-item" href="#!" target="_blank" title="youtube"> <img src="img/youtube.png" alt="" draggable="false"></a></div><a class="intro__tel" href="tel:+74950212992">+7 (495) 021-29-92</a>
+                      <p class="intro__p">Работаем ежедневно с 9:00 до 21:00 </p>
+                    </li>
+                  </ul>
+                </div><a class="btn-primary_nobg header__btn disable-md" href="bron.html">Забронировать </a><a class="btn-primary_nobg header__btn enable-md" href="tel:+74950212992"> <picture><source srcset="img/phone.webp" type="image/webp"><img src="img/phone.png" alt="" draggable="false"></picture></a>
+              </nav>
+            </header>
+      <main class="main services-page">
+                <div class="bron" id="bron">  
+                  <div class="bron__body container"> 
+                    <h2 class="bron__title">Забронировать студию</h2>
+                    <form class="bron__content" action=""> 
+                      <div class="bron__left bron__col prices"> 
+                        <div class="bron__left-item">
+                          <h3 class="bron__subtitle"><span>1.</span> Выберите студию</h3>
+                          <div class="bron__left-buttons"> 
+                            <div class="bron__left-button zona-btn">
+                              <input type="radio" name="studios" hidden id="studios-1" data-target="zona1" checked>
+                              <label for="studios-1">Студия м. Отрадное </label>
+                            </div>
+                            <div class="bron__left-button zona-btn">
+                              <input type="radio" name="studios" hidden id="studios-2" data-target="zona2">
+                              <label for="studios-2">Студия м. Тульская</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="bron__left-item zona active" id="zona1">
+                          <h3 class="bron__subtitle"><span>2.</span>  Выберите зону </h3>
+                          <div class="bron__left-buttons"> 
+                            <div class="bron__left-button">
+                              <input class="data-price" type="radio" name="zona-1" hidden id="zona-1" data-price="1900" checked>
+                              <label for="zona-1">Малая зона 15 м² 1 900 руб/час</label>
+                            </div>
+                            <div class="bron__left-button">
+                              <input class="data-price" type="radio" name="zona-1" hidden id="zona-2" data-price="2500">
+                              <label for="zona-2">Большая зона  28 м² 2 500 руб/час</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="bron__left-item zona" id="zona2">
+                          <h3 class="bron__subtitle"><span>2.</span>  Выберите зону </h3>
+                          <div class="bron__left-buttons"> 
+                            <div class="bron__left-button">
+                              <input class="data-price" type="radio" name="zona-2" hidden id="zona-3" data-price="1900" checked>
+                              <label for="zona-3">Малая зона 18 м² 1 900 руб/час</label>
+                            </div>
+                            <div class="bron__left-button">
+                              <input class="data-price" type="radio" name="zona-2" hidden id="zona-4" data-price="2500">
+                              <label for="zona-4">Средняя зона 25 м² 2 500 руб/час</label>
+                            </div>
+                            <div class="bron__left-button">
+                              <input class="data-price" type="radio" name="zona-2" hidden id="zona-5" data-price="2900">
+                              <label for="zona-5">Большая зона 47 м² 2 900 руб/час</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="bron__mid bron__col"> 
+                        <h3 class="bron__subtitle"><span>3.</span> Выберите время:</h3>
+                        <div class="bron__datapicker">               
+                          <div class="datepicker"> </div>
+                          <div class="bron__time">
+                            <div class="bron__time-item">
+                              <input type="checkbox" name="time" id="time-9" hidden>
+                              <label for="time-9">9:00 </label>
+                            </div>
+                            <div class="bron__time-item">
+                              <input type="checkbox" name="time" id="time-10" hidden disabled>
+                              <label for="time-10">10:00 </label>
+                            </div>
+                            <div class="bron__time-item">
+                              <input type="checkbox" name="time" id="time-11" hidden disabled>
+                              <label for="time-11">11:00 </label>
+                            </div>
+                            <div class="bron__time-item">
+                              <input type="checkbox" name="time" id="time-12" hidden>
+                              <label for="time-12">12:00 </label>
+                            </div>
+                            <div class="bron__time-item">
+                              <input type="checkbox" name="time" id="time-13" hidden>
+                              <label for="time-13">13:00 </label>
+                            </div>
+                            <div class="bron__time-item">
+                              <input type="checkbox" name="time" id="time-14" hidden checked>
+                              <label for="time-14">14:00</label>
+                            </div>
+                            <div class="bron__time-item">
+                              <input type="checkbox" name="time" id="time-15" hidden>
+                              <label for="time-15">15:00</label>
+                            </div>
+                            <div class="bron__time-item">
+                              <input type="checkbox" name="time" id="time-16" hidden>
+                              <label for="time-16">16:00</label>
+                            </div>
+                            <div class="bron__time-item">
+                              <input type="checkbox" name="time" id="time-17" hidden>
+                              <label for="time-17">17:00</label>
+                            </div>
+                            <div class="bron__time-item">
+                              <input type="checkbox" name="time" id="time-18" hidden>
+                              <label for="time-18">18:00</label>
+                            </div>
+                            <div class="bron__time-item">
+                              <input type="checkbox" name="time" id="time-19" hidden>
+                              <label for="time-19">19:00</label>
+                            </div>
+                            <div class="bron__time-item">
+                              <input type="checkbox" name="time" id="time-20" hidden>
+                              <label for="time-20">20:00</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="bron__right bron__col"> 
+                        <h3 class="bron__subtitle"><span>4.</span> Укажите свои контакты:</h3>
+                        <div class="bron__info"> <img src="img/icon-calendar.svg" alt="" draggable="false">
+                          <p>Запись на <span id="alternate">30/10/2021</span></p>
+                        </div>
+                        <div class="bron__info"> <img src="img/icon-time.svg" alt="" draggable="false">
+                          <p class="times">Всего времени: <span>1 час</span></p>
+                        </div>
+                        <div class="bron__info"> <img src="img/item-card.svg" alt="" draggable="false">
+                          <p class="sum">Итоговая сумма: <span>1900р.</span></p>
+                        </div>
+                        <div class="bron__right-item first">
+                          <input class="input required" type="text" required placeholder="ФИО"><span> </span>
+                        </div>
+                        <div class="bron__right-item">
+                          <input class="input required" type="tel" required placeholder="+7 ___ ___-__-__"><span> </span>
+                        </div>
+                        <div class="bron__right-item">
+                          <input class="input" type="text" placeholder="Комментарий"><span>   </span>
+                        </div>
+                        <div class="terms bron__terms">
+                          <input class="terms__checkbox" type="checkbox" checked id="terms2">
+                          <label class="terms__label" for="terms2">Я принимаю условия пользовательского соглашения</label>
+                        </div>
+                        <div class="bron__right-btn"> 
+                          <button class="btn-secondary bron__right-btn-button" type="submit">Забронировать зал   </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="form" id="form"> 
+                  <div class="form__body container"> 
+                    <h2 class="form__title">Остались вопросы? Мы вам перезвоним:</h2>
+                    <form class="form__content" action="#" id="formContent"> 
+                      <div class="form__item">
+                        <input class="input required form__input" type="text" required placeholder="ФИО" name="name"><span></span>
+                      </div>
+                      <div class="form__item">
+                        <input class="input required form__input" type="tel" required placeholder="+7 ___ ___-__-__" name="phone"><span></span>
+                      </div>
+                      <div class="form__item">
+                        <button class="form__btn btn-primary" type="submit">Отправить</button>
+                      </div>
+                      <div class="form__item">
+                        <div class="terms form__terms">
+                          <input class="terms__checkbox" type="checkbox" checked id="terms">
+                          <label class="terms__label" for="terms">Я принимаю условия пользовательского соглашения</label>
+                        </div>
+                      </div>
+                    </form>
+                    <p class="form__success">Данные отправлены!</p>
+                    <p class="form__sending">Отправляем ...</p>
+                    <div class="form__bg"> </div><picture><source srcset="img/basket.webp" type="image/webp"><img class="form__basket" src="img/basket.png" alt="" draggable="false"></picture><img class="form__pencil" src="img/pencil.png" alt="" draggable="false"><img class="form__comments" src="img/comments.png" alt="" draggable="false">
+                  </div>
+                </div>
+      </main>
+            <footer class="footer">
+              <div class="footer__offer"><picture><source srcset="img/footer-1.webp" type="image/webp"><img class="footer__offer-img first" src="img/footer-1.png" alt="" draggable="false"></picture>
+                <p class="footer__offer-p"><span>Вы продюсер?</span> Получите выгодное предложение с кэшбеком!</p><a class="btn-secondary footer__offer-btn" href="#!">Запросить КП </a><picture><source srcset="img/footer-2.webp" type="image/webp"><img class="footer__offer-img last" src="img/footer-2.png" alt="" draggable="false"></picture>
+              </div>
+              <nav class="footer__nav container"> 
+                <div class="intro__social enable-lg disable-md"> <a class="intro__social-item" href="#!" target="_blank"> <picture><source srcset="img/facebook.webp" type="image/webp"><img src="img/facebook.png" alt="" draggable="false"></picture></a><a class="intro__social-item" href="#!" target="_blank"> <img src="img/wk.png" alt="" draggable="false"></a><a class="intro__social-item" href="#!" target="_blank"> <img src="img/instagram.png" alt="" draggable="false"></a><a class="intro__social-item" href="#!" target="_blank"> <img src="img/youtube.png" alt="" draggable="false"></a></div>
+                <div class="footer__left"> 
+                  <ul class="footer__list"> 
+                    <li class="footer__li"> <a class="footer__link" href="studios.html">Наши студии</a></li>
+                    <li class="footer__li"> <a class="footer__link" href="services.html">Услуги и цены</a></li>
+                    <li class="footer__li"> <a class="footer__link" href="video.html">Наше оборудование </a></li>
+                    <li class="footer__li"> <a class="footer__link" href="clients.html">Наши клиенты</a></li>
+                    <li class="footer__li"> <a class="footer__link" href="contacts.html">Контакты</a></li>
+                    <li class="footer__li"> <a class="footer__link" href="questions.html">Ответы на вопросы</a></li>
+                    <li class="footer__li"> <a class="footer__link" href="produccers.html">Продюсерам </a></li>
+                  </ul>
+                  <p class="footer__p">© 2020-2021 Все права защищены. FACE2FACE</p><a class="footer__privacy" href="#!">Политика конфиденциальности </a>
+                </div>
+                <div class="footer__right"> <a class="footer__tel disable-md" href="tel:+74950212992">+7 (495) 021-29-92</a>
+                  <div class="intro__social disable-lg"> <a class="intro__social-item" href="#!" target="_blank" title="facebook"> <picture><source srcset="img/facebook.webp" type="image/webp"><img src="img/facebook.png" alt="" draggable="false"></picture></a><a class="intro__social-item" href="#!" target="_blank" title="wk"> <img src="img/wk.png" alt="" draggable="false"></a><a class="intro__social-item" href="#!" target="_blank" title="instagram"> <img src="img/instagram.png" alt="" draggable="false"></a><a class="intro__social-item" href="#!" target="_blank" title="youtube"> <img src="img/youtube.png" alt="" draggable="false"></a></div>
+                </div>
+              </nav>
+            </footer>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20220313130304"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js?_v=20220313130304"> </script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js?_v=20220313130304"> </script>
+    <script src="js/app.min.js?_v=20220313130304"> </script>
+  </body>
+</html>

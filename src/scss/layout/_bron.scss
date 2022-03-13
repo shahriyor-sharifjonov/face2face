@@ -101,6 +101,12 @@
             }
         }
         &-item{
+            &.zona{
+                display: none;
+                &.active{
+                    display: block;
+                }
+            }
             @include media(1200){
                 width: 100%;
             }

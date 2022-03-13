@@ -765,7 +765,8 @@ document.querySelectorAll('.quiz').forEach(function ( el ) {
 
 if(document.querySelector('.datepicker')){
   $(".datepicker").datepicker({ 
-    minDate: 1, maxDate: "+1M +10D",
+    dateFormat: 'dd/mm/yy',
+    minDate: 0, maxDate: "+1M +10D",
     closeText:"Закрыть",prevText:"&#x3C;Пред",nextText:"След&#x3E;",currentText:"Сегодня",monthNames:["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"],monthNamesShort:["Янв","Фев","Мар","Апр","Май","Июн","Июл","Авг","Сен","Окт","Ноя","Дек"],dayNames:["воскресенье","понедельник","вторник","среда","четверг","пятница","суббота"],dayNamesShort:["вск","пнд","втр","срд","чтв","птн","сбт"],
     dayNamesMin:["Вс","Пн","Вт","Ср","Чт","Пт","Сб"],
     monthNames:["Январ","Феврал","Март","Апрел","Май","Июн","Июл","Август","Сентябр","Октябр","Ноябр","Декабр"],
@@ -774,12 +775,13 @@ if(document.querySelector('.datepicker')){
   $(".datepicker").change(function(){
     document.getElementById('alternate').innerHTML = $(".datepicker").val()
   });
+  document.getElementById('alternate').innerHTML = $(".datepicker").val()
 }
 
 
 document.querySelectorAll('.bron__content').forEach(el=>{
   const inputs = el.querySelectorAll('.bron__time input');
-  const prices = el.querySelectorAll('.prices input');
+  const prices = el.querySelectorAll('.prices .data-price');
   inputs.forEach(input=>{
     input.addEventListener('input', bron)
   })  
@@ -789,10 +791,9 @@ document.querySelectorAll('.bron__content').forEach(el=>{
   function bron(){
     const sum = el.querySelector('.sum span');
     const time = el.querySelector('.times span');
-    let price = el.querySelector('.prices input:checked');
+    let price = el.querySelector('.zona.active .data-price:checked');
     let checkedInputs = el.querySelectorAll('.bron__time input:checked');
     checkedInputs = el.querySelectorAll('.bron__time input:checked');
-    price = el.querySelector('.prices input:checked');
     time.innerHTML = `${checkedInputs.length} час`
     sum.innerHTML = `${checkedInputs.length * price.getAttribute('data-price')}р.`
   }
@@ -800,30 +801,31 @@ document.querySelectorAll('.bron__content').forEach(el=>{
 
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('formContent');
-  const servicesForm = document.querySelectorAll('.services__item-form');
-  form.addEventListener('submit', formSend);
-  servicesForm.forEach(el=>{
-    el.addEventListener('submit', formSend2)
-
-    async function formSend2(e) {
-        e.preventDefault();
-        let formData = new FormData(el);
-        el.classList.add('sending');
-        let response = await fetch('files/sendmail.php', {
-            method: 'POST',
-            body: formData
-        });
-        if(response.ok){
-            let result = await response.json();
-            el.classList.add('success');
-            el.classList.remove('sending');
-            el.reset();
-        }else{
-            alert("Ошибка");
-            el.classList.remove('sending');
-        }
-    }
-  })
+  if(document.querySelector('.services__item-form')){
+    const servicesForm = document.querySelectorAll('.services__item-form');
+    form.addEventListener('submit', formSend);
+    servicesForm.forEach(el=>{
+      el.addEventListener('submit', formSend2)
+      async function formSend2(e) {
+          e.preventDefault();
+          let formData = new FormData(el);
+          el.classList.add('sending');
+          let response = await fetch('files/sendmail.php', {
+              method: 'POST',
+              body: formData
+          });
+          if(response.ok){
+              let result = await response.json();
+              el.classList.add('success');
+              el.classList.remove('sending');
+              el.reset();
+          }else{
+              alert("Ошибка");
+              el.classList.remove('sending');
+          }
+      }
+    })
+  }
 
   async function formSend(e) {
       e.preventDefault();
@@ -844,4 +846,26 @@ document.addEventListener('DOMContentLoaded', function () {
       }
   }
 
+})
+
+
+
+document.querySelectorAll('.bron').forEach(el => {
+  const btn = el.querySelectorAll('.zona-btn input');
+  btn.forEach(btn => {
+    btn.addEventListener('change', e => {
+      if(e.currentTarget.checked){
+        const target = btn.getAttribute('data-target');
+        const content = el.querySelector(`#${target}`);
+        const contents = el.querySelectorAll('.zona');
+        contents.forEach(zona => {
+          zona.classList.remove('active');
+          zona.querySelectorAll('input').forEach(e => {
+            e.checked = false
+          })
+        })
+        content.classList.add('active');
+      }
+    })
+  })
 })
