@@ -1,9 +1,27 @@
+mixin popups()
+  .popups 
+    .popup#popup 
+      .popup-close
+      .popup__body
+        .popup__content
+          h2.popup__title #[span Вы продюсер?] Получите выгодное предложение с кэшбеком!
+          form(action="#").popup__form#popupForm
+            .popup__item 
+              input(type="text" required placeholder="ФИО" name="name").input.required.popup__input
+              span
+            .popup__item 
+              input(type="text" required placeholder="+7 ___ ___-__-__" name="phone").input.required.popup__input
+              span
+            button(type="submit").btn-secondary.popup__btn Запросить КП
+        .popup__img 
+          img(src="@img/popup.png", alt="" draggable="false" loading="lazy")
 mixin footer()
+  +popups
   footer.footer
     .footer__offer
       img(src="@img/footer-1.png", alt="" draggable="false").footer__offer-img.first
       p.footer__offer-p <span>Вы продюсер?</span> Получите выгодное предложение с кэшбеком!
-      a(href="#!").btn-secondary.footer__offer-btn Запросить КП 
+      button(type='button' data-target="#popup").open-popup.btn-secondary.footer__offer-btn Запросить КП 
       img(src="@img/footer-2.png", alt="" draggable="false").footer__offer-img.last
     nav.footer__nav.container 
       .intro__social.enable-lg.disable-md 

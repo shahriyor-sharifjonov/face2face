@@ -800,10 +800,8 @@ document.querySelectorAll('.bron__content').forEach(el=>{
 })
 
 document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('formContent');
   if(document.querySelector('.services__item-form')){
     const servicesForm = document.querySelectorAll('.services__item-form');
-    form.addEventListener('submit', formSend);
     servicesForm.forEach(el=>{
       el.addEventListener('submit', formSend2)
       async function formSend2(e) {
@@ -827,6 +825,8 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 
+  const form = document.getElementById('formContent');
+  form.addEventListener('submit', formSend);
   async function formSend(e) {
       e.preventDefault();
       let formData = new FormData(form);
@@ -843,6 +843,32 @@ document.addEventListener('DOMContentLoaded', function () {
       }else{
           alert("Ошибка");
           form.classList.remove('sending');
+      }
+  }
+
+  const popupForm = document.getElementById('popupForm');
+  popupForm.addEventListener('submit', formSend5);
+  async function formSend5(e) {
+      e.preventDefault();
+      let formData5 = new FormData(popupForm);
+      popupForm.classList.add('sending');
+      let response = await fetch('files/sendmailkp.php', {
+        method: 'POST',
+        body: formData5
+      });
+      if(response.ok){
+        let result = await response.json();
+        popupForm.classList.add('success');
+        popupForm.classList.remove('sending');
+        const popups = document.querySelectorAll('.popup');
+        popups.forEach(popup => {
+          popup.classList.remove('active');
+          document.body.style.overflowY = "visible";
+        })
+        popupForm.reset();
+      }else{
+        alert("Ошибка");
+        popupForm.classList.remove('sending');
       }
   }
 
@@ -866,6 +892,25 @@ document.querySelectorAll('.bron').forEach(el => {
         })
         content.classList.add('active');
       }
+    })
+  })
+})
+
+document.querySelectorAll('.open-popup').forEach(btn=>{
+  btn.addEventListener('click', el=>{
+    const target = btn.getAttribute('data-target');
+    const popup = document.querySelector(target);
+    popup.classList.add('active');
+    document.body.style.overflowY = "hidden";
+  })
+})
+
+document.querySelectorAll('.popup-close').forEach(btn=>{
+  btn.addEventListener('click', el=>{
+    const popups = document.querySelectorAll('.popup');
+    popups.forEach(popup => {
+      popup.classList.remove('active');
+      document.body.style.overflowY = "visible";
     })
   })
 })

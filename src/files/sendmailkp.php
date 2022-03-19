@@ -16,7 +16,7 @@
     $mail->addAddress('hello@f2fst.ru');
     // $mail->addAddress('shahriyordeveloping@gmail.com');
     // тема письмо
-    $mail->Subject = 'Обратная связь c сайта f2fst.ru';
+    $mail->Subject = 'Запрос КП с сайта f2fst.ru';
 
     // VIN-CODE
     $vin_code = $_POST['vin'];
@@ -25,7 +25,7 @@
 
 
     // тело письмо
-    $body = '<h1>Обратная связь c сайта f2fst.ru</h1>';
+    $body = '<h1>Запрос КП с сайта f2fst.ru</h1>';
 
     if(trim(!empty($_POST['name']))){
         $body.='<p><strong>Имя:</strong> '.$_POST['name'].'</p>';

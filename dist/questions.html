@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20220313130304">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220313130304">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20220319095427">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220319095427">
     <title>Document</title>
   </head>
   <body class="questions"> 
@@ -120,9 +120,30 @@
                   </div>
                 </div>
       </main>
+                  <div class="popups"> 
+                    <div class="popup" id="popup"> 
+                      <div class="popup-close"></div>
+                      <div class="popup__body">
+                        <div class="popup__content">
+                          <h2 class="popup__title"><span>Вы продюсер?</span> Получите выгодное предложение с кэшбеком!</h2>
+                          <form class="popup__form" action="#" id="popupForm">
+                            <div class="popup__item"> 
+                              <input class="input required popup__input" type="text" required placeholder="ФИО" name="name"><span></span>
+                            </div>
+                            <div class="popup__item"> 
+                              <input class="input required popup__input" type="text" required placeholder="+7 ___ ___-__-__" name="phone"><span></span>
+                            </div>
+                            <button class="btn-secondary popup__btn" type="submit">Запросить КП</button>
+                          </form>
+                        </div>
+                        <div class="popup__img"> <picture><source srcset="img/popup.webp" type="image/webp"><img src="img/popup.png" alt="" draggable="false" loading="lazy"></picture></div>
+                      </div>
+                    </div>
+                  </div>
             <footer class="footer">
               <div class="footer__offer"><picture><source srcset="img/footer-1.webp" type="image/webp"><img class="footer__offer-img first" src="img/footer-1.png" alt="" draggable="false"></picture>
-                <p class="footer__offer-p"><span>Вы продюсер?</span> Получите выгодное предложение с кэшбеком!</p><a class="btn-secondary footer__offer-btn" href="#!">Запросить КП </a><picture><source srcset="img/footer-2.webp" type="image/webp"><img class="footer__offer-img last" src="img/footer-2.png" alt="" draggable="false"></picture>
+                <p class="footer__offer-p"><span>Вы продюсер?</span> Получите выгодное предложение с кэшбеком!</p>
+                <button class="open-popup btn-secondary footer__offer-btn" type="button" data-target="#popup">Запросить КП </button><picture><source srcset="img/footer-2.webp" type="image/webp"><img class="footer__offer-img last" src="img/footer-2.png" alt="" draggable="false"></picture>
               </div>
               <nav class="footer__nav container"> 
                 <div class="intro__social enable-lg disable-md"> <a class="intro__social-item" href="#!" target="_blank"> <picture><source srcset="img/facebook.webp" type="image/webp"><img src="img/facebook.png" alt="" draggable="false"></picture></a><a class="intro__social-item" href="#!" target="_blank"> <img src="img/wk.png" alt="" draggable="false"></a><a class="intro__social-item" href="#!" target="_blank"> <img src="img/instagram.png" alt="" draggable="false"></a><a class="intro__social-item" href="#!" target="_blank"> <img src="img/youtube.png" alt="" draggable="false"></a></div>
@@ -144,7 +165,7 @@
               </nav>
             </footer>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js?_v=20220313130304"> </script>
-    <script src="js/app.min.js?_v=20220313130304"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js?_v=20220319095427"> </script>
+    <script src="js/app.min.js?_v=20220319095427"> </script>
   </body>
 </html>
