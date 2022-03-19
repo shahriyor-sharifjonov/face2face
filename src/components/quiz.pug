@@ -1,29 +1,29 @@
 mixin quiz()
   .quiz 
     form(action="#!").quiz__body.container
-      .quiz__item.active  
+      .quiz__item#services.active  
         .quiz__content 
           p.quiz__title Расчет стоимости
           p.quiz__subtitle #[span 1] Выберите услугу, которая вас интересует и студию:                    
           .quiz__list 
             .quiz__list-item
-              input(type="radio" name="service" id="service-1" checked)
-              label(for="service-1")  Подкаст 
+              input(type="radio" name="service" id="service-1" data-value="Подкаст" checked)
+              label(for="service-1") Подкаст 
             .quiz__list-item
-              input(type="radio" name="service" id="service-2")
-              label(for="service-2")  Онлайн трансляция / вебинар 
+              input(type="radio" name="service" id="service-2" data-value="Онлайн трансляция / вебинар")
+              label(for="service-2") Онлайн трансляция / вебинар 
             .quiz__list-item
-              input(type="radio" name="service" id="service-3")
-              label(for="service-3")  Видеоуроки и мастер-классы 
+              input(type="radio" name="service" id="service-3" data-value="Видеоуроки и мастер-классы")
+              label(for="service-3") Видеоуроки и мастер-классы 
             .quiz__list-item
-              input(type="radio" name="service" id="service-4")
-              label(for="service-4")  Шоу для YouTube 
+              input(type="radio" name="service" id="service-4" data-value="Шоу для YouTube")
+              label(for="service-4") Шоу для YouTube 
             .quiz__list-item
-              input(type="radio" name="service" id="service-5")
-              label(for="service-5")  Интервью 
+              input(type="radio" name="service" id="service-5" data-value="Интервью")
+              label(for="service-5") Интервью 
             .quiz__list-item
-              input(type="radio" name="service" id="service-6")
-              label(for="service-6")  Led-доска 
+              input(type="radio" name="service" id="service-6" data-value="Led-доска")
+              label(for="service-6") Led-доска 
           .quiz__buttons  
             button(type='button').btn-primary.quiz__next Далее
             button(type='button').quiz__prev #[span Назад]
@@ -33,16 +33,16 @@ mixin quiz()
         .quiz__elements 
           img(src="@img/calculator.png" alt="" draggable="false").quiz__elements-img.quiz__elements-img_1
           img(src="@img/camera.png" alt="" draggable="false").quiz__elements-img.quiz__elements-img_2
-      .quiz__item
+      .quiz__item#studios
         .quiz__content 
           p.quiz__title Расчет стоимости
           p.quiz__subtitle #[span 2] Какая студия вас интересует?             
           .quiz__list 
             .quiz__list-item
-              input(type="radio" name="studio" id="studio-1" checked)
+              input(type="radio" name="studio" checked)#studio-1
               label(for="studio-1")  Студия м. Отрадное
             .quiz__list-item
-              input(type="radio" name="studio" id="studio-2")
+              input(type="radio" name="studio")#studio-2
               label(for="studio-2")  Студия м. Тульская
           .quiz__buttons  
             button(type='button').btn-primary.quiz__next Далее
@@ -53,7 +53,7 @@ mixin quiz()
         .quiz__elements 
           img(src="@img/calculator.png" alt="" draggable="false").quiz__elements-img.quiz__elements-img_1
           img(src="@img/camera.png" alt="" draggable="false").quiz__elements-img.quiz__elements-img_2
-      .quiz__item
+      .quiz__item#zals
         .quiz__content 
           p.quiz__title Расчет стоимости
           p.quiz__subtitle #[span 3] Какой зал вас интересует   
@@ -61,17 +61,17 @@ mixin quiz()
             .quiz__img-item
               img(src="@img/quiz-img-1.png", alt="" draggable="false")
               .quiz__list-item
-                input(type="radio" name="zal" id="zal-1" checked)
+                input(type="radio" name="zal" data-type="hour" checked)#zal-1
                 label(for="zal-1")  Малый (1900р час)
             .quiz__img-item 
               img(src="@img/quiz-img-2.png", alt="")
               .quiz__list-item
-                input(type="radio" name="zal" id="zal-2")
+                input(type="radio" name="zal" data-type="hour")#zal-2
                 label(for="zal-2")  Средний (2500р час)
             .quiz__img-item 
               img(src="@img/quiz-img-3.png", alt="")
               .quiz__list-item
-                input(type="radio" name="zal" id="zal-3")
+                input(type="radio" name="zal" data-type="hour")#zal-3
                 label(for="zal-3")  Большой (2900р час)
           .quiz__buttons  
             button(type='button').btn-primary.quiz__next Далее
@@ -82,17 +82,17 @@ mixin quiz()
         .quiz__elements 
           img(src="@img/calculator.png" alt="" draggable="false").quiz__elements-img.quiz__elements-img_1
           img(src="@img/camera.png" alt="" draggable="false").quiz__elements-img.quiz__elements-img_2
-      .quiz__item
+      .quiz__item#rent-hours 
         .quiz__content 
           p.quiz__title Расчет стоимости
           p.quiz__subtitle #[span 4] Сколько часов аренды вам необходимо?
           .quiz__list 
             .quiz__range 
-              input(type="range" min="2" max="12" value="7" steps="1" name="time" data-name="часов").range-2
+              input(type="range" min="2" max="12" value="7" steps="1" name="time" data-name="часов").range-2#hours
               .quiz__range-field 
-                .quiz__range-value.left 2 часа
+                .quiz__range-value.left 2 часа 
                 .quiz__range-value.abs 7 часов 
-                .quiz__range-value.right 12 часов
+                .quiz__range-value.right 12 часов 
           .quiz__buttons  
             button(type='button').btn-primary.quiz__next Далее 
             button(type='button').quiz__prev #[span Назад] 
@@ -102,49 +102,49 @@ mixin quiz()
         .quiz__elements 
           img(src="@img/calculator.png" alt="" draggable="false").quiz__elements-img.quiz__elements-img_1
           img(src="@img/camera.png" alt="" draggable="false").quiz__elements-img.quiz__elements-img_2
-      .quiz__item
+      .quiz__item#dop
         .quiz__content 
           p.quiz__title Расчет стоимости
           p.quiz__subtitle #[span 5] Какие дополнительные услуги вам интересны?
           .quiz__list 
-            .quiz__list-item
-              input(type="checkbox" id="sound" checked)
-              label(for="sound")  Запись звука, включена в стоимость
-            .quiz__list-item
-              input(type="checkbox" id="camera")
-              label(for="camera")  Выставление композиции кадра, настройка камер и света 
-            .quiz__list-item
-              input(type="checkbox" id="rgb")
-              label(for="rgb")  RGB лампы
-            .quiz__list-item
-              input(type="checkbox" id="rgbcamera" checked)
-              label(for="rgbcamera")  Аренда камер (Источники света и RGB-лампы включены в стоимость)
+            .quiz__list-item 
+              input(type="checkbox" checked)#sound 
+              label(for="sound") Запись звука, включена в стоимость
+            .quiz__list-item 
+              input(type="checkbox")#camera 
+              label(for="camera") Выставление композиции кадра, настройка камер и света 
+            .quiz__list-item 
+              input(type="checkbox")#rgb 
+              label(for="rgb") RGB лампы
+            .quiz__list-item 
+              input(type="checkbox" checked)#rentcamera 
+              label(for="rentcamera" data-type="hour") Аренда камер (Источники света и RGB-лампы включены в стоимость)
             .quiz__range 
-              input(type="range" min="1" max="5" value="3" steps="1" data-name="камеры").range-2
+              input(type="range" min="1" max="5" value="3" steps="1" data-name="камеры").range-2#rentcamerahours
               .quiz__range-field 
                 .quiz__range-value.left 1 
                 .quiz__range-value.abs 3 камеры 
                 .quiz__range-value.right 5 
-            .quiz__list-item
-              input(type="checkbox" id="istochniksveta" checked)
+            .quiz__list-item 
+              input(type="checkbox" checked)#istochniksveta
               label(for="istochniksveta") Источники света. Кол-во источников:
             .quiz__range 
-              input(type="range" min="1" max="4" value="3" steps="1" data-name="источника света" style="background: linear-gradient(to right, #F59139 0%, #F59139 68%, #E5DCFF 68%, #E5DCFF 100%);").range-2
+              input(type="range" min="1" max="4" value="3" steps="1" data-name="источника света" style="background: linear-gradient(to right, #F59139 0%, #F59139 68%, #E5DCFF 68%, #E5DCFF 100%);").range-2#istochniksvetaamount
               .quiz__range-field 
                 .quiz__range-value.left 1
                 .quiz__range-value.abs 2 источника света
                 .quiz__range-value.right 4
-            .quiz__list-item
-              input(type="checkbox" id="operator" checked)
+            .quiz__list-item 
+              input(type="checkbox" checked)#operator
               label(for="operator") Оператор. Кол-во часов:
             .quiz__range 
-              input(type="range" min="1" max="12" value="7" steps="1" data-name="часов" style="background: linear-gradient(to right, #F59139 0%, #F59139 54%, #E5DCFF 54%, #E5DCFF 100%);").range-2
+              input(type="range" min="1" max="12" value="7" steps="1" data-name="часов" style="background: linear-gradient(to right, #F59139 0%, #F59139 54%, #E5DCFF 54%, #E5DCFF 100%);").range-2#operator-hours
               .quiz__range-field 
                 .quiz__range-value.left 1 час
                 .quiz__range-value.abs 7 часов
                 .quiz__range-value.right 12 часов
           .quiz__buttons  
-            button(type='button').btn-primary.quiz__next Далее 
+            button(type='button').btn-primary.quiz__next.quiz__end Далее 
             button(type='button').quiz__prev #[span Назад] 
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.83 11L11.41 7.41L10 6L4 12L10 18L11.41 16.59L7.83 13H20V11H7.83Z" fill="#8D1AEF"/>
@@ -164,16 +164,16 @@ mixin quiz()
                 p Цена 
               .quiz__total-item-rows 
                 .quiz__total-item-row  
-                  p Подкаст 
-                  p м. Отрадное, Малый зал 
-                  p 8 часов 
-                  b 15 200 руб 
+                  p#result-usluga Подкаст 
+                  p#result-studio м. Отрадное, Малый зал 
+                  p#result-hours 8 часов 
+                  b#result-price 15 200 руб 
             .quiz__total-item(data-cols="3") 
               .quiz__total-item-header 
                 p.big Дополнительные услуги 
                 p Кол-во 
                 p Цена 
-              .quiz__total-item-rows 
+              .quiz__total-item-rows#result
                 .quiz__total-item-row 
                   p.big Запись звука
                   p -
@@ -198,5 +198,5 @@ mixin quiz()
           .quiz__total-info 
             .quiz__total-row 
               p Итого: 
-              b 25 200 руб 
+              b#total-price 25 200 руб 
             p.quiz__total-p Рассчет носит справочный характер и не является публичной офертой
