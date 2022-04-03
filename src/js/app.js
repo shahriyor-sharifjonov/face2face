@@ -947,9 +947,9 @@ document.querySelectorAll('.quiz').forEach(quiz => {
   const studio_next = studios.querySelector('.quiz__next');
   studio_next.addEventListener('click', () => {
     if(studio_1.checked){
-      studio = 'Студия м. Отрадное';
+      studio = 'Студия м.Отрадное 50 м²';
     }else if(studio_2.checked){
-      studio = 'Студия м. Тульская';
+      studio = 'Студия м.Тульская 90 м²';
     }
     console.log(`studio: ${studio}`);
   })
