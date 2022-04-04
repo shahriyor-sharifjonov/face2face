@@ -5773,6 +5773,72 @@ picture {
   width: 100%;
 }
 
+.no-webp .modal {
+  background: url("../img/overlayer.png"); }
+
+.modal__body {
+  max-width: 658px;
+  width: calc(100% - 30px);
+  border-radius: 20px;
+  padding: 80px 56px;
+}
+
+.modal__body::before,
+.modal__body::after {
+  border-radius: 20px;
+}
+
+.modal__img {
+  position: absolute;
+}
+
+.modal__img-1 {
+  bottom: 35px;
+  left: -77px;
+}
+
+.modal__img-2 {
+  bottom: 51px;
+  right: -56px;
+  z-index: -3;
+}
+
+.modal__img-3 {
+  bottom: -70px;
+  right: 28px;
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  left: auto;
+  z-index: 5;
+}
+
+.modal__title {
+  text-align: center;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 49px;
+  color: #101010;
+  margin-bottom: 20px;
+}
+
+.modal__p {
+  text-align: center;
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  color: #101010;
+  max-width: 384px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
@@ -7611,6 +7677,14 @@ picture {
     line-height: 120%;
     text-align: center;
   }
+
+  .modal__body {
+    padding: 80px 56px;
+  }
+
+  .modal__img {
+    display: none;
+  }
 }
 
 @media (max-width: 992px) and (max-width: 767px) {
@@ -7704,6 +7778,16 @@ picture {
 
   * {
     scroll-margin: 70px;
+  }
+
+  .modal__title {
+    font-size: 30px;
+    line-height: 120%;
+  }
+
+  .modal__p {
+    font-size: 20px;
+    line-height: 120%;
   }
 }
 
@@ -9443,6 +9527,19 @@ picture {
   .popup__title {
     font-size: 20px;
   }
+
+  .modal__body {
+    padding: 50px 15px;
+  }
+
+  .modal__title {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  .modal__p {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 568px) {
@@ -9615,6 +9712,8 @@ picture {
 .webp .services { background: url(../img/questions-bg.webp), #FEFBFB; }
 
 .webp .services-2 { background: url(../img/bron-bg.webp), #FEFBFB; }
+
+.webp .modal { background: url(../img/overlayer.webp); }
 
 @media (max-width: 1400px) {
 

@@ -181,3 +181,85 @@ picture{
         width: 100%;
     }
 }
+
+.modal{
+    background: url('../img/overlayer.png');
+    &__body{
+        max-width: 658px;
+        width: calc(100% - 30px);
+        border-radius: 20px;
+        padding: 80px 56px;
+        @include media(992){
+            padding: 80px 56px;
+        }
+        @include media(576){
+            padding: 50px 15px;
+        }
+        &::before,
+        &::after{
+            border-radius: 20px;
+        }
+    }
+    &__img{
+        position: absolute;
+        @include media(992){
+            display: none;
+        }
+        &-1{
+            bottom: 35px;
+            left: -77px;
+        }
+        &-2{
+            bottom: 51px;
+            right: -56px;
+            z-index: -3;
+        }
+        &-3{
+            bottom: -70px;
+            right: 28px;
+        }
+    }
+    &__close{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 20px;
+        height: 20px;
+        left: auto;
+        z-index: 5;
+    }
+    &__title{
+        text-align: center;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 49px;
+        color: #101010;
+        margin-bottom: 20px;
+        @include media(768){
+            font-size: 30px;
+            line-height: 120%;
+        }
+        @include media(576){
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+    }
+    &__p{
+        text-align: center;
+        font-weight: 800;
+        font-size: 25px;
+        line-height: 30px;
+        text-align: center;
+        color: #101010;
+        max-width: 384px;
+        margin-left: auto;
+        margin-right: auto;
+        @include media(768){
+            font-size: 20px;
+            line-height: 120%;
+        }
+        @include media(576){
+            font-size: 16px;
+        }
+    }
+}
