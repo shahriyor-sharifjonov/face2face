@@ -302,7 +302,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  background: #00000010;
+  background: rgba(0, 0, 0, 0.062745098);
   z-index: -2;
   -webkit-transition: 200ms ease;
   -o-transition: 200ms ease;
@@ -542,8 +542,8 @@ input.violet[type=range]::-webkit-slider-thumb {
   margin-left: auto;
   margin-right: auto;
   border-radius: 0px 0px 15px 15px;
-  -webkit-box-shadow: 0px 10px 20px 0px #7389FF1A;
-          box-shadow: 0px 10px 20px 0px #7389FF1A;
+  -webkit-box-shadow: 0px 10px 20px 0px rgba(115, 137, 255, 0.1019607843);
+          box-shadow: 0px 10px 20px 0px rgba(115, 137, 255, 0.1019607843);
 }
 
 .header.menu-open {
@@ -820,8 +820,8 @@ input.violet[type=range]::-webkit-slider-thumb {
 }
 
 .intro__social-item {
-  -webkit-box-shadow: 0px 10px 50px 0px #7389FF1A;
-          box-shadow: 0px 10px 50px 0px #7389FF1A;
+  -webkit-box-shadow: 0px 10px 50px 0px rgba(115, 137, 255, 0.1019607843);
+          box-shadow: 0px 10px 50px 0px rgba(115, 137, 255, 0.1019607843);
 }
 
 .intro__p {
@@ -1010,8 +1010,8 @@ input.violet[type=range]::-webkit-slider-thumb {
 
 .studios__img-prev,
 .studios__img-next {
-  -webkit-box-shadow: 0px 0px 10px 0 #00000020;
-          box-shadow: 0px 0px 10px 0 #00000020;
+  -webkit-box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.1254901961);
+          box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.1254901961);
   width: 40px;
   height: 40px;
   border-radius: 10px;
@@ -2207,8 +2207,7 @@ input.violet[type=range]::-webkit-slider-thumb {
   font-weight: 400;
   font-size: 16px;
   line-height: 130%;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   color: #8D1AEF;
 }
 
@@ -2337,8 +2336,8 @@ input.violet[type=range]::-webkit-slider-thumb {
 .podcasts__audio-item-header {
   background: #fff;
   padding: 9px 0;
-  -webkit-box-shadow: 0px 10px 50px 0px #657EFF1A;
-          box-shadow: 0px 10px 50px 0px #657EFF1A;
+  -webkit-box-shadow: 0px 10px 50px 0px rgba(101, 126, 255, 0.1019607843);
+          box-shadow: 0px 10px 50px 0px rgba(101, 126, 255, 0.1019607843);
 }
 
 .podcasts__audio-item-header p {
@@ -2848,8 +2847,7 @@ input.violet[type=range]::-webkit-slider-thumb {
   font-weight: 300;
   font-size: 15px;
   line-height: 130%;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   color: #8D1AEF;
 }
 
@@ -4899,8 +4897,7 @@ input.violet[type=range]::-webkit-slider-thumb {
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   color: #8D1AEF;
 }
 
@@ -5371,8 +5368,8 @@ input.violet[type=range]::-webkit-slider-thumb {
 
 .area__prev,
 .area__next {
-  -webkit-box-shadow: 0px 0px 10px 0 #00000020;
-          box-shadow: 0px 0px 10px 0 #00000020;
+  -webkit-box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.1254901961);
+          box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.1254901961);
   width: 40px;
   height: 40px;
   border-radius: 10px;
@@ -5637,8 +5634,33 @@ picture {
   line-height: 0 !important;
 }
 
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.preloader__p {
+  font-size: 36px;
+  line-height: 120%;
+  color: #101010;
+}
+
 .popup {
-  background: #00000090;
+  background: rgba(0, 0, 0, 0.5647058824);
   position: fixed;
   width: 100%;
   height: 100%;
@@ -7812,8 +7834,8 @@ picture {
     margin-right: auto;
     border-radius: 0px 0px 15px 15px;
     border: 2px solid #FFF2F1;
-    -webkit-box-shadow: 0px 10px 20px 0px #7389FF1A;
-            box-shadow: 0px 10px 20px 0px #7389FF1A;
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(115, 137, 255, 0.1019607843);
+            box-shadow: 0px 10px 20px 0px rgba(115, 137, 255, 0.1019607843);
   }
 
   .header.menu-open {

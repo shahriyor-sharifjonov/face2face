@@ -1,5 +1,7 @@
 import * as functions from "./modules/functions.js";
+import * as preloader from "./modules/preloader.js";
 
+preloader.init();
 functions.isWebp();
 
 import Swiper, { Navigation, Pagination } from 'swiper';
