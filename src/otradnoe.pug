@@ -7,11 +7,11 @@ html(lang="en")
         link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.min.css")
         link(rel="stylesheet", href="css/style.min.css")
         title Document
-    body.services 
+    body.services(data-barba="wrapper") 
         .wrapper 
             include components/header 
             +header 
-            main.main.services-page 
+            main.main.services-page(data-barba="container" data-barba-namespace="otradnoe")   
                 include components/studios 
                 +studios2(2)
                 include components/area 

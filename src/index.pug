@@ -7,11 +7,11 @@ html(lang="en")
         link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.min.css")
         link(rel="stylesheet", href="css/style.min.css")
         title Document
-    body.home 
-        .wrapper 
+    body(data-barba="wrapper").home 
+        .wrapper
             include components/header 
             +header 
-            main.main 
+            main.main(data-barba="container" data-barba-namespace="home")  
                 include components/intro 
                 +intro
                 include components/studios 
