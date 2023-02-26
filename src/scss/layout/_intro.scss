@@ -1,12 +1,20 @@
 .intro{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    padding-top: 160px;
+    padding-bottom: 30px;   
+    height: 100vh;
+    min-height: 700px;
+    position: relative;
+    @include media(767){
+        padding-top: 80px;
+    }
     &__body{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 15px 59px 15px;
+        padding: 0 15px 60px 15px;
         @include media(992){
             padding-bottom: 52px;
         }
@@ -134,6 +142,11 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        align-self: flex-end;
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
         @include media(767){
             display: none;
         }

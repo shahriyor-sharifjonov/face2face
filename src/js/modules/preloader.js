@@ -12,12 +12,13 @@ export function init() {
 
     const showDemo = () => {
         setTimeout(() => {
-            gsap.to('.preloader', {
+            const tl = gsap.timeline()
+            tl.to('.preloader', {
                 yPercent: -100,
                 ease: "power4",
                 duration: 1,
             })
-            document.body.classList.add('loaded');
+            
         }, 1000);
     }
 
